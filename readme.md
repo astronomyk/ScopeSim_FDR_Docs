@@ -2,6 +2,10 @@
 
 All documents are to be writen in LaTeX, and will be linked to overleaf.com
 
+The overleaf session can be access using this link:
+
+https://www.overleaf.com/8196534261ndmvhvrfzmyn
+
 Therefore ALWAYS sync a session (pull, push) with Github at the START AND END
 of a writing session. 
 
