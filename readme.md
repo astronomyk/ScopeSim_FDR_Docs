@@ -12,7 +12,7 @@ of a writing session.
 
 ## Three ScopeSim documents
 
-1. ScopeSim technical manual
+1. **ScopeSim technical manual**
    
    A wrapper document for the ScopeSim environment. This document will contain
    a description of all the packages included in this environment and links to
@@ -21,7 +21,7 @@ of a writing session.
    This document will NOT contain technical information about any specific 
    package
    
-2. MICADO instrument packages descriptions
+2. **MICADO instrument packages descriptions**
 
    This document will describe the data contained inside the three MICADO 
    instrument packages that will be delivered at FDR. These include:
@@ -35,7 +35,7 @@ of a writing session.
    Ideally this document will generate itself from the contents of the IRDB
    packages with the appropriate python scripts.
      
-3. MICADO ScopeSim user manual
+3. **MICADO ScopeSim user manual**
 
    This document is aimed at the general user of ScopeSim for simulating MICADO
    observations. It will contain a description of how to install ScopeSim and
