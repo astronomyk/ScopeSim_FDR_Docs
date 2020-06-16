@@ -7,7 +7,7 @@ The overleaf session can be access using this link:
 https://www.overleaf.com/8196534261ndmvhvrfzmyn
 
 Therefore ALWAYS sync a session (pull, push) with Github at the START AND END
-of a writing session. 
+of a writing session. (Use GitHub button on "Menu" in Overleaf)
 
 
 ## Three ScopeSim documents
