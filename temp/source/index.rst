@@ -15,3 +15,4 @@ Welcome to fdr_latex_sphinx_test's documentation!
 It's over 9000!
 
 .. bibliography:: refs.bib
+   :style: plain
