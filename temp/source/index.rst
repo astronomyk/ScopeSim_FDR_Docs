@@ -10,4 +10,6 @@ Welcome to fdr_latex_sphinx_test's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   hello
+
 It's over 9000!
