@@ -90,10 +90,3 @@ I will add more to this list soon, like:
 Feel free to add other documents to this repository as needed, e.g: 
 - for the ETC, 
 - or pipeline algorithms, etc
-    
-
- 
-    
-   
-     
-       
