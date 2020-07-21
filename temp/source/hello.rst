@@ -12,3 +12,5 @@ Hello world!
     a = plt.plot([0,1,2,3], [0,1,0,1])
 
 Thats a plot, folks
+
+See :cite:`leschinski:2020`

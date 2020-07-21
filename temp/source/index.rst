@@ -13,3 +13,5 @@ Welcome to fdr_latex_sphinx_test's documentation!
    hello
 
 It's over 9000!
+
+.. bibliography:: refs.bib
