@@ -10,6 +10,22 @@ Therefore ALWAYS sync a session (pull, push) with Github at the START AND END
 of a writing session. 
 
 
+## Sphinx and Latex
+
+The docs can be written in RST format, and include graphics generated directly 
+from python code. However the sphinx conversion create a single latex file
+which isn't as nice to edit as it could be.
+
+Some setting can be altered with the ``latex_elements`` object:
+
+- https://www.sphinx-doc.org/en/master/latex.html
+- https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html
+
+
+
+
+
+
 ## Three ScopeSim documents
 
 1. **ScopeSim technical manual**
