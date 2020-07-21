@@ -1,6 +1,6 @@
 # Documents for the MICADO final design review
 
-All documents are to be writen in LaTeX, and will be linked to overleaf.com
+All documents are to be written in LaTeX, and will be linked to overleaf.com
 
 The overleaf session can be access using this link:
 
@@ -20,7 +20,7 @@ of a writing session.
    
    This document will NOT contain technical information about any specific 
    package
-   
+
 2. **MICADO instrument packages descriptions**
 
    This document will describe the data contained inside the three MICADO 
@@ -34,7 +34,7 @@ of a writing session.
      
    Ideally this document will generate itself from the contents of the IRDB
    packages with the appropriate python scripts.
-     
+
 3. **MICADO ScopeSim user manual**
 
    This document is aimed at the general user of ScopeSim for simulating MICADO
@@ -56,6 +56,7 @@ of a writing session.
    - HCI : The high contrast imager. Still T.B.D
    - Astrometry : An example of using the sub-pixel functionality with the
      1.5mas mode in MCAO and SCAO
+
 
 ## Primer on package documentation
 
@@ -82,6 +83,7 @@ E.g:
 I will add more to this list soon, like:
 - how to set up ReadTheDocs
 - How to automatically generate and include matplotlib plots with Sphinx          
+
 
 ## Other FDR documents
 
