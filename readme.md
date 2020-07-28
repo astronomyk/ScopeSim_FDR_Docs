@@ -22,10 +22,6 @@ Some setting can be altered with the ``latex_elements`` object:
 - https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html
 
 
-
-
-
-
 ## Three ScopeSim documents
 
 1. **ScopeSim technical manual**
@@ -99,7 +95,6 @@ E.g:
 I will add more to this list soon, like:
 - how to set up ReadTheDocs
 - How to automatically generate and include matplotlib plots with Sphinx          
-
 
 ## Other FDR documents
 
