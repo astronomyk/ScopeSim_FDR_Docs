@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aea4d0c-ede5-4cf6-aa9f-0284bae610f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/play_multi_figures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/play_pandoc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/readme.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScopeSim_Overview/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScopeSim_Overview/readme.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ScopeSim_FDR_Docs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScopeSim_FDR_Docs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScopeSim_technical_manual/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScopeSim_technical_manual/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ScopeSim_Overview/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/play_multi_figures.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_add_figure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/play_pandoc.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_pandoc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,146 +24,131 @@
     <session id="847511006">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bib" value="1" />
           <entry key="gitignore" value="1" />
+          <entry key="jpg" value="4" />
           <entry key="md" value="4" />
-          <entry key="png" value="20" />
-          <entry key="py" value="24" />
-          <entry key="rst" value="5" />
-          <entry key="tex" value="3" />
+          <entry key="png" value="26" />
+          <entry key="py" value="34" />
+          <entry key="rst" value="8" />
+          <entry key="svg" value="2" />
+          <entry key="tex" value="5" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="BibTeX bibliography file" value="1" />
-          <entry key="Image" value="20" />
-          <entry key="LaTeX source file" value="3" />
+          <entry key="Image" value="30" />
+          <entry key="LaTeX source file" value="5" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="24" />
-          <entry key="ReST" value="5" />
+          <entry key="Python" value="34" />
+          <entry key="ReST" value="8" />
+          <entry key="SVG" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="262" />
+          <entry key="Python Console" value="295" />
           <entry key="bib" value="15" />
+          <entry key="dummy" value="15" />
           <entry key="gitignore" value="19" />
           <entry key="md" value="3996" />
-          <entry key="py" value="1941" />
-          <entry key="rst" value="287" />
-          <entry key="tex" value="29" />
+          <entry key="py" value="7041" />
+          <entry key="rst" value="2650" />
+          <entry key="tex" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="BibTeX bibliography file" value="15" />
-          <entry key="LaTeX source file" value="29" />
+          <entry key="LaTeX source file" value="125" />
           <entry key="Markdown" value="3996" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="2203" />
-          <entry key="ReST" value="287" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="Python" value="7336" />
+          <entry key="ReST" value="2650" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47782004">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/readme.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="200">
-                    <caret line="10" selection-start-line="10" selection-end-line="10" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/temp/source/conf.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7">
-                  <caret line="49" selection-start-line="49" selection-end-line="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/temp/source/index.rst">
-              <provider selected="true" editor-type-id="restructured-text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/temp/source/refs.bib">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/temp/source/hello.rst">
-              <provider selected="true" editor-type-id="restructured-text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7">
-                  <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#0#94#0" expanded="true" />
-                    <marker date="1595508052423" expanded="true" signature="567:568" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7">
-                  <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/temp/play_multi_figures.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://C:/Program Files/Python36/Lib/site-packages/pypandoc/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7" />
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#94#0" expanded="true" />
+                <marker date="1596015249251" expanded="true" signature="570:571" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/readme.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/main.tex">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/readme.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/play_add_figure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <marker date="1596031186073" expanded="true" signature="497:4555" ph="..." />
+                <marker date="1596031186073" expanded="true" signature="1807:1832" ph="..." />
+                <marker date="1596031186073" expanded="true" signature="4494:4496" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -173,7 +164,13 @@
       <find>self.document</find>
       <find>self.document =</find>
       <find>latex</find>
+      <find>.. tip</find>
+      <find>class figure</find>
+      <find>.</find>
     </findStrings>
+    <replaceStrings>
+      <replace>-</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -190,16 +187,22 @@
         <option value="$PROJECT_DIR$/temp/build/latex/fdr_latex_sphinx_test.tex" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/temp/play_pandoc.py" />
-        <option value="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" />
         <option value="$PROJECT_DIR$/temp/play_multi_figures.py" />
+        <option value="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" />
+        <option value="$PROJECT_DIR$/temp/play_add_figure.py" />
+        <option value="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex" />
+        <option value="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/readme.rst" />
+        <option value="$PROJECT_DIR$/ScopeSim_technical_manual/readme.rst" />
+        <option value="$PROJECT_DIR$/ScopeSim_Overview/readme.rst" />
+        <option value="$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1900" />
-    <option name="y" value="107" />
-    <option name="width" value="1239" />
-    <option name="height" value="670" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -234,18 +237,17 @@
             <path>
               <item name="ScopeSim_FDR_Docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScopeSim_FDR_Docs" type="462c0819:PsiDirectoryNode" />
-              <item name="ScopeSim_technical_manual" type="462c0819:PsiDirectoryNode" />
+              <item name="MICADO_instrument_packages_descriptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScopeSim_FDR_Docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScopeSim_FDR_Docs" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
+              <item name="MICADO_ScopeSim_user_manual" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScopeSim_FDR_Docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScopeSim_FDR_Docs" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="ScopeSim_Overview" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -256,7 +258,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/temp" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -282,7 +284,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.play_multi_figures">
+  <component name="RunManager" selected="Python.play_add_figure">
+    <configuration name="play_add_figure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ScopeSim_FDR_Docs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/temp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/play_add_figure.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="play_docutils_rst_latex" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ScopeSim_FDR_Docs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,7 +339,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/play_multi_figures.py" />
+      <option name="SCRIPT_NAME" value="C:\Work\writings\ScopeSim_FDR_Docs\temp\play_add_figure.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,12 +373,14 @@
       <item itemvalue="Python.play_docutils_rst_latex" />
       <item itemvalue="Python.play_pandoc" />
       <item itemvalue="Python.play_multi_figures" />
+      <item itemvalue="Python.play_add_figure" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.play_multi_figures" />
+        <item itemvalue="Python.play_add_figure" />
         <item itemvalue="Python.play_docutils_rst_latex" />
         <item itemvalue="Python.play_pandoc" />
+        <item itemvalue="Python.play_multi_figures" />
       </list>
     </recent_temporary>
   </component>
@@ -373,26 +398,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.119936034" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32212582" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.19127516" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21276596" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32917318" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.28308025" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.27982646" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="3" sideWeight="0.50116277" visible="true" weight="0.052238807" />
+      <window_info anchor="right" id="Structure" order="3" sideWeight="0.50116277" visible="true" weight="0.1261745" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -417,8 +441,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ScopeSim_technical_manual/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/index.rst" />
@@ -466,16 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/docutils/nodes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="1776" column="6" selection-start-line="1776" selection-start-column="6" selection-end-line="1776" selection-end-column="6" />
-          <folding>
-            <element signature="e#984#994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/docutils/readers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1713">
@@ -492,33 +517,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="121" column="8" selection-start-line="121" selection-end-line="122" />
-          <folding>
-            <element signature="e#254#268#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/0.png" />
+    <entry file="file://$PROJECT_DIR$/temp/4.png" />
+    <entry file="file://$PROJECT_DIR$/temp/3.png" />
+    <entry file="file://$PROJECT_DIR$/temp/2.png" />
+    <entry file="file://$PROJECT_DIR$/temp/1.png" />
+    <entry file="file://$PROJECT_DIR$/temp/source/refs.bib">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1120166012/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2201">
+          <caret line="765" column="8" selection-start-line="765" selection-start-column="8" selection-end-line="765" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/docutils/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="219" column="29" lean-forward="true" selection-start-line="219" selection-start-column="29" selection-end-line="219" selection-end-column="29" />
+        <state relative-caret-position="-14744">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
           <folding>
             <element signature="e#588#598#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pypandoc/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/untitled.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/untitled.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/matplotlib/cbook/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="391" selection-start-line="391" selection-end-line="391" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/my_fug2.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/my_fug.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/my_fug2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/my_fug3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/temp/source/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/source/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="25">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="200">
@@ -527,66 +619,65 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pypandoc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#94#0" expanded="true" />
-            <marker date="1595508052423" expanded="true" signature="567:568" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_multi_figures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/source/hello.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/source/refs.bib">
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/docutils/nodes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="208">
+          <caret line="927" column="31" lean-forward="true" selection-start-line="927" selection-start-column="31" selection-end-line="927" selection-end-column="31" />
+          <folding>
+            <element signature="e#984#994#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_add_figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1596031186073" expanded="true" signature="497:4555" ph="..." />
+            <marker date="1596031186073" expanded="true" signature="1807:1832" ph="..." />
+            <marker date="1596031186073" expanded="true" signature="4494:4496" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
+            <marker date="1596015249251" expanded="true" signature="570:571" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/readme.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/main.tex">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/readme.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
 </project>

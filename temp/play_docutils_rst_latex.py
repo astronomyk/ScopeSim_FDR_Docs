@@ -4,18 +4,19 @@ from docutils import nodes
 
 rst_text = """
 
-.. role:: raw-latex(raw)
-   :format: latex
+.. code::
+    :class: plot
+    :name: my_fug
 
-.. tip::
     import matplotlib.pyplot as plt
-    plt.savefig("my_fug.pdf, format="pdf")
+    plt.plot([0,1], [0,1])
+    plt.savefig("my_fug.pdf", format="pdf")
 
 .. figure:: my_fug.pdf
+    :name: fig:my_fug
 
     This is an included figure caption
-    
-    :raw-latex:`\label{fig:my_fug}`
+
      
 """
 
@@ -33,9 +34,14 @@ def print_children(obj, level=0):
         #print("*", obj, "*")
         pass
 
-#print_children(doctree)
+    if isinstance(obj, nodes.literal_block):
+        for child in obj.children:
+            if isinstance(child, nodes.Text):
+                exec(child)
 
-latex_doc = publish_from_doctree(doctree, writer_name="latex")
+print_children(doctree)
 
-print(latex_doc)
+#latex_doc = publish_from_doctree(doctree, writer_name="latex")
+
+#print(latex_doc)
 
