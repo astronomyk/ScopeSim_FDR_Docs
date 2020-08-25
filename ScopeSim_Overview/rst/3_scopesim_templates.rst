@@ -5,8 +5,9 @@ Documentation: https://scopesim-templates.readthedocs.io/
 
 Code Base: https://github.com/astronomyk/ScopeSim_templates
 
-Continuous integration : https://travis-ci.org/github/astronomyk/ScopeSim_Templates
+Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim_Templates
 
+Author: Kieran Leschinski
 
 What is included in the package
 ++++++++++++++++++++++++++++++++

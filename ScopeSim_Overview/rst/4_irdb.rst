@@ -1,11 +1,13 @@
 Instrument reference database
 -----------------------------
 
-Documentation: https://scopesim-templates.readthedocs.io/
+Documentation: https://irdb.readthedocs.io/
 
-Code Base: https://github.com/astronomyk/ScopeSim_templates
+Code Base: https://github.com/astronomyk/IRDB
 
-Continuous integration : https://travis-ci.org/github/astronomyk/ScopeSim_Templates
+Continuous integration : https://travis-ci.org/github/astronomyk/IRDB
+
+Author: Oliver Czoske
 
 
 What is contained in a packages

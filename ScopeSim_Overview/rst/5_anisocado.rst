@@ -2,11 +2,13 @@ AnisoCADO
 =========
 A package for analytically generating SCAO PSFs primarily for the ELT
 
-Documentation: https://scopesim-templates.readthedocs.io/
+Documentation: https://anisocado.readthedocs.io/
 
-Code Base: https://github.com/astronomyk/ScopeSim_templates
+Code Base: https://github.com/astronomyk/AnisoCADO
 
-Continuous integration : https://travis-ci.org/github/astronomyk/ScopeSim_Templates
+Continuous integration : https://travis-ci.org/github/astronomyk/AnisoCADO
+
+Author: Kieran Leschinski
 
 Introduction
 ------------
