@@ -1,5 +1,5 @@
-SimCADO User Manual
-===================
+ELT-MAN-MCD-56306-0058: SimCADO User Manual
+===========================================
 SimCADO, the MICADO instrument data simulator, is a combination of ScopeSim and 
 the MICADO instrument package from the instrument reference database.
 

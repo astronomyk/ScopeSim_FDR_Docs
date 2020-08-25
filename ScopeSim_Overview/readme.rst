@@ -1,7 +1,5 @@
-ScopeSim
-========
-A modular astronomical instrument data simulation environment
-
+ELT-TRE-MCD-56306-0060: ScopeSim - A modular astronomical instrument data simulation environment
+================================================================================================
 
 Authors
 -------

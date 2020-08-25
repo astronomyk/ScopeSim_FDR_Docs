@@ -68,8 +68,6 @@ We however encourage anyone who has made these custom ``Effects`` to submit a pu
 Documentation and code bases
 ++++++++++++++++++++++++++++
 
-.. todo:: update table
-
 .. list-table:: docs_and_code
 
     *   - Package
@@ -79,21 +77,21 @@ Documentation and code bases
         - https://scopesim.readthedocs.io/
         - https://github.io/astronomyk/scopesim
     *   - ScopeSim_templates
-        - 
-        - 
+        - https://scopesim-templates.readthedocs.io/
+        - https://github.com/astronomyk/ScopeSim_templates
     *   - IRDB
-        - 
-        -
+        - https://irdb.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/IRDB
     *   - AnisoCADO
-        - 
-        -
+        - https://anisocado.readthedocs.io/
+        - https://github.com/astronomyk/AnisoCADO
     *   - SkyCalc_ipy
-        - 
-        -
+        - https://skycalc-ipy.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/SkyCalc_iPy
     *   - SpeXtra
-        - 
-        -
+        - https://spextra.readthedocs.io/en/latest/
+        - https://github.com/miguelverdugo/speXtra
     *   - Pyckles
-        - 
-        -
+        - https://pyckles.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/Pyckles
     

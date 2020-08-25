@@ -1,6 +1,12 @@
 Instrument reference database
 -----------------------------
 
+Documentation: https://scopesim-templates.readthedocs.io/
+
+Code Base: https://github.com/astronomyk/ScopeSim_templates
+
+Continuous integration : https://travis-ci.org/github/astronomyk/ScopeSim_Templates
+
 
 What is contained in a packages
 +++++++++++++++++++++++++++++++
@@ -17,6 +23,7 @@ Main packages vs support packages
 +++++++++++++++++++++++++++++++++
 
 - default.yaml
+- packages dependencies
 - modes_yamls in default
 
 all other yamls just have properties and effects
@@ -38,7 +45,3 @@ Documentation
 - Reports of all packages
 - repo
 - tutorial on how to put together a package
-
-
-        
-        
