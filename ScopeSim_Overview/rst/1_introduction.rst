@@ -1,5 +1,5 @@
 Introduction
-------------
+============
 
 An overview of the ScopeSim environment
 +++++++++++++++++++++++++++++++++++++++
@@ -8,7 +8,8 @@ ScopeSim is a modular and flexible suite of python packages that enable (almost)
 
 The suite of packages can be used by a wide audience for a variety of purposes; from a astronomer interested in simulating reduced observational data, to a pipeline developer who needs raw calibration data for testing the pipeline.
 
-.. todo:: Add image of scopesim environment
+.. warning:: Add image of scopesim environment
+
    
 ScopeSim achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the ScopeSim engine package is completely instrument and object agnostic. 
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (IRDB). 
@@ -17,16 +18,16 @@ The description of the on-sky source is keep exclusively within the target ``tem
 
 The core of the ScopeSim environment are the three packages:
 
-- ScopeSim: the simulation engine
-- ScopeSim_templates: descriptions of the on-sky sources
-- IRDB: the instrument reference database.
+- ``ScopeSim``: the simulation engine
+- ``ScopeSim_templates``: descriptions of the on-sky sources
+- ``IRDB``: the instrument reference database.
 
 In addition to the core package, there are several support packages:
 
-- AnisoCADO: simulates SCAO PSFs for the ELT
-- SkyCalc_ipy: queries the ESO skycalc service for atmospheric spectral curves
-- SpeXtra: provides easy access to many well-known spectral libraries
-- Pyckles: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
+- ``AnisoCADO``: simulates SCAO PSFs for the ELT
+- ``SkyCalc_ipy``: queries the ESO skycalc service for atmospheric spectral curves
+- ``SpeXtra``: provides easy access to many well-known spectral libraries
+- ``Pyckles``: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
 
 Each of these packages will be discussed in detail in the remainder of this document.
 
@@ -69,6 +70,7 @@ Documentation and code bases
 ++++++++++++++++++++++++++++
 
 .. list-table:: docs_and_code
+    :name: tbl:list_of_packages
 
     *   - Package
         - Documentation

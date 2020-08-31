@@ -33,7 +33,7 @@ Here the object in question can be any one of the 4 main flux distribution class
 - ``ImagePlane``: (x, y, sum(lambda))
 - ``DetectorPlane``: (x, y, e-)
 
-.. todo:: finish section
+.. warning:: finish section
     
     
 Optical system capabilities

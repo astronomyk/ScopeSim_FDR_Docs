@@ -32,14 +32,14 @@ all other yamls just have properties and effects
 
 
 List of available packages
-+++++++++++++++++++++++++
+++++++++++++++++++++++++++
 
 .. code for list_packages()
 
 Custom effects example
 ++++++++++++++++++++++
 
-.. todo:: add code to show this (from astrometry notebook)
+.. warning:: add code to show this (from astrometry notebook)
 
 
 Documentation

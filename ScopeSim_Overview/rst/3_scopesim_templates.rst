@@ -33,7 +33,7 @@ Source object interface
 Example
 +++++++
 
-.. todo:: code to make images for here
+.. warning:: code to make images for here
 
 - clusters
 - galaxies with velocity gradients
