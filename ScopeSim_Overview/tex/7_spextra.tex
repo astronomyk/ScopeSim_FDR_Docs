@@ -30,6 +30,17 @@ blueshifted or smoothed with a velocity kernel, add emission or absorption lines
 \texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases. Loading these templates is as easy as typing \texttt{Spextrum(''library\_name/template\_name'')}
  
 
+\subsection{Database}
+
+The \texttt{speXtra} database contains libraries 
+of spectral templates, extinction curves and filter
+systems. The data is downloaded on-the-fly when
+requested and kept cached in the local hard drive 
+for future use. 
+
+The scheme is flexible and additional data can be added. In
+the following a short summary of the database contains is provided.
+
 \subsubsection{Spectral Templates}
 
 At the time of writting the following libraries are included in \texttt{speXtra}. Other can be added 
@@ -37,31 +48,49 @@ at request of the user.
 
 \begin{itemize}
 
-\item The Kinney-Calzetti Spectral Atlas of Galaxies
+    \item The Kinney-Calzetti Spectral Atlas of Galaxies
 
-\item Pickles Stellar Library
+    \item Pickles Stellar Library
 
-\item SDSS galaxy composite spectra
+    \item SDSS galaxy composite spectra
 
-\item IRTF spectral library
+    \item IRTF spectral library
 
-\item AGN templates
+    \item AGN templates
 
-\item Emission line nebulae
+    \item Emission line nebulae
 
-\item Galaxy SEDs from the UV to the Mid-IR
+    \item Galaxy SEDs from the UV to the Mid-IR
 
-\item Kurucz 1993 Models (subset)
+    \item Kurucz 1993 Models (subset)
 
-\item Supernova Legacy Survey templates (subset)
+    \item Supernova Legacy Survey templates (subset)
 
-\item Flux/Telluric standards with X-Shooter
+    \item Flux/Telluric standards with X-Shooter
 
-\item High-Resolution Spectra of Habitable Zone Planets (example)
+    \item High-Resolution Spectra of Habitable Zone Planets (example)
 
 
 \end{itemize}
 
+\subsubsection{Extinction Curves}
+
+Extinction curves provided with the database. 
+
+\begin{itemize}
+    \item Gordon LMC/SMC extinction curves
+    
+    \item Cardelli MW extinction curves
+    
+    \item Calzetti starburst attenuation curve
+\end{itemize}
+
+
+\subsubsection{Filter Systems}
+
+\begin{itemize}
+    \item MICADO filter system
+\end{itemize}
 
 
 \subsection{Installation}
