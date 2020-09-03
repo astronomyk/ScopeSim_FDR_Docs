@@ -4,13 +4,13 @@
   \label{spextra}%
 }
 
-<One line summary here>
+\texttt{speXtra} is a tool to manage and manipulate astronomical spectra. 
 
-Documentation:
+Documentation: \url{https://spextra.readthedocs.io/}
 
-Code Base:
+Code Base: \url{https://github.com/miguelverdugo/speXtra}
 
-Continuous integration:
+Continuous integration: \url{https://travis-ci.org/github/miguelverdugo/speXtra}
 
 Author: Miguel Verdugo
 
@@ -18,6 +18,32 @@ Author: Miguel Verdugo
 \subsection{Functionality%
   \label{functionality}%
 }
+
+\texttt{speXtra} packages several \texttt{synphot} workflows
+workflows in simple-to-use methods that allow the user 
+to manipulate astronomical spectra. For example, the user
+can extract the magnitude from an astronomical spectrum or 
+scale the specrum, the spectrum can be redshifted or 
+blueshifted or smoothed with a velocity kernel, add emission or
+absorption lines, rebin the spectra or correct it for an
+extinction curve. Etc.
+
+\texttt{speXtra} does not perform measurements, with the sole 
+exception of extracting magnitudes within a band. 
+
+\texttt{speXtra} also comes with a built-in database of spectral templates 
+that should cover most of the science cases. Loading these templates is as
+easy as typing \texttt{Spextrum("library_name/template_name")}
+
+
+
+\subsection{Installation}
+
+To install \texttt{speXtra} simply type
+
+\texttt{pip install spextra}
+
+ 
 
 
 \subsection{Examples%
