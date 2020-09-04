@@ -18,12 +18,14 @@ Functionality
 ``speXtra`` packages several ``synphot`` workflows in simple-to-use methods that allow the user
 to manipulate astronomical spectra. For example, the user
 can extract the magnitude from an astronomical spectrum or 
-scale the spetcrum, the spectrum can be redshifted or 
-blueshifted or smoothed with a velocity kernel, add emission or absorption lines, rebin the spectra or correct it for an extinction curve. Etc.
+scale the spectrum to that magnitude, the spectrum can be redshifted or
+blueshifted or smoothed with a velocity kernel, add emission or absorption lines,
+rebin the spectra or correct it for an extinction curve. Etc.
 
 ``speXtra`` does not perform measurements, with the sole exception of extracting magnitudes within a passband.
 
-``speXtra`` also comes with a built-in database of spectral templates  that cover many possible user cases. Loading these templates is as easy as typing ``Spextrum('library\_name/template\_name')``
+``speXtra`` also comes with a built-in database of spectral templates  that cover many possible user cases.
+Loading these templates is as easy as typing ``Spextrum('library_name/template_name')``
  
 
 Database
@@ -38,7 +40,7 @@ In the following a short summary of the database contains is provided.
 Spectral Templates
 ++++++++++++++++++
 
-At the time of writing the following libraries are included in ``speXtra``.
+At the time of writing the following libraries are included in the ``speXtra`` database.
 Other can be added at request of the user.
 
 * The Kinney-Calzetti Spectral Atlas of Galaxies
@@ -67,7 +69,14 @@ Extinction curves provided with the database.
 Filter Systems
 ++++++++++++++
 
+``speXtra`` currently relies on the spanish SVO filter database to download the filters. This is done thanks
+to the ``tynt`` package. However this database is not complete and in particular filters for upcoming
+ELT instruments are missing. For that reason we have added some filter management to ``speXtra``.
+
+Filter system currently included
+
 * MICADO filter system
+* METIS filter system
 
 
 Installation
@@ -78,5 +87,20 @@ To install ``speXtra`` simply type::
     pip install spextra
 
 
+Dependencies
+++++++++++++
+
+``speXtra`` require the following dependencies to properly work. If they are missing they are automatically
+installed.
+
+* ``numpy``
+* ``scipy``
+* ``astropy``
+* ``synphot``
+* ``PyYAML``
+* ``tynt``
+
+
 Examples
 --------
+
