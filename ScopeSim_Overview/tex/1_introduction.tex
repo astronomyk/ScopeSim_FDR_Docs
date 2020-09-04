@@ -11,13 +11,13 @@
 
 ScopeSim is a modular and flexible suite of python packages that enable (almost) any astronomical optical (observatory/telescope/instrument) system to be simulated.
 
-The suite of packages can be used by a wide audience for a variety of purposes; from a astronomer interested in simulating reduced observational data, to a pipeline developer who needs raw calibration data for testing the pipeline.
+The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a pipeline developer needing raw calibration data for testing the pipeline.
 
-\DUadmonition[warning]{
-\DUtitle[warning]{Warning}
+\begin{figure}
+\noindent\makebox[\linewidth][c]{\includegraphics{../images/scopesim_environment_overview.png}}\phantomsection\label{fig-scopesim-environment}
 
-Add image of scopesim environment
-}
+\caption{The packages belonging to the ScopeSim environment.}
+\end{figure}
 
 ScopeSim achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the ScopeSim engine package is completely instrument and object agnostic.
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (IRDB).
@@ -46,7 +46,7 @@ In addition to the core package, there are several support packages:
 \item \texttt{Pyckles}: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
 \end{itemize}
 
-Each of these packages will be discussed in detail in the remainder of this document.
+Each of these packages will be discussed in detail in the following sections.
 
 
 \subsection{Document Scope%
@@ -92,7 +92,7 @@ We however encourage anyone who has made these custom \texttt{Effects} to submit
 
 \setlength{\DUtablewidth}{\linewidth}
 \begin{longtable}[c]{|p{0.315\DUtablewidth}|p{0.315\DUtablewidth}|p{0.315\DUtablewidth}|}
-\caption{docs\_and\_code}\\
+\caption{Links to the open source doumentation and code bases}\\
 \hline
 
 Package

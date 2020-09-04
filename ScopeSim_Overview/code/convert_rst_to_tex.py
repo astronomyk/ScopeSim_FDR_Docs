@@ -6,8 +6,10 @@ from docutils.core import publish_file, publish_parts
 #              writer_name="latex")
 
 
+# [!37] excludes ScopeSim_templates and Spextra
+# for fname in glob.glob("../rst/[!37]*.rst"):
 for fname in glob.glob("../rst/*.rst"):
-
+    print(fname)
     with open(fname) as rst_path:
         rst = rst_path.read()
 

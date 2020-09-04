@@ -4,7 +4,7 @@
   \label{spextra}%
 }
 
-\texttt{speXtra} is a tool to manage and manipulate astronomical spectra. 
+\texttt{speXtra} is a tool to manage and manipulate astronomical spectra.
 
 Documentation: \url{https://spextra.readthedocs.io/}
 
@@ -19,87 +19,95 @@ Author: Miguel Verdugo
   \label{functionality}%
 }
 
-\texttt{speXtra} packages several \texttt{synphot} workflows in simple-to-use methods that allow the user 
+\texttt{speXtra} packages several \texttt{synphot} workflows in simple-to-use methods that allow the user
 to manipulate astronomical spectra. For example, the user
-can extract the magnitude from an astronomical spectrum or 
-scale the spetcrum, the spectrum can be redshifted or 
+can extract the magnitude from an astronomical spectrum or
+scale the spetcrum, the spectrum can be redshifted or
 blueshifted or smoothed with a velocity kernel, add emission or absorption lines, rebin the spectra or correct it for an extinction curve. Etc.
 
-\texttt{speXtra} does not perform measurements, with the sole exception of extracting magnitudes within a passband. 
+\texttt{speXtra} does not perform measurements, with the sole exception of extracting magnitudes within a passband.
 
-\texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases. Loading these templates is as easy as typing \texttt{Spextrum(''library\_name/template\_name'')}
- 
-
-\subsection{Database}
-
-The \texttt{speXtra} database contains libraries 
-of spectral templates, extinction curves and filter
-systems. The data is downloaded on-the-fly when
-requested and kept cached in the local hard drive 
-for future use. 
-
-The scheme is flexible and additional data can be added. In
-the following a short summary of the database contains is provided.
-
-\subsubsection{Spectral Templates}
-
-At the time of writting the following libraries are included in \texttt{speXtra}. Other can be added 
-at request of the user. 
-
-\begin{itemize}
-
-    \item The Kinney-Calzetti Spectral Atlas of Galaxies
-
-    \item Pickles Stellar Library
-
-    \item SDSS galaxy composite spectra
-
-    \item IRTF spectral library
-
-    \item AGN templates
-
-    \item Emission line nebulae
-
-    \item Galaxy SEDs from the UV to the Mid-IR
-
-    \item Kurucz 1993 Models (subset)
-
-    \item Supernova Legacy Survey templates (subset)
-
-    \item Flux/Telluric standards with X-Shooter
-
-    \item High-Resolution Spectra of Habitable Zone Planets (example)
+\texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases. Loading these templates is as easy as typing \texttt{Spextrum('library\textbackslash{}\_name/template\textbackslash{}\_name')}
 
 
-\end{itemize}
+\subsubsection{Database%
+  \label{database}%
+}
 
-\subsubsection{Extinction Curves}
+The \texttt{speXtra} database contains libraries of spectral templates, extinction curves and filter systems.
+The data is downloaded on-the-fly when requested and kept cached in the local hard drive for future use.
 
-Extinction curves provided with the database. 
+The scheme is flexible and additional data can be added.
+In the following a short summary of the database contains is provided.
+
+
+\subsubsection{Spectral Templates%
+  \label{spectral-templates}%
+}
+
+At the time of writing the following libraries are included in \texttt{speXtra}.
+Other can be added at request of the user.
 
 \begin{itemize}
-    \item Gordon LMC/SMC extinction curves
-    
-    \item Cardelli MW extinction curves
-    
-    \item Calzetti starburst attenuation curve
+\item The Kinney-Calzetti Spectral Atlas of Galaxies
+
+\item Pickles Stellar Library
+
+\item SDSS galaxy composite spectra
+
+\item IRTF spectral library
+
+\item AGN templates
+
+\item Emission line nebulae
+
+\item Galaxy SEDs from the UV to the Mid-IR
+
+\item Kurucz 1993 Models (subset)
+
+\item Supernova Legacy Survey templates (subset)
+
+\item Flux/Telluric standards with X-Shooter
+
+\item High-Resolution Spectra of Habitable Zone Planets (example)
 \end{itemize}
 
 
-\subsubsection{Filter Systems}
+\subsubsection{Extinction Curves%
+  \label{extinction-curves}%
+}
+
+Extinction curves provided with the database.
 
 \begin{itemize}
-    \item MICADO filter system
+\item Gordon LMC/SMC extinction curves
+
+\item Cardelli MW extinction curves
+
+\item Calzetti starburst attenuation curve
 \end{itemize}
 
 
-\subsection{Installation}
+\subsubsection{Filter Systems%
+  \label{filter-systems}%
+}
 
-To install \texttt{speXtra} simply type: 
+\begin{itemize}
+\item MICADO filter system
+\end{itemize}
 
-\texttt{pip install spextra}
 
- 
+\subsubsection{Installation%
+  \label{installation}%
+}
+
+To install \texttt{speXtra} simply type:
+
+\begin{quote}
+\begin{alltt}
+pip install spextra
+\end{alltt}
+\end{quote}
 
 
 \subsection{Examples%
