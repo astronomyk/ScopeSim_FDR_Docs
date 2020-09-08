@@ -22,7 +22,7 @@ from docutils.core import publish_file, publish_parts
 #
 
 
-for fname in glob.glob("../rst/*.rst"):
+for fname in glob.glob("../rst/*.rst")[4:5]:
     print(pth.basename(fname))
     with open(fname) as rst_path:
         rst_text = rst_path.read()
