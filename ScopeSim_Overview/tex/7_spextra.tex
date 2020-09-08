@@ -22,12 +22,14 @@ Author: Miguel Verdugo
 \texttt{speXtra} packages several \texttt{synphot} workflows in simple-to-use methods that allow the user
 to manipulate astronomical spectra. For example, the user
 can extract the magnitude from an astronomical spectrum or
-scale the spetcrum, the spectrum can be redshifted or
-blueshifted or smoothed with a velocity kernel, add emission or absorption lines, rebin the spectra or correct it for an extinction curve. Etc.
+scale the spectrum to that magnitude, the spectrum can be redshifted or
+blueshifted or smoothed with a velocity kernel, add emission or absorption lines,
+rebin the spectra or correct it for an extinction curve. Etc.
 
 \texttt{speXtra} does not perform measurements, with the sole exception of extracting magnitudes within a passband.
 
-\texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases. Loading these templates is as easy as typing \texttt{Spextrum('library\textbackslash{}\_name/template\textbackslash{}\_name')}
+\texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases.
+Loading these templates is as easy as typing \texttt{Spextrum('library\_name/template\_name')}
 
 
 \subsubsection{Database%
@@ -45,7 +47,7 @@ In the following a short summary of the database contains is provided.
   \label{spectral-templates}%
 }
 
-At the time of writing the following libraries are included in \texttt{speXtra}.
+At the time of writing the following libraries are included in the \texttt{speXtra} database.
 Other can be added at request of the user.
 
 \begin{itemize}
@@ -92,8 +94,16 @@ Extinction curves provided with the database.
   \label{filter-systems}%
 }
 
+\texttt{speXtra} currently relies on the spanish SVO filter database to download the filters. This is done thanks
+to the \texttt{tynt} package. However this database is not complete and in particular filters for upcoming
+ELT instruments are missing. For that reason we have added some filter management to \texttt{speXtra}.
+
+Filter system currently included
+
 \begin{itemize}
 \item MICADO filter system
+
+\item METIS filter system
 \end{itemize}
 
 
@@ -108,6 +118,28 @@ To install \texttt{speXtra} simply type:
 pip install spextra
 \end{alltt}
 \end{quote}
+
+
+\subsubsection{Dependencies%
+  \label{dependencies}%
+}
+
+\texttt{speXtra} require the following dependencies to properly work. If they are missing they are automatically
+installed.
+
+\begin{itemize}
+\item \texttt{numpy}
+
+\item \texttt{scipy}
+
+\item \texttt{astropy}
+
+\item \texttt{synphot}
+
+\item \texttt{PyYAML}
+
+\item \texttt{tynt}
+\end{itemize}
 
 
 \subsection{Examples%

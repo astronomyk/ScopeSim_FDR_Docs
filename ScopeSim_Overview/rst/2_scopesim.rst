@@ -17,7 +17,7 @@ The scopesim engine is the core of the scopesim environment.
 At the heart of scopesim are two major concepts. 
 
 - The observed output is the target input plus a series of optical artefacts
-- The effect of each optical artefact is indenpendent of all other artefacts
+- The effect of each optical artefact is independent of all other artefacts
 
 If we follow these to Ans�tze to their logical conclusion we end up with a situation where optical artefacts can be treated as a series of "lego bricks" and any digital optical model can be constructed much in the same way as a lego model; by stacking the correct combination of effect "bricks" together in the right order.
 

@@ -8,8 +8,9 @@ ScopeSim is a modular and flexible suite of python packages that enable (almost)
 
 The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a pipeline developer needing raw calibration data for testing the pipeline.
 
-.. figure:: ../images/scopesim_environment_overview.png
+.. figure:: images/scopesim_environment_overview.png
     :name: fig-scopesim-environment
+    :scale: 30 %
 
     The packages belonging to the ScopeSim environment.
 
@@ -45,7 +46,7 @@ Rationale for the ScopeSim environment
 ++++++++++++++++++++++++++++++++++++++
 
 Until now most instrument consortia have developed their own simulators. 
-The general argument is that every new instrument is sufficiently different from anything that has been previously developed, that it would make no sense to adapt already existing code. 
+The general concensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent. 
 Every new instrument must differ in some way from all existing instruments in order for it to be useful to the astronomical community.
 However when looked at from a global perspective, every optical system is comprised primarily of elements common to all other systems. 
@@ -53,7 +54,9 @@ Atmospheric emission, mirror reflectivities, filter transmission curves, point s
 Furthermore, while the amplitude and shape of each effect differs between optical systems, there are still commonalities in the way each effect can be described programmatically. 
 
 ScopeSim's main goal is to provide a framework for modelling (almost) any astronomical optical system by taking advantage of all these commonalities.
-What astropy has done for python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
+What astropy has done for the general python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
+
+
 
 
 Community involvement

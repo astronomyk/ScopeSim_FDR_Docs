@@ -9,9 +9,11 @@ Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim_Templat
 
 Author: Kieran Leschinski
 
+
+
 What is included in the package
 ++++++++++++++++++++++++++++++++
-- Functions to generate ``Source`` objects. 
+- Functions to generate ``Source`` objects.
 - .basic subpackage written by us
 - .advanced subpackage for community contributions
 - .micado subpackage written by micado pipeline team (HB)
