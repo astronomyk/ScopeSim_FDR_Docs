@@ -29,7 +29,21 @@ Contents
 - Observing the Source
     - Workflow
     - Contolling the simulation
-        
+
+        - Official MICADO modes
+            - SCAO, MCAO
+            - 4mas, 1.5mas, Spec
+
+        - Other major configuration parameters
+            - filter
+            - dit / ndit
+            - slit size
+            - zenith distance
+            - psf model
+
+
+
+
 - Science package use case examples
     - IMG 4mas, MCAO, Ks
     - IMG 1.5mas, SCAO, Pa-Beta

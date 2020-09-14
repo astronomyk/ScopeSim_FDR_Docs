@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aea4d0c-ede5-4cf6-aa9f-0284bae610f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/readme.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScopeSim_Overview/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScopeSim_Overview/readme.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ScopeSim_FDR_Docs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScopeSim_FDR_Docs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScopeSim_technical_manual/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScopeSim_technical_manual/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ScopeSim_Overview/main.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_docutils_rst_latex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/play_multi_figures.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_add_figure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/play_pandoc.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/play_pandoc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,17 +69,26 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-446870863">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="528">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#94#0" expanded="true" />
-                <marker date="1596015249251" expanded="true" signature="570:571" ph="..." />
               </folding>
             </state>
           </provider>
@@ -127,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="396">
               <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
             </state>
           </provider>
@@ -136,13 +135,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/play_add_figure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="4356">
               <caret line="200" selection-start-line="200" selection-end-line="200" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1596031186073" expanded="true" signature="497:4555" ph="..." />
-                <marker date="1596031186073" expanded="true" signature="1807:1832" ph="..." />
-                <marker date="1596031186073" expanded="true" signature="4494:4496" ph="..." />
               </folding>
             </state>
           </provider>
@@ -257,8 +253,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/temp" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -398,11 +394,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="65" y="-7" width="1383" height="975" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.19127516" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21276596" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988372" visible="true" weight="0.19727892" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2123369" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -416,7 +412,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="3" sideWeight="0.50116277" visible="true" weight="0.1261745" />
+      <window_info anchor="right" id="Structure" order="3" sideWeight="0.50116277" visible="true" weight="0.12547241" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -475,15 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1540">
           <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="e#256#283#2" expanded="true" />
-            <element signature="e#751#768#2" expanded="true" />
-            <element signature="e#853#871#2" expanded="true" />
-            <element signature="e#1525#1554#2" expanded="true" />
-            <element signature="e#1600#1621#2" expanded="true" />
-            <element signature="e#1649#1670#2" expanded="true" />
-            <element signature="e#1918#1945#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -543,26 +530,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14744">
           <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="e#588#598#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pypandoc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pypandoc/__init__.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -570,12 +541,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/untitled.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/untitled.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/untitled.png" />
+    <entry file="file://$PROJECT_DIR$/temp/untitled.jpg" />
     <entry file="file://C:/Program Files/Python36/Lib/site-packages/matplotlib/cbook/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -583,18 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/my_fug2.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/my_fug.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/my_fug2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/my_fug3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/my_fug2.svg" />
+    <entry file="file://$PROJECT_DIR$/temp/my_fug.png" />
+    <entry file="file://$PROJECT_DIR$/temp/my_fug2.jpg" />
+    <entry file="file://$PROJECT_DIR$/temp/my_fug3.png" />
     <entry file="file://$PROJECT_DIR$/temp/source/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
@@ -627,38 +586,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="927" column="31" lean-forward="true" selection-start-line="927" selection-start-column="31" selection-end-line="927" selection-end-column="31" />
-          <folding>
-            <element signature="e#984#994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_add_figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <marker date="1596031186073" expanded="true" signature="497:4555" ph="..." />
-            <marker date="1596031186073" expanded="true" signature="1807:1832" ph="..." />
-            <marker date="1596031186073" expanded="true" signature="4494:4496" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#94#0" expanded="true" />
-            <marker date="1596015249251" expanded="true" signature="570:571" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_docutils_rst_latex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MICADO_instrument_packages_descriptions/main.tex">
       <provider selected="true" editor-type-id="text-editor">
@@ -675,6 +617,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ScopeSim_Overview/readme.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_pandoc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/play_add_figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4356">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MICADO_ScopeSim_user_manual/readme.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
