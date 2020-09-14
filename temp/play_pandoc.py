@@ -8,6 +8,8 @@ rst_text = """
 
 .. raw
 
+    Hello World!
+
 .. figure:: my_fug.pdf
     :name: fig:my_fug
 

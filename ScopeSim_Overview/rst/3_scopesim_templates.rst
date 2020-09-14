@@ -1,19 +1,21 @@
 On-sky target templates: ScopeSim_templates
 -------------------------------------------
 
-Documentation: scopesim-templates.readthedocs.io
+Documentation: https://scopesim-templates.readthedocs.io/
 
-Code Base: github.io/astronomyk/scopesim_templates
+Code Base: https://github.com/astronomyk/ScopeSim_templates
 
-Continuous integration : travis-ci
+Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim_Templates
 
-.. todo:: update link
+Author: Kieran Leschinski
+
 
 
 What is included in the package
 ++++++++++++++++++++++++++++++++
-- Functions to generate ``Source`` objects. 
+- Functions to generate ``Source`` objects.
 - .basic subpackage written by us
+- .advanced subpackage for community contributions
 - .micado subpackage written by micado pipeline team (HB)
 
 - can add packages for any other topic if anyone has code for this 
@@ -33,7 +35,7 @@ Source object interface
 Example
 +++++++
 
-.. todo:: code to make images for here
+.. warning:: code to make images for here
 
 - clusters
 - galaxies with velocity gradients

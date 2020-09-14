@@ -1,0 +1,91 @@
+
+
+\section{On-sky target templates: ScopeSim\_templates%
+  \label{on-sky-target-templates-scopesim-templates}%
+}
+
+Documentation: \url{https://scopesim-templates.readthedocs.io/}
+
+Code Base: \url{https://github.com/astronomyk/ScopeSim_templates}
+
+Continuous integration: \url{https://travis-ci.org/github/astronomyk/ScopeSim_Templates}
+
+Author: Kieran Leschinski
+
+
+\subsection{What is included in the package%
+  \label{what-is-included-in-the-package}%
+}
+
+\begin{itemize}
+\item Functions to generate \texttt{Source} objects.
+
+\item .basic subpackage written by us
+
+\item .advanced subpackage for community contributions
+
+\item .micado subpackage written by micado pipeline team (HB)
+
+\item can add packages for any other topic if anyone has code for this
+
+\item functions do not necessarily need spectra. stars for example need mags/fluxes
+\end{itemize}
+
+
+\subsection{Source object interface%
+  \label{source-object-interface}%
+}
+
+\begin{itemize}
+\item 
+\begin{description}
+\item[{spatial description}] \leavevmode 
+\begin{itemize}
+\item ascii
+
+\item fits ImageHDU
+
+\item fits cube (3D ImageHDU)
+\end{itemize}
+
+\end{description}
+
+\item 
+\begin{description}
+\item[{spectral description}] \leavevmode 
+\begin{itemize}
+\item synphot.SourceSpectrum
+\end{itemize}
+
+\end{description}
+\end{itemize}
+
+
+\subsection{Example%
+  \label{example}%
+}
+
+\DUadmonition[warning]{
+\DUtitle[warning]{Warning}
+
+code to make images for here
+}
+
+\begin{itemize}
+\item clusters
+
+\item galaxies with velocity gradients
+\end{itemize}
+
+
+\subsection{Documentation%
+  \label{documentation}%
+}
+
+\begin{itemize}
+\item scopesim\_templates main documentation
+
+\item source object interface documentation from scopesim-templates
+
+\item converting from simcado to scopesim
+\end{itemize}

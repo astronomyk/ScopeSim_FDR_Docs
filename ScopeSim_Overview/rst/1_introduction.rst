@@ -1,14 +1,19 @@
 Introduction
-------------
+============
 
 An overview of the ScopeSim environment
 +++++++++++++++++++++++++++++++++++++++
 
 ScopeSim is a modular and flexible suite of python packages that enable (almost) any astronomical optical (observatory/telescope/instrument) system to be simulated.
 
-The suite of packages can be used by a wide audience for a variety of purposes; from a astronomer interested in simulating reduced observational data, to a pipeline developer who needs raw calibration data for testing the pipeline.
+The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a pipeline developer needing raw calibration data for testing the pipeline.
 
-.. todo:: Add image of scopesim environment
+.. figure:: images/scopesim_environment_overview.png
+    :name: fig-scopesim-environment
+    :scale: 30 %
+
+    The packages belonging to the ScopeSim environment.
+
    
 ScopeSim achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the ScopeSim engine package is completely instrument and object agnostic. 
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (IRDB). 
@@ -17,18 +22,18 @@ The description of the on-sky source is keep exclusively within the target ``tem
 
 The core of the ScopeSim environment are the three packages:
 
-- ScopeSim: the simulation engine
-- ScopeSim_templates: descriptions of the on-sky sources
-- IRDB: the instrument reference database.
+- ``ScopeSim``: the simulation engine
+- ``ScopeSim_templates``: descriptions of the on-sky sources
+- ``IRDB``: the instrument reference database.
 
 In addition to the core package, there are several support packages:
 
-- AnisoCADO: simulates SCAO PSFs for the ELT
-- SkyCalc_ipy: queries the ESO skycalc service for atmospheric spectral curves
-- SpeXtra: provides easy access to many well-known spectral libraries
-- Pyckles: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
+- ``AnisoCADO``: simulates SCAO PSFs for the ELT
+- ``SkyCalc_ipy``: queries the ESO skycalc service for atmospheric spectral curves
+- ``SpeXtra``: provides easy access to many well-known spectral libraries
+- ``Pyckles``: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
 
-Each of these packages will be discussed in detail in the remainder of this document.
+Each of these packages will be discussed in detail in the following sections.
 
 
 Document Scope
@@ -41,7 +46,7 @@ Rationale for the ScopeSim environment
 ++++++++++++++++++++++++++++++++++++++
 
 Until now most instrument consortia have developed their own simulators. 
-The general argument is that every new instrument is sufficiently different from anything that has been previously developed, that it would make no sense to adapt already existing code. 
+The general concensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent. 
 Every new instrument must differ in some way from all existing instruments in order for it to be useful to the astronomical community.
 However when looked at from a global perspective, every optical system is comprised primarily of elements common to all other systems. 
@@ -49,7 +54,9 @@ Atmospheric emission, mirror reflectivities, filter transmission curves, point s
 Furthermore, while the amplitude and shape of each effect differs between optical systems, there are still commonalities in the way each effect can be described programmatically. 
 
 ScopeSim's main goal is to provide a framework for modelling (almost) any astronomical optical system by taking advantage of all these commonalities.
-What astropy has done for python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
+What astropy has done for the general python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
+
+
 
 
 Community involvement
@@ -68,9 +75,8 @@ We however encourage anyone who has made these custom ``Effects`` to submit a pu
 Documentation and code bases
 ++++++++++++++++++++++++++++
 
-.. todo:: update table
-
-.. list-table:: docs_and_code
+.. list-table:: Links to the open source doumentation and code bases
+    :name: tbl-list-of-packages
 
     *   - Package
         - Documentation
@@ -79,21 +85,21 @@ Documentation and code bases
         - https://scopesim.readthedocs.io/
         - https://github.io/astronomyk/scopesim
     *   - ScopeSim_templates
-        - 
-        - 
+        - https://scopesim-templates.readthedocs.io/
+        - https://github.com/astronomyk/ScopeSim_templates
     *   - IRDB
-        - 
-        -
+        - https://irdb.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/IRDB
     *   - AnisoCADO
-        - 
-        -
+        - https://anisocado.readthedocs.io/
+        - https://github.com/astronomyk/AnisoCADO
     *   - SkyCalc_ipy
-        - 
-        -
+        - https://skycalc-ipy.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/SkyCalc_iPy
     *   - SpeXtra
-        - 
-        -
+        - https://spextra.readthedocs.io/en/latest/
+        - https://github.com/miguelverdugo/speXtra
     *   - Pyckles
-        - 
-        -
+        - https://pyckles.readthedocs.io/en/latest/
+        - https://github.com/astronomyk/Pyckles
     

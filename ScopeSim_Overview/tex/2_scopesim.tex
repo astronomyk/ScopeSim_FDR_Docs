@@ -1,0 +1,113 @@
+
+
+\section{The ScopeSim engine%
+  \label{the-scopesim-engine}%
+}
+
+Documentation: \url{https://scopesim.readthedocs.io/}
+
+Code Base: \url{https://github.com/astronomyk/ScopeSim}
+
+Continuous integration: \url{https://travis-ci.org/github/astronomyk/ScopeSim}
+
+Author: Kieran Leschinski
+
+
+\subsection{How the ScopeSim engine works%
+  \label{how-the-scopesim-engine-works}%
+}
+
+The scopesim engine is the core of the scopesim environment.
+At the heart of scopesim are two major concepts.
+
+\begin{itemize}
+\item The observed output is the target input plus a series of optical artefacts
+
+\item The effect of each optical artefact is independent of all other artefacts
+\end{itemize}
+
+If we follow these to concepts to their logical conclusion we end up with a situation where optical artefacts can be treated as a series of \textquotedbl{}lego bricks\textquotedbl{} and any digital optical model can be constructed much in the same way as a lego model; by stacking the correct combination of effect \textquotedbl{}bricks\textquotedbl{} together in the right order.
+
+The ScopeSim engine is therefore comprised of two types of objects: a collection of \texttt{Effect} object subclasses, and a series of \textquotedbl{}management\textquotedbl{} classes.
+
+The \texttt{Effect} object is a lightweight class that acts as a simple operator class.
+Object goes in, object comes out.
+Albeit with the flux distribution slightly altered in one way or another.
+Here the object in question can be any one of the 4 main flux distribution classes:
+
+\begin{itemize}
+\item \texttt{Source}: (x, y, lambda)
+
+\item \texttt{FieldOfView}: (x, y, lambda\_0)
+
+\item \texttt{ImagePlane}: (x, y, sum(lambda))
+
+\item \texttt{DetectorPlane}: (x, y, e-)
+\end{itemize}
+
+\DUadmonition[warning]{
+\DUtitle[warning]{Warning}
+
+finish section
+}
+
+
+\subsection{Optical system capabilities%
+  \label{optical-system-capabilities}%
+}
+
+\begin{itemize}
+\item Imaging
+
+\item Spectroscopy (LS, MOS, IFU)
+
+\item Simultaneous readouts on multiple image planes
+\end{itemize}
+
+
+\subsection{Explanation of Effect objects%
+  \label{explanation-of-effect-objects}%
+}
+
+\begin{itemize}
+\item effects are operators, what is passed, is returned
+
+\item 
+\begin{description}
+\item[{effect classes can alter the object in a variety of ways:}] \leavevmode 
+\begin{itemize}
+\item intensity (mult, add, sub) in x,y and/or lambda
+
+\item shifts
+
+\item convolutions
+
+\item spreads
+\end{itemize}
+
+\end{description}
+\end{itemize}
+
+effects are applied one after the other, first lam, then xylam, then xy
+- effects can also be electronic in nature,
+- examples of effects, psf, linearity, exposure
+
+
+\subsection{Explanation of observation workflow%
+  \label{explanation-of-observation-workflow}%
+}
+
+\begin{itemize}
+\item pseudo code for loop
+
+\item description of 4 objects, and why they are important
+\end{itemize}
+
+
+\subsection{Documentation%
+  \label{documentation}%
+}
+
+\begin{itemize}
+\item Tutorials on read the docs
+\end{itemize}

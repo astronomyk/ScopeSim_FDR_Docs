@@ -1,13 +1,13 @@
 The ScopeSim engine
 -------------------
         
-Documentation: scopesim.readthedocs.io
+Documentation: https://scopesim.readthedocs.io/
 
-Code Base: github.io/astronomyk/scopesim
+Code Base: https://github.com/astronomyk/ScopeSim
 
-Continuous integration : travis-ci
+Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim
 
-.. todo:: update link
+Author: Kieran Leschinski
 
 
 How the ScopeSim engine works
@@ -17,9 +17,9 @@ The scopesim engine is the core of the scopesim environment.
 At the heart of scopesim are two major concepts. 
 
 - The observed output is the target input plus a series of optical artefacts
-- The effect of each optical artefact is indenpendent of all other artefacts
+- The effect of each optical artefact is independent of all other artefacts
 
-If we follow these to Ansätze to their logical conclusion we end up with a situation where optical artefacts can be treated as a series of "lego bricks" and any digital optical model can be constructed much in the same way as a lego model; by stacking the correct combination of effect "bricks" together in the right order.
+If we follow these to concepts to their logical conclusion we end up with a situation where optical artefacts can be treated as a series of "lego bricks" and any digital optical model can be constructed much in the same way as a lego model; by stacking the correct combination of effect "bricks" together in the right order.
 
 The ScopeSim engine is therefore comprised of two types of objects: a collection of ``Effect`` object subclasses, and a series of "management" classes.
 
@@ -33,7 +33,7 @@ Here the object in question can be any one of the 4 main flux distribution class
 - ``ImagePlane``: (x, y, sum(lambda))
 - ``DetectorPlane``: (x, y, e-)
 
-.. todo:: finish section
+.. warning:: finish section
     
     
 Optical system capabilities
