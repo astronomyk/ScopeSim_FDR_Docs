@@ -41,14 +41,13 @@ As such it contains the following information.
 
 * A spectral description: Basically a spectrum with wavelength and flux information.
 
+The spatial description is internally stored as a ``astropy.table.Table`` object (in case of point sources)
+or as a ``astropy.io.fits.ImageHDU`` object (extended sources.
 
+The spectral description is stored as a ``synphot.SourceSpectrum`` object.
 
-- spatial description
-    - ascii
-    - fits ImageHDU
-    - fits cube (3D ImageHDU)
-- spectral description
-    - synphot.SourceSpectrum
+We plan to add support for fits data cubes.
+
 
 
 Installation
