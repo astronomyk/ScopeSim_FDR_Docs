@@ -9,10 +9,19 @@ Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim_Templat
 
 Author: Kieran Leschinski
 
+Functionality
+-------------
+
+``ScopeSim_templates`` creates astronomical sources in a format (``Source`` objects)
+that can be used with the instrument simulator ``ScopeSim``. It is designed to
+be agnostic regarding the instrument/telescope details. It is also possible to add
+new sources with relative ease.
 
 
 What is included in the package
 ++++++++++++++++++++++++++++++++
+
+
 - Functions to generate ``Source`` objects.
 - .basic subpackage written by us
 - .advanced subpackage for community contributions
@@ -24,6 +33,16 @@ What is included in the package
 
 Source object interface
 +++++++++++++++++++++++
+
+A ScopeSim ``Source`` object is essentially a 2+1D (x, y, lambda) description of an on-sky object.
+As such it contains the following information.
+
+* A spatial description: Either in table form (point sources) or in image/bitmap form (extended source).
+
+* A spectral description: Basically a spectrum with wavelength and flux information.
+
+
+
 - spatial description
     - ascii
     - fits ImageHDU
@@ -31,7 +50,36 @@ Source object interface
 - spectral description
     - synphot.SourceSpectrum
 
-    
+
+Installation
+++++++++++++
+
+To install ``ScopeSim_templates`` simply type::
+
+    pip install scopesim_templates
+
+For the development version please visit the github repository.
+
+``ScopeSim_templates`` should run with ``Python`` versions 3.5 and above.
+
+
+Dependencies
+++++++++++++
+
+The following dependencies are necessary to run ScopeSim_templates``
+installed.
+
+* ``numpy``
+* ``scipy``
+* ``astropy``
+* ``synphot``
+* ``PyYAML``
+* ``pyckles``
+* ``scopesim``
+* ``spextra``
+* ``synphot``
+
+
 Example
 +++++++
 
@@ -47,3 +95,4 @@ Documentation
 - scopesim_templates main documentation
 - source object interface documentation from scopesim-templates
 - converting from simcado to scopesim
+
