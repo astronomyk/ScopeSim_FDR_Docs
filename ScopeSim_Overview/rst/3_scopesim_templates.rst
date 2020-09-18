@@ -24,7 +24,7 @@ Source object interface
 +++++++++++++++++++++++
 
 A ``ScopeSim.Source`` object is a 2+1D (x, y, lambda) description of an on-sky object.
-As such, they need to contain the following information:
+As such, it needs to contain the following information:
 
 * A spatial description of the flux distribution on the sky. Either in table form (point sources)
   or in image/bitmap form (extended sources). The spatial description is internally stored as
@@ -37,6 +37,7 @@ As such, they need to contain the following information:
 
 We plan to add support for fits datacubes in the near future.
 
+Composition of sources are possible, for example creating an stellar field around a galaxy.
 
 
 What is included in the package
@@ -58,17 +59,6 @@ They include a
 
 * A ``.micado`` subpackage which contains MICADO specific sources with the main purpose of pipeline
   testing
-
-
-
-Functions to generate ``Source`` objects.
-- .basic subpackage written by us
-- .advanced subpackage for community contributions
-- .micado subpackage written by micado pipeline team (HB)
-
-- can add packages for any other topic if anyone has code for this 
-- functions do not necessarily need spectra. stars for example need mags/fluxes
-
 
 
 
@@ -104,10 +94,63 @@ installed.
 Example
 +++++++
 
-.. warning:: code to make images for here
+1. A stellar cluster with a mass of 100 Msun, located at 1000pc and a core radius of 1pc. Currently only
+   age=0 is supported.
 
-- clusters
-- galaxies with velocity gradients
+.. plot::
+    :context: reset
+    :include-source:
+    :align: center
+
+    import matplotlib.pyplot as plt
+    from templates.basic import star_cluster
+
+    # This creates the source
+    cluster = star_cluster(mass=100, distance=1000, core_radius=1)
+
+    # Let's examine the fields
+    table = star_cluster.fields[0]
+    print(table)
+
+    # And now the positions
+    plt.plot(table["x"], table["y"], ".")
+
+
+2. A two component galaxy, with a younger component described by a star-forming spectra and an older by a
+   passive evolving spectral energy distribution
+
+.. plot::
+    :context: reset
+    :include-source:
+    :align: center
+
+    from scopesim_templates.basic.galaxy import spiral_two_component
+    import matplotlib.pyplot as plt
+    import astropy.units as u
+
+    gal = spiral_two_component(fluxes=(20*u.ABmag, 21*u.ABmag))
+
+    plt.subplot(121)
+    plt.imshow(gal.fields[0].data)
+    plt.subplot(122)
+    plt.imshow(gal.fields[1].data)
+
+
+Above only the flux distribution on the sky can be appreciated. The description regarding the total flux
+and its dependence with wavelength is contained in the ``.spectra`` property.
+
+.. plot::
+    :context: reset
+    :include-source:
+    :align: center
+
+    from scopesim_templates.basic.galaxy import spiral_two_component
+    import matplotlib.pyplot as plt
+    import astropy.units as u
+
+    gal = spiral_two_component(fluxes=(20*u.ABmag, 21*u.ABmag))
+    gal.spectra[0].plot(left=3000, right=8000, flux_unit="FLAM")
+
     
 
 Documentation
