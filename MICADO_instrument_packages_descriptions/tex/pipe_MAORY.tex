@@ -1,0 +1,209 @@
+
+
+\section{OpticalElement: \textquotedbl{}MAORY\textquotedbl{}%
+  \label{opticalelement-maory}%
+}
+
+\textbf{Element}: relay\_optics
+
+\textbf{Alias}: RO
+
+\textbf{Description}: MAORY AO relay module
+
+
+\subsection{Global properties%
+  \label{global-properties}%
+}
+
+\begin{quote}
+\begin{alltt}
+ temperature : !ATMO.temperature
+psf_filename : None
+element_name : MAORY
+\end{alltt}
+\end{quote}
+
+
+\subsection{Effects%
+  \label{effects}%
+}
+
+Summary of Effects included in this optical element:
+
+\setlength{\DUtablewidth}{\linewidth}
+\begin{longtable*}[c]{|p{0.098\DUtablewidth}|p{0.226\DUtablewidth}|p{0.203\DUtablewidth}|p{0.110\DUtablewidth}|p{0.179\DUtablewidth}|}
+\hline
+\textbf{%
+element
+} & \textbf{%
+name
+} & \textbf{%
+class
+} & \textbf{%
+included
+} & \textbf{%
+z\_orders
+} \\
+\hline
+\endfirsthead
+\hline
+\textbf{%
+element
+} & \textbf{%
+name
+} & \textbf{%
+class
+} & \textbf{%
+included
+} & \textbf{%
+z\_orders
+} \\
+\hline
+\endhead
+\multicolumn{5}{c}{\hfill ... continued on next page} \\
+\endfoot
+\endlastfoot
+
+MAORY
+ & 
+maory\_surface\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MAORY
+ & 
+maory\_generic\_psf
+ & 
+FieldConstantPSF
+ & 
+True
+ & 
+{[}262, 662{]}
+ \\
+\hline
+\end{longtable*}
+\label{tbl-maory}
+
+
+\subsubsection{SurfaceList: \textquotedbl{}maory\_surface\_list\textquotedbl{}%
+  \label{surfacelist-maory-surface-list}%
+}
+
+\textbf{Included by default}: \texttt{True}
+
+\textbf{File Description}: list of surfaces in MAORY
+
+\textbf{Class Description}: <no docstring>
+
+\textbf{Changes}:
+
+\begin{itemize}
+\item 2018-11-19 (KL) Added meta data, changed Dichr. filename
+
+\item 2019-01-28 (KL) Fixed YAML format in meta data
+
+\item 2020-06-22 (KL) Obsolete. Use LIST\_mirrors\_maory\_mms.tbl from now on.
+\end{itemize}
+
+
+\paragraph{Data%
+  \label{data}%
+}
+
+
+\paragraph{Meta-data%
+  \label{meta-data}%
+}
+
+\begin{quote}
+\begin{alltt}
+          filename : LIST_mirrors_MCAO_MAORY.tbl
+              name : maory_surface_list
+       temperature : !ATMO.temperature
+      psf_filename : None
+      element_name : MAORY
+            author : Kieran Leschinski
+            source : Ciliegi+ 2018 SPIE, "MAORY for ELT - preliminary design overview"
+      date_created : 2018-11-19
+     date_modified : 2018-11-19
+            status : Design - pre PDR list of MAORY mirrors
+              type : mirror:list
+        outer_unit : m
+        inner_unit : m
+        angle_unit : degree
+  temperature_unit : deg_C
+           z_order : [20, 120, 520]
+           include : True
+      ignore_wings : False
+          wave_min : !SIM.spectral.wave_min
+          wave_max : !SIM.spectral.wave_max
+         wave_unit : !SIM.spectral.wave_unit
+          wave_bin : !SIM.spectral.spectral_resolution
+minimum_throughput : !SIM.spectral.minimum_throughput
+           etendue : !TEL.etendue
+\end{alltt}
+\end{quote}
+
+
+\subsubsection{FieldConstantPSF: \textquotedbl{}maory\_generic\_psf\textquotedbl{}%
+  \label{fieldconstantpsf-maory-generic-psf}%
+}
+
+\textbf{Included by default}: \texttt{True}
+
+\textbf{File Description}: MAORY field varying MCAO PSF
+
+\textbf{Class Description}: <no docstring>
+
+\textbf{Changes}:
+
+\begin{itemize}
+\item \end{itemize}
+
+
+\paragraph{Data%
+  \label{id1}%
+}
+
+
+\paragraph{Meta-data%
+  \label{id2}%
+}
+
+\begin{quote}
+\begin{alltt}
+        filename : PSF_MCAO_ConstPSF_40_18_6.fits
+            name : maory_generic_psf
+     temperature : 7
+    psf_filename : None
+    element_name : MAORY
+         warning : Default PSF is not Field Varying. See Documentation
+          SIMPLE : True
+          BITPIX : 8
+           NAXIS : 0
+          EXTEND : True
+          AUTHOR : Kieran Leschinski
+        DATE_CRE : 2019-07-30
+        DATE_MOD : 2019-07-30
+          SOURCE : AnisoCADO
+          STATUS : Best guess for a MAORY ConstantPSF with AnisoCADO
+           ETYPE : CONSTPSF
+            ECAT : -1
+           EDATA : 1
+         XOFFSET : 0
+         YOFFSET : 0
+         z_order : [262, 662]
+         include : True
+   flux_accuracy : 0.001
+  sub_pixel_flag : False
+   convolve_mode : full
+        wave_key : WAVE0
+normalise_kernel : True
+\end{alltt}
+\end{quote}
