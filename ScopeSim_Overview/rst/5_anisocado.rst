@@ -27,6 +27,7 @@ Examples
 
 .. code::
     :class: execute
+    :name: code-anisocado-example
 
     from anisocado import AnalyticalScaoPsf
 
@@ -38,6 +39,7 @@ Examples
     action: plot
     name: anisocado_basic_example
     ---
+    plt.figure(figsize=(10,5))
     plt.subplot(121)
     plt.imshow(on_axis, norm=LogNorm())
     plt.subplot(122)
