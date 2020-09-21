@@ -47,8 +47,9 @@ Examples
 
 
 
-.. figure:: ../images/anisocado_basic_example.png
+.. figure:: images/anisocado_basic_example.png
     :name: fig-anisocado-basic-example
+    :scale: 50 %
 
     Left: the on-axis K-band (2.15$\mu$m) SCAO PSF for standrard atmospheric conditions.
     Right: the K-band SCAO-PSF at the position (15, -5) arcseconds from the natural guide star.
