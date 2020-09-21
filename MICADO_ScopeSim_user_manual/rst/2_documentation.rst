@@ -38,13 +38,11 @@ Once ScopeSim is available to the local Python (version >= 3.5) installation, th
                                "instruments/MAORY",
                                "instruments/MICADO"])
 
-.. note:: There are two (2) MICADO packages available
+.. note:: There are two (2) MICADO packages available: ``MICADO`` and ``MICADO_Sci``.
 
-    ``MICADO`` and ``MICADO_Sci``.
-
-    For those interested in quick results, ``MICADO_Sci`` provides a reduced version of the MICADO package that contains all the major effects expected from the MICADO optical system.
-    For those more concerned with accuracy, the standard ``MICADO`` package contains all expected optical effects.
-    ``MICADO`` was originally developed for the development of the reduction pipeline, and therefore contains many effects that are beyond the scope of normal science case feasability studies.
+For those interested in quick results, ``MICADO_Sci`` provides a reduced version of the MICADO package that contains all the major effects expected from the MICADO optical system.
+For those more concerned with accuracy, the standard ``MICADO`` package contains all expected optical effects.
+``MICADO`` was originally developed for the development of the reduction pipeline, and therefore contains many effects that are beyond the scope of normal science case feasability studies.
 
 
 Primary vs Support packages

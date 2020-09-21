@@ -9,9 +9,9 @@ This latest iteration of SimCADO is superior to the original version in the sens
 
 In a word, SimCADO has been de-spaghetti-afied.
 
-.. figure:: ../images/simcado_evolution.png
+.. figure:: images/simcado_evolution.png
     :name: fig-simcado-evolution
-    :scale: 50 %
+    :scale: 30 %
 
     Left: SimCADO v1 contained everything needed to run a simulation for MICADO.
     However the inner algorithms were convoluted and interconnected.
