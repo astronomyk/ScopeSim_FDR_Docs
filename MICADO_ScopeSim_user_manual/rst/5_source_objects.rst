@@ -9,3 +9,10 @@ Making an on-sky Source
     - Elliptical galaxy
     - Custom extended source
     - Combining sources
+
+
+
+.. _SimCADO: https://simcado.readthedocs.io/en/latest/
+.. _ScopeSim: https://scopesim.readthedocs.io/en/latest/
+.. _IRDB: https://github.com/astronomyk/irdb
+.. _ScopeSim_Templates: https://scopesim-templates.readthedocs.io/en/latest/

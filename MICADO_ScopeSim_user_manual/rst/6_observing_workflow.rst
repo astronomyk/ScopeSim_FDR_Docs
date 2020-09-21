@@ -19,3 +19,10 @@ Contolling the simulation
     - slit size
     - zenith distance
     - psf model
+
+
+
+.. _SimCADO: https://simcado.readthedocs.io/en/latest/
+.. _ScopeSim: https://scopesim.readthedocs.io/en/latest/
+.. _IRDB: https://github.com/astronomyk/irdb
+.. _ScopeSim_Templates: https://scopesim-templates.readthedocs.io/en/latest/

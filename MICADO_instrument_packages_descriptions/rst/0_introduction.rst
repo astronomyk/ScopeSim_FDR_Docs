@@ -26,6 +26,7 @@ These two packages serve two different audiences:
 
 Support packages
 ################
+
 The MICADO packages, as the names suggest, only describe the contents of the MICADO instrument.
 Observations with MICADO will however rely on the ELT infrastructure, which can be decomposed into several parts: Location, Telescope, Relay optics.
 Each of these additional parts can be considered as closed optical elements in the full observational optical system.
