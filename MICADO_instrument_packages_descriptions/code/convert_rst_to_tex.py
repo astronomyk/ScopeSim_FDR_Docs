@@ -2,7 +2,6 @@ import glob
 import os.path as pth
 from scopesim import rc
 from scopesim.reports import rst_utils as ru
-from docutils.core import publish_file, publish_parts
 
 
 for fname in glob.glob("../rst/*.rst"):
