@@ -10,7 +10,8 @@ for fname in glob.glob("../rst/*.rst"):
         rst_text = rst_path.read()
 
     f_out = pth.basename(fname).replace("rst", "tex")
-    ru.latexify_rst_text(rst_text, filename=f_out, path="../tex/")
+    ru.latexify_rst_text(rst_text, filename=f_out, path="../tex/",
+                         float_figures=False)
 
     rc.__config__["!SIM.reports.image_path"] = "../images/"
     ru.plotify_rst_text(rst_text)
