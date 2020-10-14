@@ -57,11 +57,13 @@ Author: Kieran Leschinski
 \begin{DUclass}{execute}
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
 from anisocado import AnalyticalScaoPsf
 
 psf = AnalyticalScaoPsf(N=64, wavelength=2.15)  # um
 on_axis = psf.psf_on_axis
 off_axis = psf.shift_off_axis(15, -5)   # arcsec
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 \end{DUclass}

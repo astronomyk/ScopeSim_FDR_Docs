@@ -17,7 +17,8 @@ Here is a basic example of creating a star cluster using ``ScopeSim_templates``:
 
     from scopesim_templates.basic.stars import cluster
 
-    my_cluster = cluster(mass=1000, distance=50000, half_light_radius=1)
+    my_cluster = cluster(mass=1000, distance=50000,
+                         half_light_radius=1)
 
 ..
     action: plot

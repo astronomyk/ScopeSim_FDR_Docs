@@ -33,10 +33,10 @@ The casual user will also probably want to install the templates package, which 
 Once ScopeSim is available to the local Python (version >= 3.5) installation, the user must download **ALL** the required instrument packages from the server::
 
     from scopesim.server import download_package
-    scopesim.download_package(["locations/Armazones",
-                               "telescopes/ELT",
-                               "instruments/MAORY",
-                               "instruments/MICADO"])
+    download_package(["locations/Armazones",
+                      "telescopes/ELT",
+                      "instruments/MAORY",
+                      "instruments/MICADO"])
 
 .. note:: There are two (2) MICADO packages available: ``MICADO`` and ``MICADO_Sci``.
 
@@ -51,7 +51,7 @@ Primary vs Support packages
 ``MICADO`` and ``MICADO_Sci`` are primary packages.
 This means they contain detector modules that enable an on-sky target to be observed
 
-Armazones, ELT, and MAORY are support packages.
+``Armazones``, ``ELT``, and ``MAORY`` are support packages.
 They do not contain detector modules.
 
 Just like in real life, observing with only MICADO would be a difficult task.

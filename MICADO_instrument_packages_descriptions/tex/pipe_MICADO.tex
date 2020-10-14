@@ -17,8 +17,10 @@
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
  temperature : -190
 element_name : MICADO
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -134,6 +136,7 @@ True
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
           filename : LIST_MICADO_mirrors_static.dat
               name : micado_static_surfaces
        temperature : -190
@@ -157,6 +160,7 @@ True
           wave_bin : !SIM.spectral.spectral_resolution
 minimum_throughput : !SIM.spectral.minimum_throughput
            etendue : !TEL.etendue
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -188,6 +192,7 @@ minimum_throughput : !SIM.spectral.minimum_throughput
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
           filename : filters/TC_filter_Spec_HK.dat
               name : micado_filter
        temperature : -190
@@ -212,6 +217,7 @@ minimum_throughput : 0.000101
             action : transmission
           position : -1
    wing_flux_level : None
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -244,6 +250,7 @@ minimum_throughput : 0.000101
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
         filename : INST_MICADO_wavefront_error_budget.dat
             name : micado_ncpas_psf
      temperature : -190
@@ -267,5 +274,6 @@ normalise_kernel : True
     strehl_drift : 0.02
         wave_min : !SIM.spectral.wave_min
         wave_max : !SIM.spectral.wave_max
+\end{lstlisting}
 \end{alltt}
 \end{quote}

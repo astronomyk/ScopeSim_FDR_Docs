@@ -97,35 +97,36 @@ Example
 1. A stellar cluster with a mass of 100 Msun, located at 1000pc and a core radius of 1pc. Currently only
    age=0 is supported.
 
-.. plot::
-    :context: reset
-    :include-source:
-    :align: center
+.. code::
+    :class: plot, clear-figure
+    :name: scopesim_templates_cluster
 
     import matplotlib.pyplot as plt
-    from templates.basic import star_cluster
+    from scopesim_templates.basic.stars import cluster
 
     # This creates the source
-    cluster = star_cluster(mass=100, distance=1000, core_radius=1)
+    my_cluster = cluster(mass=100, distance=1000, core_radius=1)
 
-    # Let's examine the fields
-    table = star_cluster.fields[0]
-    print(table)
-
-    # And now the positions
+    # Plot the positions
+    table = my_cluster.fields[0]
     plt.plot(table["x"], table["y"], ".")
+
+
+.. figure:: images/scopesim_templates_cluster.png
+    :name: fig-scopesim-templates-cluster
+    :scale: 50 %
+
+    The positions of the cluster stars in arcseconds relative to the centre of the field of view .
 
 
 2. A two component galaxy, with a younger component described by a star-forming spectra and an older by a
    passive evolving spectral energy distribution
 
-.. plot::
-    :context: reset
-    :include-source:
-    :align: center
+.. code::
+    :class: plot, clear-figure
+    :name: scopesim_templates_galaxy
 
     from scopesim_templates.basic.galaxy import spiral_two_component
-    import matplotlib.pyplot as plt
     import astropy.units as u
 
     gal = spiral_two_component(fluxes=(20*u.ABmag, 21*u.ABmag))
@@ -136,22 +137,30 @@ Example
     plt.imshow(gal.fields[1].data)
 
 
+.. figure:: images/scopesim_templates_galaxy.png
+    :name: fig-scopesim-templates-galaxy
+    :scale: 50 %
+
+    The two images which represent the new and old stellar populations of the spiral galaxy.
+
+
 Above only the flux distribution on the sky can be appreciated. The description regarding the total flux
 and its dependence with wavelength is contained in the ``.spectra`` property.
 
-.. plot::
-    :context: reset
-    :include-source:
-    :align: center
-
-    from scopesim_templates.basic.galaxy import spiral_two_component
-    import matplotlib.pyplot as plt
-    import astropy.units as u
+.. code::
+    :class: plot, clear-figure
+    :name: scopesim_templates_galaxy_spectra
 
     gal = spiral_two_component(fluxes=(20*u.ABmag, 21*u.ABmag))
     gal.spectra[0].plot(left=3000, right=8000, flux_unit="FLAM")
+    gal.spectra[1].plot(left=3000, right=8000, flux_unit="FLAM")
 
-    
+
+.. figure:: images/scopesim_templates_galaxy_spectra.png
+    :name: fig-scopesim-templates-galaxy-spectra
+    :scale: 50 %
+
+    The spectra associated with each of the galaxy components
 
 Documentation
 +++++++++++++

@@ -17,9 +17,11 @@
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
  temperature : !ATMO.temperature
 psf_filename : None
 element_name : default_ro
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -118,6 +120,7 @@ True
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
         filename : PSF_SCAO_ConstPSF_0_5off.fits
             name : relay_psf
      temperature : 7
@@ -145,6 +148,7 @@ True
    convolve_mode : full
         wave_key : WAVE0
 normalise_kernel : True
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -183,6 +187,7 @@ normalise_kernel : True
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
           filename : LIST_RO_SCAO_mirrors.dat
               name : relay_surface_list
        temperature : !ATMO.temperature
@@ -207,5 +212,6 @@ normalise_kernel : True
           wave_bin : !SIM.spectral.spectral_resolution
 minimum_throughput : !SIM.spectral.minimum_throughput
            etendue : !TEL.etendue
+\end{lstlisting}
 \end{alltt}
 \end{quote}

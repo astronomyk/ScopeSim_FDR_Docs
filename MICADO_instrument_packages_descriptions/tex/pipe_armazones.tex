@@ -17,6 +17,7 @@
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
     altitude : 3060
    longitude : -70.1918
     latitude : -24.5899
@@ -28,6 +29,7 @@
  pupil_angle : !OBS.pupil_angle
  pixel_scale : !INST.pixel_scale
 element_name : armazones
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -141,6 +143,7 @@ False
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
        filename : TER_armazones_default_NIR_IMG.dat
            name : armazones_atmo_default_ter_curve
         include : True
@@ -175,6 +178,7 @@ wavelength_unit : um
            area : !TEL.area
       area_unit : m2
        position : 0
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -206,6 +210,7 @@ wavelength_unit : um
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
           filename : None
               name : armazones_atmo_dispersion
           altitude : 3060
@@ -226,6 +231,7 @@ wavelength_unit : um
           wave_max : !SIM.spectral.wave_max
 sub_pixel_fraction : !SIM.sub_pixel.fraction
          num_steps : 1000
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -257,6 +263,7 @@ sub_pixel_fraction : !SIM.sub_pixel.fraction
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
     filename : None
         name : armazones_atmo_skycalc_ter_curve
      include : False
@@ -286,5 +293,6 @@ ignore_wings : False
         area : !TEL.area
    area_unit : m2
     position : 0
+\end{lstlisting}
 \end{alltt}
 \end{quote}

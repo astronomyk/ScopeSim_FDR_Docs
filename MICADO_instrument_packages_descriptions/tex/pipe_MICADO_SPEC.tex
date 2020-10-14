@@ -17,9 +17,11 @@
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
  pixel_scale : 0.004
  plate_scale : 0.2666666667
 element_name : MICADO_SPEC
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -133,6 +135,7 @@ True
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
           filename : LIST_MICADO_mirrors_spec.dat
               name : spec_mode_optics
        pixel_scale : 0.004
@@ -159,6 +162,7 @@ True
           wave_bin : !SIM.spectral.spectral_resolution
 minimum_throughput : !SIM.spectral.minimum_throughput
            etendue : !TEL.etendue
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -193,6 +197,7 @@ minimum_throughput : !SIM.spectral.minimum_throughput
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
       filename : !OBS.slit_file
           name : spectroscopic_slit_aperture
    pixel_scale : 0.004
@@ -213,6 +218,7 @@ minimum_throughput : !SIM.spectral.minimum_throughput
          shape : rect
 conserve_image : True
             id : 0
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -257,6 +263,7 @@ conserve_image : True
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
         filename : !OBS.trace_file
             name : micado_spectral_traces
      pixel_scale : 0.004
@@ -289,5 +296,6 @@ col_number_start : 1
        x_colname : x
        y_colname : y
            dwave : 0.002
+\end{lstlisting}
 \end{alltt}
 \end{quote}

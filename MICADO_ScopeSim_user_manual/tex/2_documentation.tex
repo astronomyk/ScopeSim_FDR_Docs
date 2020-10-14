@@ -64,10 +64,10 @@ Once ScopeSim is available to the local Python (version >= 3.5) installation, th
 \begin{alltt}
 \begin{lstlisting}[frame=single]
 from scopesim.server import download_package
-scopesim.download_package(["locations/Armazones",
-                           "telescopes/ELT",
-                           "instruments/MAORY",
-                           "instruments/MICADO"])
+download_package(["locations/Armazones",
+                  "telescopes/ELT",
+                  "instruments/MAORY",
+                  "instruments/MICADO"])
 \end{lstlisting}
 \end{alltt}
 \end{quote}
@@ -90,7 +90,7 @@ For those more concerned with accuracy, the standard \texttt{MICADO} package con
 \texttt{MICADO} and \texttt{MICADO\_Sci} are primary packages.
 This means they contain detector modules that enable an on-sky target to be observed
 
-Armazones, ELT, and MAORY are support packages.
+\texttt{Armazones}, \texttt{ELT}, and \texttt{MAORY} are support packages.
 They do not contain detector modules.
 
 Just like in real life, observing with only MICADO would be a difficult task.

@@ -21,7 +21,6 @@ Contolling the simulation
     - psf model
 
 
-
 .. _SimCADO: https://simcado.readthedocs.io/en/latest/
 .. _ScopeSim: https://scopesim.readthedocs.io/en/latest/
 .. _IRDB: https://github.com/astronomyk/irdb

@@ -20,16 +20,18 @@ Author: Miguel Verdugo
 }
 
 \texttt{speXtra} packages several \texttt{synphot} workflows in simple-to-use methods that allow the user
-to manipulate astronomical spectra. For example, the user
-can extract the magnitude from an astronomical spectrum or
+to manipulate astronomical spectra. It is intended to be the main spectral engine for \texttt{ScopeSim\_templates}
+but its design also allows standalone use.
+
+Using \texttt{speXtra}, the user can extract the magnitude from an astronomical spectrum or
 scale the spectrum to that magnitude, the spectrum can be redshifted or
 blueshifted or smoothed with a velocity kernel, add emission or absorption lines,
-rebin the spectra or correct it for an extinction curve. Etc.
-
-\texttt{speXtra} does not perform measurements, with the sole exception of extracting magnitudes within a passband.
+rebin the spectra or correct it for an extinction curve, etc. \texttt{speXtra} however does not perform
+measurements, with the sole exception of extracting magnitudes within a passband.
 
 \texttt{speXtra} also comes with a built-in database of spectral templates  that cover many possible user cases.
-Loading these templates is as easy as typing \texttt{Spextrum('library\_name/template\_name')}
+Loading these templates is as easy as typing \texttt{Spextrum('library\_name/template\_name')}. The user
+can also read their own spectra from a file.
 
 
 \subsubsection{Database%
@@ -74,6 +76,8 @@ Other can be added at request of the user.
 \item High-Resolution Spectra of Habitable Zone Planets (example)
 \end{itemize}
 
+More templates can be easily added to the database at request of the users.
+
 
 \subsubsection{Extinction Curves%
   \label{extinction-curves}%
@@ -89,13 +93,15 @@ Extinction curves provided with the database.
 \item Calzetti starburst attenuation curve
 \end{itemize}
 
+More templates can be easily added to the database at request of the users.
+
 
 \subsubsection{Filter Systems%
   \label{filter-systems}%
 }
 
-\texttt{speXtra} currently relies on the spanish SVO filter database to download the filters. This is done thanks
-to the \texttt{tynt} package. However this database is not complete and in particular filters for upcoming
+\texttt{speXtra} currently relies on the spanish SVO filter database to download filters transmission curves.
+This is done thanksto the \texttt{tynt} package. However this database is not complete and in particular filters for upcoming
 ELT instruments are missing. For that reason we have added some filter management to \texttt{speXtra}.
 
 Filter system currently included
@@ -106,6 +112,8 @@ Filter system currently included
 \item METIS filter system
 \end{itemize}
 
+More templates can be easily added to the database at request of the users.
+
 
 \subsubsection{Installation%
   \label{installation}%
@@ -115,7 +123,9 @@ To install \texttt{speXtra} simply type:
 
 \begin{quote}
 \begin{alltt}
+\begin{lstlisting}[frame=single]
 pip install spextra
+\end{lstlisting}
 \end{alltt}
 \end{quote}
 
@@ -145,3 +155,125 @@ installed.
 \subsection{Examples%
   \label{examples}%
 }
+
+Load the S0 template from the Kinney-Calzetti library and then plot it for quick examination.
+
+\DUadmonition[system-message]{
+\DUtitle[system-message]{system-message}
+
+
+{\color{red}ERROR/3} in \texttt{<string>}, line~122
+
+Unknown directive type \textquotedbl{}plot\textquotedbl{}.
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+.. plot::
+   :context: reset
+   :include-source:
+   :align: center
+
+    from spextra import Spextrum
+
+    sp = Spextrum("kc96/s0")
+    sp.plot()
+
+
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+backrefs: }
+
+It is possible to arithmetic operations with spectra
+
+\DUadmonition[system-message]{
+\DUtitle[system-message]{system-message}
+
+
+{\color{red}ERROR/3} in \texttt{<string>}, line~135
+
+Unknown directive type \textquotedbl{}plot\textquotedbl{}.
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+.. plot::
+   :context: reset
+   :include-source:
+   :align: center
+
+    from spextra import Spextrum
+
+    sp1 = Spextrum("kc96/s0")
+    sp2 = Spextrum("agn/qso")
+    sp = sp1 + 0.3*sp2
+    sp.plot()
+
+
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+backrefs: }
+
+Scaling the spectra to a magnitude and see what we get afterwards
+
+\DUadmonition[system-message]{
+\DUtitle[system-message]{system-message}
+
+
+{\color{red}ERROR/3} in \texttt{<string>}, line~150
+
+Unknown directive type \textquotedbl{}plot\textquotedbl{}.
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+.. plot::
+    :context: reset
+    :include-source:
+    :align: center
+
+    from spextra import Spextrum
+
+    sp1 = Spextrum("kc96/s0")
+    sp2 = sp1.scale_to_magnitude(amplitude=13 * u.ABmag, filter_name="g")
+
+    print(sp2.get_magnitude(filter_name="g")
+
+
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+backrefs: }
+
+Adding emission lines
+
+\DUadmonition[system-message]{
+\DUtitle[system-message]{system-message}
+
+
+{\color{red}ERROR/3} in \texttt{<string>}, line~165
+
+Unknown directive type \textquotedbl{}plot\textquotedbl{}.
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+.. plot::
+    :context: reset
+    :include-source:
+    :align: center
+
+    from spextra import Spextrum
+    import astropy.units as u
+
+    sp1 = Spextrum("kc96/s0")
+    sp2 = sp1.add_emi_lines(center=4000, flux=4e-13, fwhm=5*u.AA)
+
+    sp2.plot()
+
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+backrefs: }
