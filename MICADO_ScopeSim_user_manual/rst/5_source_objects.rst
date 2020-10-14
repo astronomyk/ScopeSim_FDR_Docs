@@ -9,7 +9,7 @@ The documentation for `ScopeSim templates can be found on Read-The-Docs`__
 
 __ ScopeSim_Templates_
 
-Here is a basic example of creating a star cluster using `ScopeSim_templates``:
+Here is a basic example of creating a star cluster using ``ScopeSim_templates``:
 
 .. code::
     :class: plot
