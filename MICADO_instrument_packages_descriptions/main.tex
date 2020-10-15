@@ -21,12 +21,31 @@
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{alltt}
-\usepackage{listings}
 \usepackage{float}
+\usepackage{listings}
+\lstloadlanguages{csh, python}
+
+%%% MICADO PDR doc packages
+\usepackage{dmd-doc}
+\usepackage[english]{babel}
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{supertabular}
+\usepackage{fancyhdr}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\definecolor{listingbg}{gray}{0.95}
+
 
 %%% User specified packages and stylesheets
 
-%%% Fallback definitions for Docutils-specific commands
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Docutils-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % admonition (specially marked topic)
 \providecommand{\DUadmonition}[2][class-arg]{%
@@ -73,25 +92,73 @@
   pdftitle={ScopeSim instrument packages for MICADO},
 }
 
-%%% Body
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set title values
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dmdTitle{ScopeSim instrument packages for MICADO}
+\dmdDocId{ELT-TRE-MCD-56306-0059}
+\dmdIssue{1.0}
+\dmdDate{15. October 2020}
+\dmdPreparedBy{K.\ Leschinski}
+\dmdPreparedOn{2018-09-27}
+\dmdPreparedSig{\resizebox{2.5cm}{!}{\includegraphics{leschinski_signature}}}
+\dmdApprovedBy{}
+\dmdApprovedOn{}
+\dmdApprovedSig{}
+\dmdReleasedBy{}
+\dmdReleasedOn{}
+\dmdReleasedSig{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
-\title{ScopeSim instrument packages for MICADO%
-  \label{title}%
-  \\%
-  \DUdocumentsubtitle{Doc. No.: ELT-TRE-MCD-56306-0059}%
-  \label{subtitle}}
-\author{Kieran Leschinski,
-        Hugo Buddelmeijer,
-        Oliver Czoske,
-        Miguel Verdugo, \\
-        Gijs Verdoes-Kleijn,
-        Werner Zeilinger}
-\date{\today}
+% listings style
+\lstset{basicstyle=\ttfamily,
+        columns=flexible,
+        frame=single,
+        backgroundcolor=\color{listingbg},
+        captionpos=b,
+        showspaces=false}
 
-\maketitle
+\dmdmaketitle
 
+%\emptypage{This page was intentionally left blank}
+
+\begin{center}
+  \textbf{Change record}
+
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Issue/Rev.} &
+    \multicolumn{1}{|c|}{Date} &
+    \multicolumn{1}{|c|}{Section/Parag.\ affected} &
+    \multicolumn{1}{|c|}{Reason/Initiation/Documents/Remarks} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|l|}
+   0.0.1 & 20/6/2018 & All & Layout initialised \\
+   0.1  & 26/7/2018 & All & Internal draft issue \\
+   0.2 & 27/8/2018 & All & Consortium internal review\\
+   0.3 & 10/9/2018 & All & Consortium internal review, revised\\
+   0.4 & 16/9/2018 &    & internal submission for PDR \\
+   1.0 & 27/9/2018 &  & released for PDR \\
+   \hline
+  \end{supertabular}
+
+\end{center}
+
+%\emptypage{This page was unintentionally left blank}
+
+\setcounter{tocdepth}{3}
 \tableofcontents
+\cleardoublepage
+
 
 \chapter{Introduction}
 \include{tex/0_introduction}
