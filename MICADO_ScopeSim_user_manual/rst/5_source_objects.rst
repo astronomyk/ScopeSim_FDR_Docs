@@ -38,8 +38,6 @@ Here is a basic example of creating a star cluster using ``ScopeSim_templates``:
     Right: the K-band SCAO-PSF at the position (15, -5) arcseconds from the natural guide star.
 
 
-
-
 - What is inside a Source object
 - How to make source objects to observe
     - Star cluster

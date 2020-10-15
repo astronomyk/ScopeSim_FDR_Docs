@@ -21,13 +21,31 @@
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{alltt}
-\usepackage{listings}
 \usepackage{float}
+\usepackage{listings}
+\lstloadlanguages{csh, python}
+
+%%% MICADO PDR doc packages
+\usepackage{dmd-doc}
+\usepackage[english]{babel}
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{supertabular}
+\usepackage{fancyhdr}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\definecolor{listingbg}{gray}{0.95}
 
 
 %%% User specified packages and stylesheets
 
-%%% Fallback definitions for Docutils-specific commands
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Docutils-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % admonition (specially marked topic)
 \providecommand{\DUadmonition}[2][class-arg]{%
@@ -71,27 +89,71 @@
   \urlstyle{same} % normal text font (alternatives: tt, rm, sf)
 }{}
 \hypersetup{
-  pdftitle={The ScopeSim environment},
+  pdftitle={ScopeSim Overview},
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set title values
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dmdTitle{The ScopeSim environment \\ A flexible astronomical instrument data simulation environment in Python}
+\dmdDocId{ELT-TRE-MCD-56306-0060}
+\dmdIssue{1.0}
+\dmdDate{15. October 2020}
+\dmdPreparedBy{K. Leschinski, M. Verdugo}
+\dmdPreparedOn{2018-09-27}
+\dmdPreparedSig{\resizebox{2.5cm}{!}{\includegraphics{leschinski_signature}}}
+\dmdApprovedBy{}
+\dmdApprovedOn{}
+\dmdApprovedSig{}
+\dmdReleasedBy{}
+\dmdReleasedOn{}
+\dmdReleasedSig{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Body
 \begin{document}
 
-\title{The ScopeSim environment%
-  \label{title}%
-  \\%
-  \DUdocumentsubtitle{A flexible astronomical instrument data simulation environment in Python \\
-    Doc. No.: ELT-TRE-MCD-56306-0060}%
-  \label{subtitle}}
-\author{Kieran Leschinski,
-        Hugo Buddelmeijer,
-        Oliver Czoske,
-        Miguel Verdugo}
-\date{\today}
+% listings style
+\lstset{basicstyle=\ttfamily,
+        columns=flexible,
+        frame=single,
+        backgroundcolor=\color{listingbg},
+        captionpos=b,
+        showspaces=false}
 
-\maketitle
+\dmdmaketitle
 
+%\emptypage{This page was intentionally left blank}
+
+\begin{center}
+  \textbf{Change record}
+
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Issue/Rev.} &
+    \multicolumn{1}{|c|}{Date} &
+    \multicolumn{1}{|c|}{Section/Parag.\ affected} &
+    \multicolumn{1}{|c|}{Reason/Initiation/Documents/Remarks} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|l|}
+   0.0.1 & 20/6/2018 & All & Layout initialised \\
+   \hline
+  \end{supertabular}
+
+\end{center}
+
+%\emptypage{This page was unintentionally left blank}
+
+\setcounter{tocdepth}{3}
 \tableofcontents
+\cleardoublepage
 
 
 %\chapter{The ScopeSim environment}{The ScopeSim environment}
