@@ -7,8 +7,9 @@ Code Base: https://github.com/astronomyk/IRDB
 
 Continuous integration : https://travis-ci.org/github/astronomyk/IRDB
 
-Author: Oliver Czoske
+Author: Kieran Leschinski, Oliver Czoske, Hugo Buddelmeijer
 
+The instrument reference database contains the instrument packages used by ScopeSim to build the optical system models used in simulations.
 
 What is contained in a packages
 +++++++++++++++++++++++++++++++
@@ -45,5 +46,6 @@ Custom effects example
 Documentation
 +++++++++++++
 - Reports of all packages
+
 - repo
 - tutorial on how to put together a package

@@ -38,9 +38,32 @@ Here the object in question can be any one of the 4 main flux distribution class
     
 Optical system capabilities
 +++++++++++++++++++++++++++
-- Imaging
-- Spectroscopy (LS, MOS, IFU)
-- Simultaneous readouts on multiple image planes
+ScopeSim is able to simulate raw detector data for the majority of the currently. available imaging and spectroscopic instruments.
+
+Imagers
+*******
+In theory there is no limit to the size of a focal plane that ScopeSim can simulate.
+ScopeSim uses a puzzle like approach to populating the final image plane canvas.
+It generates a series of smaller fields-of-view objects which each cover a unique region of the spatial and spectral domain available to the instrument.
+Each of these field-of-view objects observe only the parts of the on-sky target that fit within each fields-of-view's spectro-spatial limits.
+The images contained within each field-of-view are broadcast onto their corresponding region of the image plane canvas.
+
+In this manner, ScopeSim can simulate focal plane images up to half as large as the available amount of RAM on the host machine.
+
+Spectroscopes
+*************
+The use of field-of-view objects with a restricted spectro-spatial range allows ScopeSim to also simulated a range of different spectroscopic modes.
+Instead of splitting the field of view in the spatial dimensions, ScopeSim can also split along the spectral dimension.
+To simulate raw spectroscope detector outputs, ScopeSim sets the allowable spatial field equal to the dimensions of the aperture mask.
+It then creates spatially identical field-of-view objects for each narrow wavelength bin within the desired wavelength range of the instrument.
+As with the imager mode, these field-of-view objects observe the on-sky target within each field-of-view's spectro-spatial limits.
+The detector coordinates of each field-of-view are set such that they mimic the instrument's raw dispersion pattern.
+Simulated raw detector images must then be reduced or analysed with the common suite of spectroscopic data tools.
+
+Using this method, ScopeSim attempts to replicate as efficiently as possible the actual physical processes within a spectrograph.
+This enables the spectroscopic mode of ScopeSim to be applied to all major spectrograph types: long slit, integral field unit, and multi-object spectrographs.
+This is done by providing a simplified mapping between apertures and spectral traces on the detector. For example, a simple long-slit spectrograph will have a single aperture and a single spectral trace on the detector plane.
+IFUs and MOS can be seen as a collection of simple long slits with coherent and incoherent aperture images.
 
 
 Explanation of Effect objects
