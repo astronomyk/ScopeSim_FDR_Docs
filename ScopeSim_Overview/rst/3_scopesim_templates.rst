@@ -9,6 +9,16 @@ Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim_Templat
 
 Author: Kieran Leschinski
 
+Updated: 06.11.2020
+
+Installation::
+
+    pip install scopesim_templates
+
+
+
+
+
 Functionality
 -------------
 

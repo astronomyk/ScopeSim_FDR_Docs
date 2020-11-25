@@ -9,6 +9,12 @@ Continuous integration: https://travis-ci.org/github/astronomyk/ScopeSim
 
 Author: Kieran Leschinski
 
+Updated: 06.11.2020
+
+Installation::
+
+    pip install scopesim
+
 
 How the ScopeSim engine works
 +++++++++++++++++++++++++++++
@@ -92,10 +98,10 @@ While ScopeSim contains a library of effect objects common to many astronomical 
 .. warning:: Include code snippet of custom effect
 
 
-
-
 Explanation of observation workflow
 +++++++++++++++++++++++++++++++++++
+
+.. warning:: Add visual representation here
 
 During an observation simulation the flux description of the on-sky target is passed through a series of management layer objects: ``Source``, ``FieldOfView``, ``ImagePlane``, ``Detector``.
 The effects specific to each management layer object are iteratively applied to these objects before moving onto the next step.
@@ -143,14 +149,33 @@ The output of the observation simulation is a FITS object containing detector re
 This can be passed on in memory for further use or saved to disk using the standard FITS write out method.
 
 
-Restricting the scope of simulations
-++++++++++++++++++++++++++++++++++++
+Reducing the complexity of simulations
+++++++++++++++++++++++++++++++++++++++
 
-
+The observation workflow described above depicts the full process of simulating an observation.
+It allows for a complete description and treatment of all optical artefacts within an optical train.
+For many applications however such a complete description is not needed.
+For science case feasibility studies, many of the effects contained in the raw readout frames are removed in by the data processing pipelines.
+The modular nature of ScopeSim allows for many levels of complexity in the optical train.
+For example, the wavelength and spatial extent of simulations can be restricted to only those areas that are interesting to the user.
+Effect objects can be turned on or off on-the-fly.
+Large and complex effect objects can be replaced by more light-weight versions.
+For the MICADO simulator, we have provided three packages with increasing levels of simplicity: ``MICADO_pipe``, ``MICADO_sci``, and ``MICADO_etc``.
+As the names suggest, each package contains only the effects and simulation parameter spaces relevant to the package's scope.
+These three packages are described in greater detail in ELT-TRE-MCD-56306-0059
 
 Documentation
 +++++++++++++
-- Tutorials on read the docs
+User documentation can be found online at https://scopesim.readthedocs.io/en/latest/.
+The online documentation primarily focuses on how to control ScopeSim.
+A series of shorter tutorials (so called 5-liners) describe very specific aspects of the software.
+There are also a few longer tutorials which guide a potential user through the process of running observation simulations from start to finish.
+
+.. warning:: Add some 5 liners
+
+.. warning:: generate a nice 3 colour image with everything scopesim can do.
+
+
 
 
 

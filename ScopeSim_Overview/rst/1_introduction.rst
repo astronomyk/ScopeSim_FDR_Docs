@@ -4,7 +4,7 @@ Introduction
 An overview of the ScopeSim environment
 +++++++++++++++++++++++++++++++++++++++
 
-ScopeSim is a modular and flexible suite of python packages that enable (almost) any astronomical optical (observatory/telescope/instrument) system to be simulated.
+ScopeSim is a modular and flexible suite of python packages that enable many common astronomical optical (observatory/telescope/instrument) systems to be simulated.
 
 The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a pipeline developer needing raw calibration data for testing the pipeline.
 
@@ -46,7 +46,7 @@ Rationale for the ScopeSim environment
 ++++++++++++++++++++++++++++++++++++++
 
 Until now most instrument consortia have developed their own simulators. 
-The general concensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
+The general consensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent. 
 Every new instrument must differ in some way from all existing instruments in order for it to be useful to the astronomical community.
 However when looked at from a global perspective, every optical system is comprised primarily of elements common to all other systems. 
@@ -75,7 +75,7 @@ We however encourage anyone who has made these custom ``Effects`` to submit a pu
 Documentation and code bases
 ++++++++++++++++++++++++++++
 
-.. list-table:: Links to the open source doumentation and code bases
+.. list-table:: Links to the open source documentation and code bases
     :name: tbl-list-of-packages
 
     *   - Package
