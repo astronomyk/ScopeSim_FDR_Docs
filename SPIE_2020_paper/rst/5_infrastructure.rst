@@ -16,7 +16,7 @@ In addition to the core package, there are several support packages:
 - ``SpeXtra``: provides easy access to many well-known spectral libraries
 - ``Pyckles``: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
 
-These package are not direct dependencies for ScopeSim, but do help provide additional functionality to the simulation engine.
+These package are not direct dependencies of ScopeSim, but do help provide additional functionality to the simulation engine.
 Table \ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
 
 .. list-table:: Links to the open source documentation and code bases

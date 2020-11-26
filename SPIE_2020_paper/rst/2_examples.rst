@@ -1,14 +1,20 @@
 Examples
 --------
+:name: sec-examples
+
 As the saying goes: Pictures are worth a thousand words.
 The purpose of the ScopeSim ecosystem is to simulate data from astronomical instruments.
 This section will illustrate how this is done with very few lines of python code for three common science cases.
+It is the authors' hope that the code snippets provided are readable by the intended audience of this paper.
+It this is in fact not the case, the authors refer the reader to the scopesim online documentation.
 
 
 Example 1: Extended source imaging
 ++++++++++++++++++++++++++++++++++
 
 .. figure:: ../images/combined_1_2.png
+    :name: fig-combined_1_2
+    :scale: 90 %
 
     Left: A simulated 1 second observation in the Ks filter of a spiral galaxy similar to NGC1231L using HAWKI at the VLT
     Right: A simulated 1 hour observation in the Ks filter of a dense 3000 Msun star cluster in the Large Magellanic Cloud using MICADO at the ELT.
@@ -19,12 +25,13 @@ The target is a two component spiral galaxy using a template based on NGC~1232L 
 The galaxy was resized to a diameter of 3 arcminutes and the associated flux spectra from Brown+14 were rescaled to ~12 mag arcsec-2.
 The detector window of 1024x1024 pixels covers ~1.6x1.6 arcminutes on sky.
 The final simulated image shows primarily the star forming regions in the inner regions of the spiral arms.
-The simulated detector output is shown in the left panel of Figure \ref{fig:combined_1_2}.
+The simulated detector output is shown in the left panel of Figure \ref{fig-combined_1_2}.
 
 This simulation setup was chosen to illustrate the noise characterises introduced by ScopeSim.
 The observation simulation requires only the following 8 lines of code:
 
 .. code::
+    :name: code-example-1-galaxy
 
     import scopesim
     from scopesim_templates.basic.galaxy import spiral_two_component
@@ -57,9 +64,10 @@ Given the pixel-scale of HAWKI (0.106"\,pix-1) it would be impossible to resolve
 MICADO on the ELT, with its 4\,mas\,pix-1 pixel-scale (Davies+20) and adaptive optics (AO) capabilities may well be able to detect individual stars in these regions.
 
 The following code shows how to use the ELT and MICADO (Science Team) packages to simulate observations of highly dense star cluster outside the Milky Way.
-The result of this code is show in the right panel of Figure \ref{fig:combined_1_2}
+The result of this code is show in the right panel of Figure \ref{fig-combined-1-2}
 
 .. code::
+    :name: code-example-2-cluster
 
     import scopesim
     from scopesim_templates.basic.stars import cluster
@@ -80,8 +88,8 @@ This code uses the star cluster template from the scopesim_templates package to 
 An exposure time of 1 hour with the Ks filter was used for the simulated observation.
 This setup was chosen to show the effect of the ELT PSF on observations of densely populated fields with several bright sources.
 
-It should be noted that the instrument package used (MICADO_Sci) is the slimmed down version of the full MICADO instrument package.
-Simulations using the MICADO_Sci package are less computationally intensive compared to the full MICADO package which is aimed at pipeline development).
+It should be noted that the instrument package used above (MICADO_Sci) is the slimmed down version of the full MICADO instrument package.
+Simulations using the MICADO_Sci package are less computationally intensive than when using the full MICADO package (which is aimed at pipeline development).
 The MICADO_Sci package was compiled specifically for the MICADO science team to test the feasibility of various science cases with MICADO and the ELT.
 
 
@@ -89,6 +97,8 @@ Example 3: Spectroscopy
 +++++++++++++++++++++++
 
 .. figure:: ../images/example_3_spectra.png
+    :name: fig-example-3-spectra
+    :scale: 90 %
 
     Top: A rectified spectral image from the MICADO detectors for a 1 hour spectrographic observation of 6 progressively fainter stars (18<=Ks<=23)
     The dark vertical bars are the atmospheric emission lines.
@@ -106,6 +116,8 @@ The following code simulates the spectral traces of 6 stars spaced equidistantly
 In order to reduce computation time, the simulated wavelength range is restricted to 1024 spectral bins either side of a desired wavelength (1.578um).
 
 .. code::
+    :name: code-example-3-spectra
+
 
     from scopesim import UserCommands, OpticalTrain
     from scopesim_templates.basic.stars import stars
@@ -126,30 +138,32 @@ In order to reduce computation time, the simulated wavelength range is restricte
     micado_spec.observe(stars)
     micado_spec.readout(filename="basic_spectral_trace.fits")
 
-As can be seen in Figure \ref{fig:example_3_spectra} the atmospheric emission lines are prominent in the simulated raw detector output.
+As can be seen in Figure \ref{fig-example-3-spectra} the atmospheric emission lines are prominent in the simulated raw detector output.
 The 6 stellar spectra can be seen as thin horizontal lines.
-The spectra displayed in the lower panel of Figure \ref{fig:example_3_spectra} were extracted for the detector readout in the upper panel.
+The spectra displayed in the lower panel of Figure \ref{fig-example-3-spectra} were extracted for the detector readout in the upper panel.
 The noise in the (red) K0III spectrum is a product of the noise characteristic of the simulated observation.
 These include, but are not limited to photon shot noise and electronic noise sources.
 
 Effects included in instrument packages
 +++++++++++++++++++++++++++++++++++++++
 
-The instrument packages used for these examples can be found online in the Instrument Reference Database (IRDB) Github repository (see Section \ref{sec:docs-and-code}).
+The instrument packages used for these examples can be found online in the Instrument Reference Database (IRDB) Github repository (see Section \ref{sec-docs-and-code}).
 Each package contains a description of the optical effects that are inherent to the instrument or telescope, as well as the data needed to replicate these effects.
 Scopesim allows the user to view which effects are included in the current optical model.
 This example uses the MICADO_Sci optical system from the previous examples
 
 .. code::
+    :name: code-optical-train
     micado = scopesim.OpticalTrain("MICADO_Sci")
     print(micado.effects)
 
 During run-time ScopeSim creates an Effect object for each effect listed in the instrument configuration files.
 It then applies each of these Effect objects to the on-sky Source description in turn.
-Effects can be included or excluded from a simulation by using the ``.include`` flag on the relevant Effect object:
+Effects can be included or excluded from a simulation by using the ``.include'' flag on the relevant Effect object:
 
 .. code::
+    :name: code-effects-on-off
     micado["readout_noise"].include = False
     micado["shot_noise"].include = True
 
-More information about the Effect objects is given in Section \ref{sec:architecture} as well as in the online documentation.
+More information about the Effect objects is given in Section \ref{sec-architecture} as well as in the online documentation.

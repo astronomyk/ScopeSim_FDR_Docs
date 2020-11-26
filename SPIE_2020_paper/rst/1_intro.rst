@@ -20,3 +20,6 @@ Furthermore, while the amplitude and shape of each effect differs between optica
 
 ScopeSim's main goal is to provide a framework for modelling (almost) any astronomical optical system by taking advantage of all these commonalities.
 What Astropy has done for the general python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
+
+This paper is not intended to be a comprehensive description of the ScopeSim environment. Rather is aims to introduce the reader to the elements that make up ScopeSim and directs the reader towards the online documentation for each of the packages, should the reader wish to dive deeper into the material.
+
