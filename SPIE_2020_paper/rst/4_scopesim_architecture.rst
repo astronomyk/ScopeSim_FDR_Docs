@@ -1,9 +1,10 @@
 ScopeSim Architecture
 ---------------------
+:name: scopesim-architecture
 
 In order to work as a multi-purpose optical* instrument simulator, ScopeSim needs to be able to handle (at least) the two main types of instruments: imagers and spectrographs.
 
-*Footnote: Optical refers to the wavelength ranges where telescopes act as "photon buckets" and detectors are in essence "photon counters".
+**Footnote**: Optical refers to the wavelength ranges where telescopes act as "photon buckets" and detectors are in essence "photon counters".
 In other words, from the near ultraviolet (0.1um) to the mid infrared (~30um).
 While every instrument is unique, all instruments, by virtue of their astronomical nature, have several key aspects in common.
 All instruments:
@@ -61,7 +62,7 @@ Figure \ref{fig-workflow} illustrates how the first 4 of these classes interact 
 The Source objects (A, E) are supplied by the user.
 These contain a 2+1D description of the on-sky target(s).
 The spatial (2D) information is stored either as tables (collection of point sources) or as ImageHDU objects (for extended objects).
-Each of the spatial ``fields`` must be accompanied by one or more unique spectrum.
+Each of the spatial "fields" must be accompanied by one or more unique spectrum.
 There need not be a one-to-one relationship between the spatial and spectral inputs.
 Multiple spatial fields can reference a single spectrum.
 In doing so, ScopeSim can vastly reduce the amount of data that needs to be processed.
@@ -70,7 +71,7 @@ However only several tens of spectra are needed to adequately describe all the s
 There will be many hundreds of M-type stars that can reference a single common M-type stellar spectrum.
 
 ScopeSim builds a model of the optical train by importing instrument packages.
-Based on the list of Effects contained in the configuration files, ScopeSim splits the full spectral and spatial parameter space of the instrument into 3D ``puzzle'' pieces, known as FieldOfView objects.
+Based on the list of Effects contained in the configuration files, ScopeSim splits the full spectral and spatial parameter space of the instrument into 3D "puzzle" pieces, known as FieldOfView objects.
 Each FieldOfView object (B, F) then extracts only the flux from the Source object that fits within its sprecto-spatial limits.
 This process essentially creates a series of quasi-monochromatic puzzle pieces from the 2+1D source flux.
 The spatial size and spectral depth of each puzzle piece is determined by which optical effects are included in the optical model.
@@ -86,7 +87,7 @@ The FieldOfView objects also contain two sets of spatial coordinates which conne
 The ImagePlane (C, G) inside each optical model acts as a 2D canvas for the integrated flux contained inside the FieldOfView objects.
 When each FieldOfView object deposits its flux map onto the ImagePlane, it simple adds the photon counts to what is already on the canvas at the FieldOfViews projected focal plane position.
 The resulting ImagePlane image is therefore the final integrated projected expectation flux map as would exist at the detector focal plane of a real image, in units of [ph s-1 pixel-1]
-All information on telescope aperture, viewing angle, and spectral bandpass has been integrated into the normalised photon count map - thus the name ``expectation'' flux map.
+All information on telescope aperture, viewing angle, and spectral bandpass has been integrated into the normalised photon count map - thus the name "expectation" flux map.
 At this stage of the simulation all sources of background flux (atmospheric, thermal) have also been projected onto the ImagePlane, however no noise characteristics are included.
 
 The DetectorArray class contains a list of Detector objects (D, H).
@@ -105,7 +106,7 @@ Effects Objects
 
     Effect objects are similar to matrix operator in mathematics.
     What goes in must come out.
-    Each Effect object has a single point of entry: the ``apply_to'' method, which can accept any one of the 4 major ScopeSim classes.
+    Each Effect object has a single point of entry: the "apply_to" method, which can accept any one of the 4 major ScopeSim classes.
     This method is responsible for applying optical aberrations to the flux distribution contained within those 4 major flux container classes.
 
 
@@ -123,7 +124,7 @@ Higher dimensional Effects are also possible albeit very rare, e.g. field varyin
 
 Functionally, the Effect class is similar to a quantum mechanical operator.
 What goes in must come out.
-In other words, if a Source object is the input to an Effect objects ``apply_to'' function, then a Source object will also be returned.
+In other words, if a Source object is the input to an Effect objects "apply_to" function, then a Source object will also be returned.
 The Effect object may alter the distribution of flux inside an object, but it must return the same object.
 This is illustrated in Figure \ref{fig-effect}
 
@@ -159,7 +160,7 @@ The following pseudo-code snippet describes the major steps of the simulation wo
     detector.write_to("file.fits")
 
 As can be seen, there is a very similar pattern.
-Obviously there are a few more steps involved, in the actual ScopeSim code, however the ``observe'' method of an optical model consists of little more than a python implementation of this pseudo-code.
+Obviously there are a few more steps involved, in the actual ScopeSim code, however the "observe" method of an optical model consists of little more than a python implementation of this pseudo-code.
 
 .. todo:: include list of effects in scopesim?
 

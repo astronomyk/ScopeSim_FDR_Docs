@@ -154,15 +154,17 @@ This example uses the MICADO_Sci optical system from the previous examples
 
 .. code::
     :name: code-optical-train
+
     micado = scopesim.OpticalTrain("MICADO_Sci")
     print(micado.effects)
 
 During run-time ScopeSim creates an Effect object for each effect listed in the instrument configuration files.
 It then applies each of these Effect objects to the on-sky Source description in turn.
-Effects can be included or excluded from a simulation by using the ``.include'' flag on the relevant Effect object:
+Effects can be included or excluded from a simulation by using the ".include" flag on the relevant Effect object:
 
 .. code::
     :name: code-effects-on-off
+
     micado["readout_noise"].include = False
     micado["shot_noise"].include = True
 
