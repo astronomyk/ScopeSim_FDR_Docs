@@ -1,6 +1,5 @@
 ScopeSim Architecture
 ---------------------
-:name: scopesim-architecture
 
 In order to work as a multi-purpose optical* instrument simulator, ScopeSim needs to be able to handle (at least) the two main types of instruments: imagers and spectrographs.
 
@@ -43,7 +42,7 @@ The main ScopeSim engine architecture is based around 5 major python classes:
 
 .. figure:: Workflow.png
     :name: fig-workflow
-    :scale: 90 %
+    :scale: 90%
 
     An illustration of the connections between the main internal classes in ScopeSim: Source, FieldOfView, ImagePlane, DetectorArray.
     The upper panels show the work flow for imaging simulations.
@@ -102,7 +101,7 @@ Effects Objects
 
 .. figure:: Effects.png
     :name: fig-effect
-    :scale: 90 %
+    :scale: 90%
 
     Effect objects are similar to matrix operator in mathematics.
     What goes in must come out.
@@ -133,9 +132,7 @@ While flux resides in each of these objects, the relevant Effects are sequential
 For example, the telescope's (chromatic) PSF is applied to each of the FieldOfView objects, as this is a spectrally dependent spatial (3D) effect.
 In contrast the wind-shake gaussian PSF has no spectral dependency and is therefore only applied to the ImagePlane.
 
-The following pseudo-code snippet describes the major steps of the simulation workflow and illustrates how and when the Effect objects interact with the 4 major flux container classes.
-
-.. code::
+The following pseudo-code snippet describes the major steps of the simulation workflow and illustrates how and when the Effect objects interact with the 4 major flux container classes::
 
     source = deepcopy(orig_source)
 

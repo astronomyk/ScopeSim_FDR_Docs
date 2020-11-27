@@ -13,5 +13,17 @@ for fname in glob.glob("../rst/*.rst"):
     ru.latexify_rst_text(rst_text, filename=f_out, path="../tex/",
                          float_figures=False)
 
-    # rc.__config__["!SIM.reports.image_path"] = "../images/"
-    # ru.plotify_rst_text(rst_text)
+
+for fname in glob.glob("../tex/*.tex"):
+    with open(fname) as f:
+        data = f.read()
+
+    data = data.replace("begin{figure}[H]", "begin{figure}")
+    data = data.replace("ref\{", r"\ref{")
+    data = data.replace("\}", r"}")
+    data = data.replace("citep\{", r"\citep{")
+    data = data.replace("citet\{", r"\citet{")
+
+    with open(fname, 'w') as f:
+        f.write(data)
+

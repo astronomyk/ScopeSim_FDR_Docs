@@ -3,7 +3,13 @@ Building blocks
 
 .. figure:: Ecosystem.png
     :name: fig-ecosystem
-    :scale: 90 %
+    :scale: 90%
+
+    An illustration of the scopes of the three main packages in the ScopeSim environment.
+    ScopeSim_templates (left) only provides the functionality to generate descriptions of on-sky objects in the format used by ScopeSim.
+    The instrument reference database (right) contains the data and configuration files required to generate a model of an optical system in discrete instrument packages.
+    The ScopeSim engine (centre) requires input from both of these packages, along with the observation constrains (e.g. exposure time, observing mode, etc.) in order to simulate mock observation data.
+    The final output of a simulation is one or more FITS files containing the images or spectra of the users  target including all expected optical aberrations associated with the optical system.
 
 The ScopeSim ecosystem has been designed to maintain strict boundaries between the simulation code, the optical model data, and the user input.
 As with real systems, the astronomical objects and the light they emit exist regardless of the telescope or astronomer.
@@ -19,7 +25,7 @@ The ScopeSim ecosystem consists of three main packages:
 
 Figure \ref{fig-ecosystem} illustrates the relationship between these three packages.
 Although there is a strict delineation between the scopes of each package, the interfaces between the packages allows them to interact almost seamlessly with each other.
-This can be seen in the code examples from section \ref{sec-examples}.
+This can be seen in the code examples from section \ref{examples}.
 The main code pattern for simulating observations with a specific instrument is the same for all use cases:
 
 1. download the required instrument packages from the instrument reference database (IRDB) using scopesim,
@@ -47,7 +53,7 @@ At the other end of the scale, ScopeSim is also useful for generating simulated 
 As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only the number and accuracy of the Effects listed in these packages.
 
 
-ScopeSim_templates: Description sof on-sky targets
+ScopeSim_templates: Descriptions of on-sky targets
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The scopesim_templates package provides a series of functions to help the user create a description of the on-sky targets they wish to observe in the format required by the ScopeSim engine.
@@ -56,10 +62,7 @@ These helper function populate one or more instances of the ScopeSim "Source" cl
 Format of a Source object
 *************************
 
-In order to optimise memory usage the Source objects split the spatial and spectral characteristics of a target.
-
-**!!!** reference Schmalzl+2010 (old METIS simulator paper)
-
+In order to optimise memory usage the Source objects split the spatial and spectral characteristics of a target \citep{schmalzl2012}.
 These are held separately in two list: fields and spectra.
 A spatial field can be either a table of coordinated and flux scaling factors (e.g. the positions of stars in cluster) or a 2D weight map (e.g. an image of a galaxy).
 Each entry in a field must reference one of the entries in the list of spectra, however there is no requirement for a one-to-one relationship between field entries and spectral list entries.

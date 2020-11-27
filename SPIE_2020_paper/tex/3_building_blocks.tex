@@ -4,8 +4,14 @@
   \label{building-blocks}%
 }
 
-\begin{figure}[H]
+\begin{figure}
 \noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{Ecosystem.png}}\phantomsection\label{fig-ecosystem}
+
+\caption{An illustration of the scopes of the three main packages in the ScopeSim environment.
+ScopeSim\_templates (left) only provides the functionality to generate descriptions of on-sky objects in the format used by ScopeSim.
+The instrument reference database (right) contains the data and configuration files required to generate a model of an optical system in discrete instrument packages.
+The ScopeSim engine (centre) requires input from both of these packages, along with the observation constrains (e.g. exposure time, observing mode, etc.) in order to simulate mock observation data.
+The final output of a simulation is one or more FITS files containing the images or spectra of the users  target including all expected optical aberrations associated with the optical system.}
 \end{figure}
 
 The ScopeSim ecosystem has been designed to maintain strict boundaries between the simulation code, the optical model data, and the user input.
@@ -24,9 +30,9 @@ The ScopeSim ecosystem consists of three main packages:
 \item IRDB: The instrument reference database containing the data and configuration files needed to generate the digital models of a range of telescope and instrument optical system.
 \end{itemize}
 
-Figure ref\{fig-ecosystem\} illustrates the relationship between these three packages.
+Figure \ref{fig-ecosystem} illustrates the relationship between these three packages.
 Although there is a strict delineation between the scopes of each package, the interfaces between the packages allows them to interact almost seamlessly with each other.
-This can be seen in the code examples from section ref\{sec-examples\}.
+This can be seen in the code examples from section \ref{examples}.
 The main code pattern for simulating observations with a specific instrument is the same for all use cases:
 
 \begin{enumerate}
@@ -50,7 +56,7 @@ The ScopeSim core package, also referred to as the ScopeSim engine, contains the
 The code has been written in such a way as to be completely agnostic to the instrument setup as well as agnostic towards the on-sky target.
 At its heart the code transports flux from a description of the on-sky target to a detector focal plane.
 During the process it applies any optical aberrations contained in the optical model to the flux description.
-Section ref\{sec-scopesim-architecture\} describes this process in more detail.
+Section \ref{sec-scopesim-architecture} describes this process in more detail.
 ScopeSim attempts to remove as much redundancy and inefficiency from observation simulations as possible by recognising the fact that there is little need to redo the majority of the calculations executed in high-fidelity simulations.
 In other words, the ScopeSim engine does not work with ray-tracing methods or use fourier optics, except in isolated cases.
 Instead it uses the fact that the observed image is a linear combination of independent optical aberrations applied to an incoming spectro-spatial flux distribution.
@@ -62,8 +68,8 @@ At the other end of the scale, ScopeSim is also useful for generating simulated 
 As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only the number and accuracy of the Effects listed in these packages.
 
 
-\subsection{ScopeSim\_templates: Description sof on-sky targets%
-  \label{scopesim-templates-description-sof-on-sky-targets}%
+\subsection{ScopeSim\_templates: Descriptions of on-sky targets%
+  \label{scopesim-templates-descriptions-of-on-sky-targets}%
 }
 
 The scopesim\_templates package provides a series of functions to help the user create a description of the on-sky targets they wish to observe in the format required by the ScopeSim engine.
@@ -74,10 +80,7 @@ These helper function populate one or more instances of the ScopeSim \textquoted
   \label{format-of-a-source-object}%
 }
 
-In order to optimise memory usage the Source objects split the spatial and spectral characteristics of a target.
-
-\textbf{!!!} reference Schmalzl+2010 (old METIS simulator paper)
-
+In order to optimise memory usage the Source objects split the spatial and spectral characteristics of a target \citep{schmalzl2012}.
 These are held separately in two list: fields and spectra.
 A spatial field can be either a table of coordinated and flux scaling factors (e.g. the positions of stars in cluster) or a 2D weight map (e.g. an image of a galaxy).
 Each entry in a field must reference one of the entries in the list of spectra, however there is no requirement for a one-to-one relationship between field entries and spectral list entries.
@@ -146,7 +149,7 @@ Each instrument package contains two main types of data:
 The configuration files are written in YAML.
 They contain lists of Effect object descriptions as well as global properties that are common to all Effect objects in the subsystem.
 The Effect object descriptions must call an existing Effect class from the ScopeSim core package.
-Effect objects are discussed in more detail in section ref\{subsec-effects\}.
+Effect objects are discussed in more detail in section \ref{subsec-effects}.
 For the Effects which rely on external empirical data, these files must also be contained in the instrument package.
 The empirical data files must be either ASCII tables or FITS images/tables.
 Examples of empirical data files include the filter response curves or pre-computed sets of PSF kernels.
