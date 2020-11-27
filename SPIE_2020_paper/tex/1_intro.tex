@@ -9,14 +9,10 @@ The suite of packages can be used by a wide audience for a variety of purposes; 
 
 ScopeSim achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the ScopeSim engine package is completely instrument and object agnostic.
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (IRDB).
-The description of the on-sky source is keep exclusively within the target \texttt{templates} package (see \texttt{scopesim\_templates}).
+The description of the on-sky source is keep exclusively within the target templates package (see \texttt{scopesim\_templates}).
 Finally, the engine has no clue about what it is observing until run-time.
 
-
-\subsection{Why another instrument simulator%
-  \label{why-another-instrument-simulator}%
-}
-
+But why does the community need yet another instrument simulator?
 Until now most instrument consortia have developed their own simulators.
 The general consensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent.

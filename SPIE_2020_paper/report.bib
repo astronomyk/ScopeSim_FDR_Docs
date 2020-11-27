@@ -1,73 +1,323 @@
-%% report.bib - contains BiBtex input for bibliography
+@ARTICLE{numpy,
+ title         = {Array programming with {NumPy}},
+ author        = {Charles R. Harris and K. Jarrod Millman and St{'{e}}fan J.
+                 van der Walt and Ralf Gommers and Pauli Virtanen and David
+                 Cournapeau and Eric Wieser and Julian Taylor and Sebastian
+                 Berg and Nathaniel J. Smith and Robert Kern and Matti Picus
+                 and Stephan Hoyer and Marten H. van Kerkwijk and Matthew
+                 Brett and Allan Haldane and Jaime Fern{'{a}}ndez del
+                 R{'{\i}}o and Mark Wiebe and Pearu Peterson and Pierre
+                 G{'{e}}rard-Marchant and Kevin Sheppard and Tyler Reddy and
+                 Warren Weckesser and Hameer Abbasi and Christoph Gohlke and
+                 Travis E. Oliphant},
+ year          = {2020},
+ month         = sep,
+ journal       = {Nature},
+ volume        = {585},
+ number        = {7825},
+ pages         = {357--362},
+ doi           = {10.1038/s41586-020-2649-2},
+ publisher     = {Springer Science and Business Media {LLC}},
+ url           = {https://doi.org/10.1038/s41586-020-2649-2}
+}
 
-@book{Alred03, 
-	author = "G. J. Alred and C. T. Brusaw and W. E. Oliu", 
-	title  = "Handbook of Technical Writing", 
-	publisher= "St. Martin's", 
-	address= "New York", 
-	year   = "2015 (eleventh edition)"	}
-	
-@book{Goossens97, 
-	author = "Michel Goossens and Frank Mittelbach and Sebastian Rahtz", 
-	title  = "The LaTeX Companion", 
-	publisher= "Addison-Wesley", 
-	address= "Reading, Mass.", 
-	year   = "1997"	} 
+@ARTICLE{scipy,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
+            Bright, Jonathan and {van der Walt}, St{\'e}fan J. and
+            Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and
+            Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and
+            Kern, Robert and Larson, Eric and Carey, C J and
+            Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and
+            {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and
+            Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and
+            Harris, Charles R. and Archibald, Anne M. and
+            Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and
+            {van Mulbregt}, Paul and {SciPy 1.0 Contributors}},
+  title   = {{{SciPy} 1.0: Fundamental Algorithms for Scientific
+            Computing in Python}},
+  journal = {Nature Methods},
+  year    = {2020},
+  volume  = {17},
+  pages   = {261--272},
+  adsurl  = {https://rdcu.be/b08Wh},
+  doi     = {10.1038/s41592-019-0686-2},
+}
 
-@book{Mittelbach04, 
-	author = "Frank Mittelbach and Michel Goossens and Johannes Braams and David Carlisle", 
-	title  = "The LaTeX Companion", 
-	publisher= "Addison-Wesley", 
-	address= "Reading, Mass.",
-	edition= "second", 
-	year   = "2004"	} 
 
-@incollection{Gull89a, 
-	author = "S. F. Gull", 
-	title  = "Developments in maximum-entropy data analysis", 
-	booktitle= " Maximum Entropy and Bayesian Methods", 
-	editor = "J. Skilling", 
-	pages  = "53-71 ", 
-	publisher= "Kluwer Academic",
-	address= "Dordrecht", 
-	year   = "1989"	} 
- 
-@inproceedings{Hanson93c, 
-	author = "K. M. Hanson", 
-	title  = "Introduction to {B}ayesian image analysis", 
-	booktitle= "Medical Imaging:\ Image Processing",
-	editor = "M.\ H. Loew",
-	series = "Proc. SPIE", 
-	volume = "1898",
-	pages  = "716-731", 
-	year   = "1993"	} 
+@ARTICLE{matplotlib,
+  author={J. D. {Hunter}},
+  journal={Computing in Science   Engineering},
+  title={Matplotlib: A 2D Graphics Environment},
+  year={2007},
+  volume={9},
+  number={3},
+  pages={90-95},
+  doi={10.1109/MCSE.2007.55}}
 
-@book{Lamport94, 
-	author = "L. Lamport", 
-	title  = "LaTeX: A Document Preparation System", 
-	publisher= "Addison-Wesley", 
-	address= "Reading, Mass.", 
-	year   = "1994"	}
 
-@article{Metropolis53, 
-	author = "N. Metropolis and A. W. Rosenbluth and M. N. Rosenbluth and A. H. Teller and E. Teller", 
-	title  = "Equations of state calculations by fast computing machine", 
-	journal= "J. Chem. Phys.",  
-	volume = "21", 
-	pages  = "1087-1091", 
-	year   = "1953"	} 
+@article{astropy1,
+Adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+Adsurl = {http://adsabs.harvard.edu/abs/2013A%26A...558A..33A},
+Archiveprefix = {arXiv},
+Author = {{Astropy Collaboration} and {Robitaille}, T.~P. and {Tollerud}, E.~J. and {Greenfield}, P. and {Droettboom}, M. and {Bray}, E. and {Aldcroft}, T. and {Davis}, M. and {Ginsburg}, A. and {Price-Whelan}, A.~M. and {Kerzendorf}, W.~E. and {Conley}, A. and {Crighton}, N. and {Barbary}, K. and {Muna}, D. and {Ferguson}, H. and {Grollier}, F. and {Parikh}, M.~M. and {Nair}, P.~H. and {Unther}, H.~M. and {Deil}, C. and {Woillez}, J. and {Conseil}, S. and {Kramer}, R. and {Turner}, J.~E.~H. and {Singer}, L. and {Fox}, R. and {Weaver}, B.~A. and {Zabalza}, V. and {Edwards}, Z.~I. and {Azalee Bostroem}, K. and {Burke}, D.~J. and {Casey}, A.~R. and {Crawford}, S.~M. and {Dencheva}, N. and {Ely}, J. and {Jenness}, T. and {Labrie}, K. and {Lim}, P.~L. and {Pierfederici}, F. and {Pontzen}, A. and {Ptak}, A. and {Refsdal}, B. and {Servillat}, M. and {Streicher}, O.},
+Doi = {10.1051/0004-6361/201322068},
+Eid = {A33},
+Eprint = {1307.6212},
+Journal = {\aap},
+Keywords = {methods: data analysis, methods: miscellaneous, virtual observatory tools},
+Month = oct,
+Pages = {A33},
+Primaryclass = {astro-ph.IM},
+Title = {{Astropy: A community Python package for astronomy}},
+Volume = 558,
+Year = 2013,
+Bdsk-Url-1 = {https://dx.doi.org/10.1051/0004-6361/201322068}}
 
-@book{Perelman97, 
-	author = "L. C. Perelman and J. Paradis and E. Barrett", 
-	title  = "Mayfield Handbook of Technical and Scientific Writing", 
-	publisher= "Mountain View", 
-	address= "Mayfield",
-	month  = "April", 
-	year   = "1997",
-	note = "http://mit.imoat.net/handbook/"	}
-    
-@misc{Lees-Miller-LaTeX-course-1,
-    author = {John D Lees-Miller},
-    title = {{Free and Interactive Online Introduction to LaTeX}},
-    howpublished = "Overleaf, 26 February 2015  \url{https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1}", 
-    note = "(Accessed: 15 September 2015)" }
+@ARTICLE{astropy2,
+       author = {{Astropy Collaboration} and {Price-Whelan}, A.~M. and
+         {Sip{H{o}}cz}, B.~M. and {G{"u}nther}, H.~M. and {Lim}, P.~L. and
+         {Crawford}, S.~M. and {Conseil}, S. and {Shupe}, D.~L. and
+         {Craig}, M.~W. and {Dencheva}, N. and {Ginsburg}, A. and {Vand
+        erPlas}, J.~T. and {Bradley}, L.~D. and {P{'e}rez-Su{'a}rez}, D. and
+         {de Val-Borro}, M. and {Aldcroft}, T.~L. and {Cruz}, K.~L. and
+         {Robitaille}, T.~P. and {Tollerud}, E.~J. and {Ardelean}, C. and
+         {Babej}, T. and {Bach}, Y.~P. and {Bachetti}, M. and {Bakanov}, A.~V. and
+         {Bamford}, S.~P. and {Barentsen}, G. and {Barmby}, P. and
+         {Baumbach}, A. and {Berry}, K.~L. and {Biscani}, F. and {Boquien}, M. and
+         {Bostroem}, K.~A. and {Bouma}, L.~G. and {Brammer}, G.~B. and
+         {Bray}, E.~M. and {Breytenbach}, H. and {Buddelmeijer}, H. and
+         {Burke}, D.~J. and {Calderone}, G. and {Cano Rodr{'i}guez}, J.~L. and
+         {Cara}, M. and {Cardoso}, J.~V.~M. and {Cheedella}, S. and {Copin}, Y. and
+         {Corrales}, L. and {Crichton}, D. and {D'Avella}, D. and {Deil}, C. and
+         {Depagne}, {'E}. and {Dietrich}, J.~P. and {Donath}, A. and
+         {Droettboom}, M. and {Earl}, N. and {Erben}, T. and {Fabbro}, S. and
+         {Ferreira}, L.~A. and {Finethy}, T. and {Fox}, R.~T. and
+         {Garrison}, L.~H. and {Gibbons}, S.~L.~J. and {Goldstein}, D.~A. and
+         {Gommers}, R. and {Greco}, J.~P. and {Greenfield}, P. and
+         {Groener}, A.~M. and {Grollier}, F. and {Hagen}, A. and {Hirst}, P. and
+         {Homeier}, D. and {Horton}, A.~J. and {Hosseinzadeh}, G. and {Hu}, L. and
+         {Hunkeler}, J.~S. and {Ivezi{'c}}, {{Z}}. and {Jain}, A. and
+         {Jenness}, T. and {Kanarek}, G. and {Kendrew}, S. and {Kern}, N.~S. and
+         {Kerzendorf}, W.~E. and {Khvalko}, A. and {King}, J. and {Kirkby}, D. and
+         {Kulkarni}, A.~M. and {Kumar}, A. and {Lee}, A. and {Lenz}, D. and
+         {Littlefair}, S.~P. and {Ma}, Z. and {Macleod}, D.~M. and
+         {Mastropietro}, M. and {McCully}, C. and {Montagnac}, S. and
+         {Morris}, B.~M. and {Mueller}, M. and {Mumford}, S.~J. and {Muna}, D. and
+         {Murphy}, N.~A. and {Nelson}, S. and {Nguyen}, G.~H. and
+         {Ninan}, J.~P. and {N{"o}the}, M. and {Ogaz}, S. and {Oh}, S. and
+         {Parejko}, J.~K. and {Parley}, N. and {Pascual}, S. and {Patil}, R. and
+         {Patil}, A.~A. and {Plunkett}, A.~L. and {Prochaska}, J.~X. and
+         {Rastogi}, T. and {Reddy Janga}, V. and {Sabater}, J. and
+         {Sakurikar}, P. and {Seifert}, M. and {Sherbert}, L.~E. and
+         {Sherwood-Taylor}, H. and {Shih}, A.~Y. and {Sick}, J. and
+         {Silbiger}, M.~T. and {Singanamalla}, S. and {Singer}, L.~P. and
+         {Sladen}, P.~H. and {Sooley}, K.~A. and {Sornarajah}, S. and
+         {Streicher}, O. and {Teuben}, P. and {Thomas}, S.~W. and
+         {Tremblay}, G.~R. and {Turner}, J.~E.~H. and {Terr{'o}n}, V. and
+         {van Kerkwijk}, M.~H. and {de la Vega}, A. and {Watkins}, L.~L. and
+         {Weaver}, B.~A. and {Whitmore}, J.~B. and {Woillez}, J. and
+         {Zabalza}, V. and {Astropy Contributors}},
+        title = "{The Astropy Project: Building an Open-science Project and Status of the v2.0 Core Package}",
+      journal = {aj},
+     keywords = {methods: data analysis, methods: miscellaneous, methods: statistical, reference systems, Astrophysics - Instrumentation and Methods for Astrophysics},
+         year = 2018,
+        month = sep,
+       volume = {156},
+       number = {3},
+          eid = {123},
+        pages = {123},
+          doi = {10.3847/1538-3881/aabc4f},
+archivePrefix = {arXiv},
+       eprint = {1801.02634},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018AJ....156..123A},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@MISC{synphot,
+       author = {{STScI Development Team}},
+        title = "{synphot: Synthetic photometry using Astropy}",
+     keywords = {Software},
+         year = 2018,
+        month = nov,
+          eid = {ascl:1811.001},
+        pages = {ascl:1811.001},
+archivePrefix = {ascl},
+       eprint = {1811.001},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018ascl.soft11001S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{anisocado,
+       author = {{Leschinski}, Kieran and {Gendron}, Eric},
+        title = "{AnisoCADO: a python package for analytically generating adaptive optics point spread functions for the Extremely Large Telescope}",
+      journal = {arXiv e-prints},
+     keywords = {Astrophysics - Instrumentation and Methods for Astrophysics},
+         year = 2020,
+        month = jun,
+          eid = {arXiv:2006.14572},
+        pages = {arXiv:2006.14572},
+archivePrefix = {arXiv},
+       eprint = {2006.14572},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2020arXiv200614572L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@inproceedings{jupyter,
+       booktitle = {Positioning and Power in Academic Publishing: Players, Agents and Agendas},
+          editor = {Fernando Loizides and Birgit Scmidt},
+           title = {Jupyter Notebooks - a publishing format for reproducible computational workflows},
+          author = {Thomas Kluyver and Benjamin Ragan-Kelley and Fernando P{\'e}rez and Brian Granger and Matthias Bussonnier and Jonathan Frederic and Kyle Kelley and Jessica Hamrick and Jason Grout and Sylvain Corlay and Paul Ivanov and Dami{\'a}n Avila and Safia Abdalla and Carol Willing and  Jupyter development team},
+       publisher = {IOS Press},
+         address = {Netherlands},
+            year = {2016},
+           pages = {87--90},
+             url = {https://eprints.soton.ac.uk/403913/},
+        abstract = {It is increasingly necessary for researchers in all fields to write computer code, and in order to reproduce research results, it is important that this code is published. We present Jupyter notebooks, a document format for publishing code, results and explanations in a form that is both readable and executable. We discuss various tools and use cases for notebook documents.}
+}
+
+
+@INPROCEEDINGS{simcado2016,
+       author = {{Leschinski}, K. and {Czoske}, O. and {K{\"o}hler}, R. and {Mach}, M. and {Zeilinger}, W. and {Verdoes Kleijn}, G. and {Alves}, J. and {Kausch}, W. and {Przybilla}, N.},
+        title = "{SimCADO: an instrument data simulator package for MICADO at the E-ELT}",
+     keywords = {Astrophysics - Instrumentation and Methods for Astrophysics},
+    booktitle = {Modeling, Systems Engineering, and Project Management for Astronomy VI},
+         year = 2016,
+       editor = {{Angeli}, George Z. and {Dierickx}, Philippe},
+       series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+       volume = {9911},
+        month = aug,
+          eid = {991124},
+        pages = {991124},
+          doi = {10.1117/12.2232483},
+archivePrefix = {arXiv},
+       eprint = {1609.01480},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2016SPIE.9911E..24L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@INPROCEEDINGS{simcado2019,
+       author = {{Leschinski}, Kieran and {Czoske}, Oliver and {K{\"o}hler}, Rainer and {Mach}, Michael and {Zeilinger}, Werner and {Verdoes Kleijn}, Gijs and {Kausch}, Wolfgang and {Przybilla}, Norbert and {Alves}, Joao and {Davies}, Richard},
+        title = "{SimCADO - a Python Package for Simulating Detector Output for MICADO at the E-ELT}",
+    booktitle = {Astronomical Data Analysis Software and Systems XXVI},
+         year = 2019,
+       editor = {{Molinaro}, Marco and {Shortridge}, Keith and {Pasian}, Fabio},
+       series = {Astronomical Society of the Pacific Conference Series},
+       volume = {521},
+        month = oct,
+        pages = {527},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2019ASPC..521..527L},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@INPROCEEDINGS{schmalzl2012,
+       author = {{Schmalzl}, E. and {Meisner}, J. and {Venema}, L. and {Kendrew}, S. and {Brandl}, B. and {Blommaert}, J. and {Glasse}, Alistair and {Lenzen}, R. and {Meyer}, M. and {Molster}, F. and {Pantin}, E.},
+        title = "{An end-to-end instrument model for the proposed E-ELT instrument METIS}",
+    booktitle = {Modeling, Systems Engineering, and Project Management for Astronomy V},
+         year = 2012,
+       editor = {{Angeli}, George Z. and {Dierickx}, Philippe},
+       series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+       volume = {8449},
+        month = sep,
+          eid = {84491P},
+        pages = {84491P},
+          doi = {10.1117/12.925938},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2012SPIE.8449E..1PS},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@INPROCEEDINGS{micado2018,
+       author = {{Davies}, R. and {Alves}, J. and {Cl{\'e}net}, Y. and {Lang-Bardl}, F. and {Nicklas}, H. and {Pott}, J. -U. and {Ragazzoni}, R. and {Tolstoy}, E. and {Amico}, P. and {Anwand-Heerwart}, H. and {Barboza}, S. and {Barl}, L. and {Baudoz}, P. and {Bender}, R. and {Bezawada}, N. and {Bizenberger}, P. and {Boland}, W. and {Bonifacio}, P. and {Borgo}, B. and {Buey}, T. and {Chapron}, F. and {Chemla}, F. and {Cohen}, M. and {Czoske}, O. and {D{\'e}o}, V. and {Disseau}, K. and {Dreizler}, S. and {Dupuis}, O. and {Fabricius}, M. and {Falomo}, R. and {Fedou}, P. and {F{\"o}rster Schreiber}, N. and {Garrel}, V. and {Geis}, N. and {Gemperlein}, H. and {Gendron}, E. and {Genzel}, R. and {Gillessen}, S. and {Gl{\"u}ck}, M. and {Grupp}, F. and {Hartl}, M. and {H{\"a}user}, M. and {Hess}, H. -J. and {Hofferbert}, R. and {Hopp}, U. and {H{\"o}rmann}, V. and {Hubert}, Z. and {Huby}, E. and {Huet}, J. -M. and {Hutterer}, V. and {Ives}, D. and {Janssen}, A. and {Jellema}, W. and {Kausch}, W. and {Kerber}, F. and {Kravcar}, H. and {Le Ruyet}, B. and {Leschinski}, K. and {Mandla}, C. and {Manhart}, M. and {Massari}, D. and {Mei}, S. and {Merlin}, F. and {Mohr}, L. and {Monna}, A. and {Muench}, N. and {M{\"u}ller}, F. and {Musters}, G. and {Navarro}, R. and {Neumann}, U. and {Neumayer}, N. and {Niebsch}, J. and {Plattner}, M. and {Przybilla}, N. and {Rabien}, S. and {Ramlau}, R. and {Ramos}, J. and {Ramsay}, S. and {Rhode}, P. and {Richter}, A. and {Richter}, J. and {Rix}, H. -W. and {Rodeghiero}, G. and {Rohloff}, R. -R. and {Rosensteiner}, M. and {Rousset}, G. and {Schlichter}, J. and {Schubert}, J. and {Sevin}, A. and {Stuik}, R. and {Sturm}, E. and {Thomas}, J. and {Tromp}, N. and {Verdoes-Kleijn}, G. and {Vidal}, F. and {Wagner}, R. and {Wegner}, M. and {Zeilinger}, W. and {Ziegleder}, J. and {Ziegler}, B. and {Zins}, G.},
+        title = "{The MICADO first light imager for the ELT: overview, operation, simulation}",
+     keywords = {Astrophysics - Instrumentation and Methods for Astrophysics},
+    booktitle = {Ground-based and Airborne Instrumentation for Astronomy VII},
+         year = 2018,
+       editor = {{Evans}, Christopher J. and {Simard}, Luc and {Takami}, Hideki},
+       series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+       volume = {10702},
+        month = jul,
+          eid = {107021S},
+        pages = {107021S},
+          doi = {10.1117/12.2311483},
+archivePrefix = {arXiv},
+       eprint = {1807.10003},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018SPIE10702E..1SD},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@INPROCEEDINGS{metis2018,
+       author = {{Brandl}, Bernhard R. and {Absil}, Olivier and {Ag{\'o}cs}, Tibor and {Baccichet}, Nicola and {Bertram}, Thomas and {Bettonvil}, Felix and {van Boekel}, Roy and {Burtscher}, Leonard and {van Dishoeck}, Ewine and {Feldt}, Markus and {Garcia}, Paulo J.~V. and {Glasse}, Alistair and {Glauser}, Adrian and {G{\"u}del}, Manuel and {Haupt}, Christoph and {Kenworthy}, Matthew A. and {Labadie}, Lucas and {Laun}, Werner and {Lesman}, Dirk and {Pantin}, Eric and {Quanz}, Sascha P. and {Snellen}, Ignas and {Siebenmorgen}, Ralf and {van Winckel}, Hans},
+        title = "{Status of the mid-IR ELT imager and spectrograph (METIS)}",
+    booktitle = {Ground-based and Airborne Instrumentation for Astronomy VII},
+         year = 2018,
+       editor = {{Evans}, Christopher J. and {Simard}, Luc and {Takami}, Hideki},
+       series = {Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+       volume = {10702},
+        month = jul,
+          eid = {107021U},
+        pages = {107021U},
+          doi = {10.1117/12.2311492},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018SPIE10702E..1UB},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{elt,
+       author = {{Gilmozzi}, R. and {Spyromilio}, J.},
+        title = "{The European Extremely Large Telescope (E-ELT)}",
+      journal = {The Messenger},
+         year = 2007,
+        month = mar,
+       volume = {127},
+        pages = {11},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2007Msngr.127...11G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{hsim,
+       author = {{Zieleniewski}, S. and {Thatte}, N. and {Kendrew}, S. and {Houghton}, R.~C.~W. and {Swinbank}, A.~M. and {Tecza}, M. and {Clarke}, F. and {Fusco}, T.},
+        title = "{HSIM: a simulation pipeline for the HARMONI integral field spectrograph on the European ELT}",
+      journal = {\mnras},
+     keywords = {instrumentation: adaptive optics, instrumentation: spectrographs, galaxies: high-redshift, galaxies: kinematics and dynamics, Astrophysics - Instrumentation and Methods for Astrophysics},
+         year = 2015,
+        month = nov,
+       volume = {453},
+       number = {4},
+        pages = {3754-3765},
+          doi = {10.1093/mnras/stv1860},
+archivePrefix = {arXiv},
+       eprint = {1508.04441},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015MNRAS.453.3754Z},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+@ARTICLE{hawki,
+       author = {{Kissler-Patig}, M. and {Pirard}, J. -F. and {Casali}, M. and {Moorwood}, A. and {Ageorges}, N. and {Alves de Oliveira}, C. and {Baksai}, P. and {Bedin}, L.~R. and {Bendek}, E. and {Biereichel}, P. and {Delabre}, B. and {Dorn}, R. and {Esteves}, R. and {Finger}, G. and {Gojak}, D. and {Huster}, G. and {Jung}, Y. and {Kiekebush}, M. and {Klein}, B. and {Koch}, F. and {Lizon}, J. -L. and {Mehrgan}, L. and {Petr-Gotzens}, M. and {Pritchard}, J. and {Selman}, F. and {Stegmeier}, J.},
+        title = "{HAWK-I: the high-acuity wide-field K-band imager for the ESO Very Large Telescope}",
+      journal = {\aap},
+     keywords = {instrumentation: miscellaneous, infrared: general},
+         year = 2008,
+        month = dec,
+       volume = {491},
+       number = {3},
+        pages = {941-950},
+          doi = {10.1051/0004-6361:200809910},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2008A&A...491..941K},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+

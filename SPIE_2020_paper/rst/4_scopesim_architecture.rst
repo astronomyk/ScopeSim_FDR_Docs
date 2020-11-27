@@ -41,7 +41,7 @@ The main ScopeSim engine architecture is based around 5 major python classes:
 - **Effect**: the interface base class for introducing spectral and spatial aberrations into the final flux map.
 
 
-.. figure:: ../images/Workflow.png
+.. figure:: Workflow.png
     :name: fig-workflow
     :scale: 90 %
 
@@ -100,7 +100,7 @@ The final detector output is returned in the form of a FITS HDUList.
 Effects Objects
 +++++++++++++++
 
-.. figure:: ../images/Effects.png
+.. figure:: Effects.png
     :name: fig-effect
     :scale: 90 %
 
@@ -162,7 +162,7 @@ The following pseudo-code snippet describes the major steps of the simulation wo
 As can be seen, there is a very similar pattern.
 Obviously there are a few more steps involved, in the actual ScopeSim code, however the "observe" method of an optical model consists of little more than a python implementation of this pseudo-code.
 
-.. todo:: include list of effects in scopesim?
+**!!!** include list of effects in scopesim?
 
 The authors of ScopeSim have already included a large number of standard Effects in the ScopeSim core package.
 It is clear however that there are many more that could be added.

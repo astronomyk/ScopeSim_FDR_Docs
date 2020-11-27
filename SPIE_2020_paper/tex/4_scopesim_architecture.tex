@@ -66,7 +66,7 @@ The main ScopeSim engine architecture is based around 5 major python classes:
 \end{itemize}
 
 \begin{figure}[H]
-\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{../images/Workflow.png}}\phantomsection\label{fig-workflow}
+\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{Workflow.png}}\phantomsection\label{fig-workflow}
 
 \caption{An illustration of the connections between the main internal classes in ScopeSim: Source, FieldOfView, ImagePlane, DetectorArray.
 The upper panels show the work flow for imaging simulations.
@@ -124,7 +124,7 @@ The final detector output is returned in the form of a FITS HDUList.
 }
 
 \begin{figure}[H]
-\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{../images/Effects.png}}\phantomsection\label{fig-effect}
+\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{Effects.png}}\phantomsection\label{fig-effect}
 
 \caption{Effect objects are similar to matrix operator in mathematics.
 What goes in must come out.
@@ -195,23 +195,7 @@ detector.write_to("file.fits")
 As can be seen, there is a very similar pattern.
 Obviously there are a few more steps involved, in the actual ScopeSim code, however the \textquotedbl{}observe\textquotedbl{} method of an optical model consists of little more than a python implementation of this pseudo-code.
 
-\DUadmonition[system-message]{
-\DUtitle[system-message]{system-message}
-
-
-{\color{red}ERROR/3} in \texttt{<string>}, line~170
-
-Unknown directive type \textquotedbl{}todo\textquotedbl{}.
-
-\begin{quote}
-\begin{alltt}
-\begin{lstlisting}[frame=single]
-.. todo:: include list of effects in scopesim?
-
-\end{lstlisting}
-\end{alltt}
-\end{quote}
-backrefs: }
+\textbf{!!!} include list of effects in scopesim?
 
 The authors of ScopeSim have already included a large number of standard Effects in the ScopeSim core package.
 It is clear however that there are many more that could be added.

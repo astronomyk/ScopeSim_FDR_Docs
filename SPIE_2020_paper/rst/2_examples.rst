@@ -2,28 +2,28 @@ Examples
 --------
 :name: sec-examples
 
-As the saying goes: Pictures are worth a thousand words.
 The purpose of the ScopeSim ecosystem is to simulate data from astronomical instruments.
+As the saying goes: Pictures are worth a thousand words.
 This section will illustrate how this is done with very few lines of python code for three common science cases.
-It is the authors' hope that the code snippets provided are readable by the intended audience of this paper.
+It is the authors' hope that the code snippets provided are readable by the audience of this paper.
 It this is in fact not the case, the authors refer the reader to the scopesim online documentation.
 
 
 Example 1: Extended source imaging
 ++++++++++++++++++++++++++++++++++
 
-.. figure:: ../images/combined_1_2.png
+.. figure:: combined_1_2.png
     :name: fig-combined_1_2
     :scale: 90 %
 
-    Left: A simulated 1 second observation in the Ks filter of a spiral galaxy similar to NGC1231L using HAWKI at the VLT
-    Right: A simulated 1 hour observation in the Ks filter of a dense 3000 Msun star cluster in the Large Magellanic Cloud using MICADO at the ELT.
+    Left: A simulated one second observation in the Ks filter of a spiral galaxy similar to NGC\,1232L using HAWKI at the VLT
+    Right: A simulated one hour observation in the Ks filter of a dense 3000\,M$_\odot$ star cluster in the Large Magellanic Cloud using MICADO at the ELT.
 
 
 The first short example simulates a short (1 second) exposure with HAWKI at the VLT in No-AO mode using the Ks filter.
 The target is a two component spiral galaxy using a template based on NGC~1232L from the scopesim_templates package.
-The galaxy was resized to a diameter of 3 arcminutes and the associated flux spectra from Brown+14 were rescaled to ~12 mag arcsec-2.
-The detector window of 1024x1024 pixels covers ~1.6x1.6 arcminutes on sky.
+The galaxy was resized to a diameter of 3 arcminutes and the associated flux spectra from Brown+14 were rescaled to ~12\,mag\,arcsec$^{-2}$.
+The detector window of 1024\,$\times$\,1024 pixels covers $\sim$1.6\,$\times$\,1.6\,arcminutes on sky.
 The final simulated image shows primarily the star forming regions in the inner regions of the spiral arms.
 The simulated detector output is shown in the left panel of Figure \ref{fig-combined_1_2}.
 
@@ -76,11 +76,11 @@ The result of this code is show in the right panel of Figure \ref{fig-combined-1
                                 "telescopes/ELT",
                                 "instruments/MICADO_Sci"])
 
-    cluster = cluster(mass=3e3,         # solar masses
-                      distance=50e3,    # parsec
-                      core_radius=0.3)  # parsec
+    cluster = cluster(mass=3e3,                     # solar masses
+                      distance=50e3,                # parsec
+                      core_radius=0.3)              # parsec
     micado = scopesim.OpticalTrain("MICADO_Sci")
-    micado.cmds["!OBS.dit"] = 3600                      # seconds
+    micado.cmds["!OBS.dit"] = 3600                  # seconds
     micado.observe(cluster)
     fits_hdulists = micado.readout()
 
@@ -96,7 +96,7 @@ The MICADO_Sci package was compiled specifically for the MICADO science team to 
 Example 3: Spectroscopy
 +++++++++++++++++++++++
 
-.. figure:: ../images/example_3_spectra.png
+.. figure:: example_3_spectra.png
     :name: fig-example-3-spectra
     :scale: 90 %
 
@@ -118,7 +118,7 @@ In order to reduce computation time, the simulated wavelength range is restricte
 .. code::
     :name: code-example-3-spectra
 
-
+    import numpy as np
     from scopesim import UserCommands, OpticalTrain
     from scopesim_templates.basic.stars import stars
 
@@ -149,7 +149,7 @@ Effects included in instrument packages
 
 The instrument packages used for these examples can be found online in the Instrument Reference Database (IRDB) Github repository (see Section \ref{sec-docs-and-code}).
 Each package contains a description of the optical effects that are inherent to the instrument or telescope, as well as the data needed to replicate these effects.
-Scopesim allows the user to view which effects are included in the current optical model.
+ScopeSim allows the user to view which effects are included in the current optical model.
 This example uses the MICADO_Sci optical system from the previous examples
 
 .. code::

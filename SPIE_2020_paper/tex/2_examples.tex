@@ -9,10 +9,10 @@
 sec-examples
 \end{DUfieldlist}
 
-As the saying goes: Pictures are worth a thousand words.
 The purpose of the ScopeSim ecosystem is to simulate data from astronomical instruments.
+As the saying goes: Pictures are worth a thousand words.
 This section will illustrate how this is done with very few lines of python code for three common science cases.
-It is the authors' hope that the code snippets provided are readable by the intended audience of this paper.
+It is the authors' hope that the code snippets provided are readable by the audience of this paper.
 It this is in fact not the case, the authors refer the reader to the scopesim online documentation.
 
 
@@ -21,16 +21,16 @@ It this is in fact not the case, the authors refer the reader to the scopesim on
 }
 
 \begin{figure}[H]
-\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{../images/combined_1_2.png}}\phantomsection\label{fig-combined-1-2}
+\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{combined_1_2.png}}\phantomsection\label{fig-combined-1-2}
 
-\caption{Left: A simulated 1 second observation in the Ks filter of a spiral galaxy similar to NGC1231L using HAWKI at the VLT
-Right: A simulated 1 hour observation in the Ks filter of a dense 3000 Msun star cluster in the Large Magellanic Cloud using MICADO at the ELT.}
+\caption{Left: A simulated one second observation in the Ks filter of a spiral galaxy similar to NGC,1232L using HAWKI at the VLT
+Right: A simulated one hour observation in the Ks filter of a dense 3000,M\$\_odot\$ star cluster in the Large Magellanic Cloud using MICADO at the ELT.}
 \end{figure}
 
 The first short example simulates a short (1 second) exposure with HAWKI at the VLT in No-AO mode using the Ks filter.
 The target is a two component spiral galaxy using a template based on NGC\textasciitilde{}1232L from the scopesim\_templates package.
-The galaxy was resized to a diameter of 3 arcminutes and the associated flux spectra from Brown+14 were rescaled to \textasciitilde{}12 mag arcsec-2.
-The detector window of 1024x1024 pixels covers \textasciitilde{}1.6x1.6 arcminutes on sky.
+The galaxy was resized to a diameter of 3 arcminutes and the associated flux spectra from Brown+14 were rescaled to \textasciitilde{}12,mag,arcsec\$\textasciicircum{}\{-2\}\$.
+The detector window of 1024,\$times\$,1024 pixels covers \$sim\$1.6,\$times\$,1.6,arcminutes on sky.
 The final simulated image shows primarily the star forming regions in the inner regions of the spiral arms.
 The simulated detector output is shown in the left panel of Figure ref\{fig-combined\_1\_2\}.
 
@@ -92,11 +92,11 @@ scopesim.download_packages(["locations/Armazones",
                             "telescopes/ELT",
                             "instruments/MICADO_Sci"])
 
-cluster = cluster(mass=3e3,         # solar masses
-                  distance=50e3,    # parsec
-                  core_radius=0.3)  # parsec
+cluster = cluster(mass=3e3,                     # solar masses
+                  distance=50e3,                # parsec
+                  core_radius=0.3)              # parsec
 micado = scopesim.OpticalTrain("MICADO_Sci")
-micado.cmds["!OBS.dit"] = 3600                      # seconds
+micado.cmds["!OBS.dit"] = 3600                  # seconds
 micado.observe(cluster)
 fits_hdulists = micado.readout()
 \end{lstlisting}
@@ -118,7 +118,7 @@ The MICADO\_Sci package was compiled specifically for the MICADO science team to
 }
 
 \begin{figure}[H]
-\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{../images/example_3_spectra.png}}\phantomsection\label{fig-example-3-spectra}
+\noindent\makebox[\linewidth][c]{\includegraphics[scale=0.900000]{example_3_spectra.png}}\phantomsection\label{fig-example-3-spectra}
 
 \caption{Top: A rectified spectral image from the MICADO detectors for a 1 hour spectrographic observation of 6 progressively fainter stars (18<=Ks<=23)
 The dark vertical bars are the atmospheric emission lines.
@@ -141,6 +141,7 @@ In order to reduce computation time, the simulated wavelength range is restricte
 \begin{quote}
 \begin{alltt}
 \begin{lstlisting}[frame=single]
+import numpy as np
 from scopesim import UserCommands, OpticalTrain
 from scopesim_templates.basic.stars import stars
 
@@ -177,7 +178,7 @@ These include, but are not limited to photon shot noise and electronic noise sou
 
 The instrument packages used for these examples can be found online in the Instrument Reference Database (IRDB) Github repository (see Section ref\{sec-docs-and-code\}).
 Each package contains a description of the optical effects that are inherent to the instrument or telescope, as well as the data needed to replicate these effects.
-Scopesim allows the user to view which effects are included in the current optical model.
+ScopeSim allows the user to view which effects are included in the current optical model.
 This example uses the MICADO\_Sci optical system from the previous examples
 
 \phantomsection\label{code-optical-train}

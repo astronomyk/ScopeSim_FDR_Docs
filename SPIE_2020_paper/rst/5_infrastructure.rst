@@ -1,7 +1,7 @@
 Package Ecosystem
 -----------------
 
-.. todo:: add Figure showing the relation ship between packages
+**!!!** add Figure showing the relation ship between packages
 
 At its core the ScopeSim environment contains three packages:
 

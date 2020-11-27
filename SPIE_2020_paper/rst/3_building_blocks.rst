@@ -1,7 +1,7 @@
 Building blocks
 ---------------
 
-.. figure:: ../images/Ecosystem.png
+.. figure:: Ecosystem.png
     :name: fig-ecosystem
     :scale: 90 %
 
@@ -42,7 +42,7 @@ Instead it uses the fact that the observed image is a linear combination of inde
 
 This focus on removing as many redundant calculations as possible results in very quick execution times.
 The images from the code examples were generated on a standard laptop in around 10 seconds.
-Such speed makes Scopesim suitable for use cases with short iteration times, such a quick look feasibility studies, e.g. "playing" with a science case, or advanced exposure time calculators.
+Such speed makes ScopeSim suitable for use cases with short iteration times, such a quick look feasibility studies, e.g. "playing" with a science case, or advanced exposure time calculators.
 At the other end of the scale, ScopeSim is also useful for generating simulated raw data needed during the development of instrument data reduction pipelines.
 As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only the number and accuracy of the Effects listed in these packages.
 
@@ -58,7 +58,7 @@ Format of a Source object
 
 In order to optimise memory usage the Source objects split the spatial and spectral characteristics of a target.
 
-.. todo:: reference Schmalzl+2010 (old METIS simulator paper)
+**!!!** reference Schmalzl+2010 (old METIS simulator paper)
 
 These are held separately in two list: fields and spectra.
 A spatial field can be either a table of coordinated and flux scaling factors (e.g. the positions of stars in cluster) or a 2D weight map (e.g. an image of a galaxy).
@@ -69,8 +69,8 @@ Scopsim memory requirement are further reduces by taking advantage of this redun
 Galaxies and similar extended objects can also be adequately represented in this manner.
 A galaxy generally contains populations of stars (new, old, high-, low-metalicity, etc.) and in most cases observations do not resolve individual stars.
 Hence it can be assumed that if each component is represented by a unique flux weight map (i.e. an image) then each stellar population can be represented by a single spectrum.
-As an example, the scopesim_templates function "spiral_two_component" uses the B filter image of the galaxy NGC\,1232L to represent the young population and the I filter image for the old population.
-Each image references the relevant spectrum for a young or old population.
+As an example, the scopesim_templates function ``galaxy.spiral_two_component`` uses the B filter image of the galaxy NGC\,1232L to represent the young population and the I filter image for the old population.
+Each image references a spectrum for a young or old population.
 
 The extreme limit for this type of representation would be the case where every single pixel in an image is associated with a unique spectrum.
 An example might be the turbulent motions of gas in a star forming region, although it is still arguable that even here there will still be spectrally redundant regions.
@@ -78,19 +78,19 @@ In this case the spectral and spatial components can still be split, however the
 Such a use case would be particularly computationally expensive.
 It is therefore highly recommended in such cases to search for possible spectral redundancy before creating a "Source" object from a spectral cube.
 
-.. todo:: insert image of these use cases
+**!!!** insert image of these use cases
 
 
-Structure of ScopeSim_templates package
+Structure of ScopeSim-templates package
 ***************************************
 
-Currently Scopesim_templates splits the helper functions into categories based on the complexity of the Source object that is produced.
-The "basic" subpackage contains helper function which are useful for quick look investigations, but which should not be used for in depth feasibility studies.
-For example the "stars.cluster" function does not allow age or metallicity to be set.
-In contrast the "advanced" subpackage contains functions that can be useful for very specific science cases, but are not adapted for general use.
+Currently ScopeSim-templates splits the helper functions into categories based on the complexity of the Source object that is produced.
+The ``basic`` subpackage contains helper function which are useful for quick look investigations, but which should not be used for in depth feasibility studies.
+For example the ``stars.cluster`` function does not allow age or metallicity to be set.
+In contrast the ``advanced`` subpackage contains functions that can be useful for very specific science cases, but are not adapted for general use.
 
 In addition to the general functions, it is possible to add helper functions for objects used by specific instruments.
-The "micado" subpackage for example contains functions that produce objects specific to the MICADO instrument at the ELT.
+The ``micado`` subpackage for example contains functions that produce objects specific to the MICADO instrument at the ELT.
 
 Community participation is most welcome to help expand the number of object template function in the ScopeSim_templates package.
 
@@ -137,4 +137,4 @@ An example of this is available in the online documentation.
 For readers interested in creating their own instrument packages for a local telescope or instrument, the authors recommend looking inside the LFOA (Leopold-Figl Observatory for Astrophysics) package on the IRDB Github page.
 This contains everything needed to simulate observations with the Viennese 1.5m telescope.
 
-.. todo:: add link here
+**!!!** add link here

@@ -5,11 +5,10 @@ The suite of packages can be used by a wide audience for a variety of purposes; 
 
 ScopeSim achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the ScopeSim engine package is completely instrument and object agnostic.
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (IRDB).
-The description of the on-sky source is keep exclusively within the target ``templates`` package (see ``scopesim_templates``).
+The description of the on-sky source is keep exclusively within the target templates package (see ``scopesim_templates``).
 Finally, the engine has no clue about what it is observing until run-time.
 
-Why another instrument simulator
-++++++++++++++++++++++++++++++++
+But why does the community need yet another instrument simulator?
 Until now most instrument consortia have developed their own simulators.
 The general consensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent.
@@ -22,4 +21,3 @@ ScopeSim's main goal is to provide a framework for modelling (almost) any astron
 What Astropy has done for the general python landscape in astronomy, ScopeSim aims to do for the instrument simulator landscape.
 
 This paper is not intended to be a comprehensive description of the ScopeSim environment. Rather is aims to introduce the reader to the elements that make up ScopeSim and directs the reader towards the online documentation for each of the packages, should the reader wish to dive deeper into the material.
-
