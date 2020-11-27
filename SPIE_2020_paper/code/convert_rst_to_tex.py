@@ -23,6 +23,10 @@ for fname in glob.glob("../tex/*.tex"):
     data = data.replace("\}", r"}")
     data = data.replace("citep\{", r"\citep{")
     data = data.replace("citet\{", r"\citet{")
+    data = data.replace(r"\begin{lstlisting}",
+                        r"\begin{minipage}[c]{0.95\textwidth}" + "\n" + r"\begin{lstlisting}")
+    data = data.replace(r"\end{lstlisting}",
+                        r"\end{lstlisting}" + "\n" + r"\end{minipage}")
 
     with open(fname, 'w') as f:
         f.write(data)

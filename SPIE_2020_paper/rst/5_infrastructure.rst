@@ -1,7 +1,5 @@
-Package Ecosystem
------------------
-
-**!!!** add Figure showing the relation ship between packages
+Full ScopeSim Ecosystem
+-----------------------
 
 At its core the ScopeSim environment contains three packages:
 
@@ -18,6 +16,7 @@ In addition to the core package, there are several support packages:
 
 These package are not direct dependencies of ScopeSim, but do help provide additional functionality to the simulation engine.
 Table \ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
+
 
 .. list-table:: Links to the open source documentation and code bases
     :name: tbl-list-of-packages
@@ -48,8 +47,6 @@ Table \ref{tbl-list-of-packages} contains a list of the relevant links to both d
         - https://github.com/astronomyk/Pyckles
 
 
-Community involvement
-+++++++++++++++++++++
 **Community involvement is highly encouraged!**
 The whole ScopeSim ecosystem is open source and the developers welcome any contributions, both code and comments, by members of the astronomical community.
 The astronomical object templates package is one area which will benefit greatly from community contributions.

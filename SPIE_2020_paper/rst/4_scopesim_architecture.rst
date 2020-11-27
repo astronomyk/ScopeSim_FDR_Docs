@@ -159,9 +159,7 @@ The following pseudo-code snippet describes the major steps of the simulation wo
 As can be seen, there is a very similar pattern.
 Obviously there are a few more steps involved, in the actual ScopeSim code, however the "observe" method of an optical model consists of little more than a python implementation of this pseudo-code.
 
-**!!!** include list of effects in scopesim?
-
-The authors of ScopeSim have already included a large number of standard Effects in the ScopeSim core package.
+The authors of ScopeSim have already included a large number of standard Effects in the ScopeSim core package (see online documentation).
 It is clear however that there are many more that could be added.
 Community participation is always welcome.
 The Effect object interface has been intentionally kept light weight to encourage users to implement their own custom effects for their own simulations.

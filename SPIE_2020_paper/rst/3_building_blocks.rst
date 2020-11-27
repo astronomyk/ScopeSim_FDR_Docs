@@ -81,8 +81,6 @@ In this case the spectral and spatial components can still be split, however the
 Such a use case would be particularly computationally expensive.
 It is therefore highly recommended in such cases to search for possible spectral redundancy before creating a "Source" object from a spectral cube.
 
-**!!!** insert image of these use cases
-
 
 Structure of ScopeSim-templates package
 ***************************************
@@ -139,5 +137,3 @@ An example of this is available in the online documentation.
 
 For readers interested in creating their own instrument packages for a local telescope or instrument, the authors recommend looking inside the LFOA (Leopold-Figl Observatory for Astrophysics) package on the IRDB Github page.
 This contains everything needed to simulate observations with the Viennese 1.5m telescope.
-
-**!!!** add link here

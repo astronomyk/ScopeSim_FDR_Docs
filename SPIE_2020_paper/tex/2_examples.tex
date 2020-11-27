@@ -34,6 +34,7 @@ The observation simulation requires only the following 8 lines of code:
 
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 import scopesim
 from scopesim_templates.basic.galaxy import spiral_two_component
@@ -50,6 +51,7 @@ hawki.cmds["!OBS.dit"] = 1                      # seconds
 hawki.observe(spiral)
 fits_hdulists = hawki.readout()
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 
@@ -74,6 +76,7 @@ The result of this code is show in the right panel of Figure \ref{fig-combined-1
 
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 import scopesim
 from scopesim_templates.basic.stars import cluster
@@ -90,6 +93,7 @@ micado.cmds["!OBS.dit"] = 3600                  # seconds
 micado.observe(cluster)
 fits_hdulists = micado.readout()
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 
@@ -129,6 +133,7 @@ In order to reduce computation time, the simulated wavelength range is restricte
 \begin{DUclass}{code}
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 import numpy as np
 from scopesim import UserCommands, OpticalTrain
@@ -150,6 +155,7 @@ micado_spec = OpticalTrain(cmds)
 micado_spec.observe(stars)
 micado_spec.readout(filename="basic_spectral_trace.fits")
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 \end{DUclass}
@@ -172,10 +178,12 @@ This example uses the MICADO\_Sci optical system from the previous examples:
 
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 micado = scopesim.OpticalTrain("MICADO_Sci")
 print(micado.effects)
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 
@@ -185,10 +193,12 @@ Effects can be included or excluded from a simulation by using the \textquotedbl
 
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 micado["readout_noise"].include = False
 micado["shot_noise"].include = True
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 
