@@ -34,6 +34,7 @@ The observation simulation requires only the following 8 lines of code:
 
 \begin{quote}
 \begin{alltt}
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[frame=single]
 import scopesim
 from scopesim_templates.basic.galaxy import spiral_two_component
@@ -50,6 +51,7 @@ hawki.cmds["!OBS.dit"] = 1                      # seconds
 hawki.observe(spiral)
 fits_hdulists = hawki.readout()
 \end{lstlisting}
+\end{minipage}
 \end{alltt}
 \end{quote}
 
