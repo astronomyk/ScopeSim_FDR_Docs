@@ -7,8 +7,7 @@ The ScopeSim framework has been designed to maintain strict boundaries between t
 %As with real systems, the astronomical objects and the light they emit exist regardless of the telescope or astronomer.
 %The telescope and instruments also exist independently of the astronomer.
 %Only when an astronomer uses a telescope to observe a celestial object are the three connected.
-A similar philosophy has been applied to the development of the ScopeSim framework.
-
+% A similar philosophy has been applied to the development of the ScopeSim framework.
 The ScopeSim framework consists of three main packages:
 \begin{itemize}
 \item \lstinline{ScopeSim}: the core simulation engine,
@@ -33,18 +32,6 @@ The final output of a simulation is one or more FITS files containing the images
 Figure~\ref{fig:framework} illustrates the relationship between these three packages.
 Although there is a strict delineation between the scopes of each package, the interfaces between the packages allow them to interact almost seamlessly with each other.
 This can be seen in the code examples from Section~\ref{examples}.
-The main code pattern for simulating observations with a specific instrument is the same for all use cases:
-
-\begin{enumerate}
-\item download the required instrument packages from the instrument reference database (IRDB) using \lstinline{scopesim},
-
-\item create a description of the astronomical object using \lstinline{scopesim_templates},
-
-\item generate a model of the desired optical system using \lstinline{scopesim} and referencing the \lstinline{irdb} package,
-
-\item simulate and output the observed data using \lstinline{scopesim}.
-\end{enumerate}
-
 The following subsections briefly describe each of these three packages.
 
 \subsection{ScopeSim: the observation simulator engine}
@@ -63,7 +50,7 @@ This focus on removing as many redundant calculations as possible results in ver
 The images from the code examples were generated on a standard laptop in around 10~seconds.
 Such speed makes ScopeSim suitable for use cases with short iteration times, such a quick look feasibility studies, e.g.~``playing'' with a science case, or advanced exposure time calculators.
 At the other end of the scale, ScopeSim is also useful for generating simulated raw data needed during the development of instrument data reduction pipelines.
-As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only the number and accuracy of the Effects listed in these packages.
+As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only by the number and accuracy of the Effects listed in these packages.
 
 
 \subsection{ScopeSim Templates: Descriptions of on-sky targets}
@@ -87,7 +74,7 @@ Galaxies and similar extended objects can also be adequately represented in this
 A galaxy generally contains populations of stars (new, old, high- or low-metallicity, etc.) and in most cases observations do not resolve individual stars.
 Hence it can be assumed that if each component is represented by a unique flux weight map (i.e.~an image) then each stellar population can be represented by a single spectrum.
 As an example, the \scopesimtemplates{} function \lstinline{galaxy.spiral_two_component} uses the B~filter image of the galaxy NGC\,1232L to represent the young population and the I~filter image for the old population.
-Each image references a spectrum for a young or old population.
+Each image references a spectrum for a young or old population\cite{brown2014}.
 
 The extreme limit for this type of representation would be the case where every single pixel in an image is associated with a unique spectrum.
 An example might be the turbulent motions of gas in a star forming region, although it is still arguable that even here there will still be spectrally redundant regions.
@@ -107,10 +94,10 @@ In contrast the \lstinline{advanced} subpackage contains functions that can be u
 
 In addition to the general functions, it is possible to add helper functions for objects used by specific instruments.
 The \lstinline{micado} subpackage for example contains functions that produce objects specific to the MICADO instrument at the ELT.
-Community participation is most welcome to help expand the number of object template function in the \ScopeSimtemplates{} package.
+Community participation is most welcome to help expand the number of object templates in the \ScopeSimtemplates{} package.
 
 
-\subsection{Instrument Reference Database: The optical model data}
+\subsection{Instrument Reference Database: The data inside each optical model}
 \label{instrument-reference-database-the-optical-model-data}
 
 \ScopeSim{} aims to be a general-purpose instrument data simulator that can be used to simulate the output of many different optical systems.
@@ -118,12 +105,12 @@ To make this goal a reality it was mandatory that the \scopesim{} engine be comp
 There is however a large amount of instrument specific data that is needed to accurately model the optical aberrations inherent in any optical system.
 For \ScopeSim{} this data is stored in instrument packages in a separate instrument reference database (IRDB).
 Instrument packages can be created for any self-contained section of an optical train.
-For example, the telescope, the atmosphere, the relay optics, and the instrument are generally assumed to be self-contained optical sections.
+The telescope, the atmosphere, the relay optics, and the instrument are generally assumed to be self-contained optical sections.
 For small observatories like the University of Vienna's 1.5\,m telescope there is no benefit to splitting the optical elements into separate packages.
-However, for large observatories like the VLT where multiple instruments can be attached to a single telescope, it makes sense to split the telescope optical system from the instrument description.
+However, for large observatories like the VLT where multiple instruments can be attached to a single telescope, it makes sense to split the telescope optical section from the instrument optical section.
 Not only does this avoid multiple versions of a single optical element (e.g.~telescope) becoming unsynchronised when one instrument package is updated and another is not, it also reduces the scope of responsibility for maintaining packages.
-For example, this means that instrument consortia need only concentrate on maintaining their own instrument package, while the telescope operator is responsible for maintaining the telescope package.
-It also means a telescope or relay optics package can be updated without needing (theoretically) to inform the maintainers of all instrument packages that use those subsystem.
+This means that instrument consortia would only be responsible for maintaining their own instrument package, while the telescope operator is responsible for maintaining the telescope package.
+It also means a telescope or relay optics package can be updated without needing (theoretically) to inform the maintainers of all instrument packages that use a given subsystem.
 
 
 \subsubsection{Instrument package format}
@@ -157,10 +144,11 @@ This contains everything needed to simulate observations with the Viennese 1.5\,
 
 
 
-\subsection{Support Packages}
+\subsection{Additional Support Packages}
 \label{support-packages}
 
-In addition to the core package, there are several support packages:
+In addition to the core package, there are several stand alone packages which have been developed as part of the \ScopeSim{} framework. 
+These package are not direct dependencies of \ScopeSim{}, but do help provide additional functionality to the simulation engine:
 
 \begin{itemize}
 \item \lstinline{AnisoCADO}: simulates SCAO PSFs for the ELT
@@ -169,10 +157,10 @@ In addition to the core package, there are several support packages:
 
 \item \lstinline{SpeXtra}: provides easy access to many well-known spectral libraries
 
-\item \lstinline{Pyckles}: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
+\item \lstinline{Pyckles}: a light-weight wrapper for the Pickles (1998)\cite{pickles1998} and Brown (2014)\cite{brown2014} catalogues.
 \end{itemize}
 
-These package are not direct dependencies of \ScopeSim{}, but do help provide additional functionality to the simulation engine.
+
 Table~\ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
 
 \begin{table}
