@@ -1,10 +1,10 @@
 \section{Introduction}
 \label{introduction}
 
-\ScopeSim{} is a modular and flexible suite of Python packages that enable many common astronomical optical (observatory site/telescope/instrument) systems to be simulated.
+\ScopeSim{} is a modular and flexible suite of Python packages that enable many common astronomical optical systems (observatory site/telescope/instrument) to be simulated.
 The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a developer needing raw calibration data for testing the data reduction software.
 
-\ScopeSim{} achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the \ScopeSim{} engine package is completely instrument and object agnostic.
+\ScopeSim{} achieves this level of flexibility by adhering to strict interfaces between the packages, e.g: the \ScopeSim{} engine package is completely instrument and object agnostic.
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (\IRDB{}).
 The description of the on-sky source is kept exclusively within the target templates package (see \ScopeSimtemplates{}).
 Finally, the engine makes no assumptions about what it is observing until run-time.
