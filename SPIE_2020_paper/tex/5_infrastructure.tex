@@ -1,37 +1,36 @@
 
 
-\section{Full ScopeSim Ecosystem%
-  \label{full-scopesim-ecosystem}%
-}
+\section{Full ScopeSim Ecosystem}
+\label{full-scopesim-ecosystem}
 
-At its core the ScopeSim environment contains three packages:
+At its core the \ScopeSim{} environment contains three packages:
 
 \begin{itemize}
-\item \texttt{ScopeSim}: the simulation engine
+\item \ScopeSim{}: the simulation engine
 
-\item \texttt{ScopeSim\_templates}: descriptions of the on-sky sources
+\item \ScopeSimtemplates: descriptions of the on-sky sources
 
-\item \texttt{IRDB}: the instrument reference database, which contains the data files used to build the instrument models as well as the conguration files which tell the ScopeSim engine how to simulate observations.
+\item \IRDB{}: the instrument reference database, which contains the data files used to build the instrument models as well as the configuration files which tell the \ScopeSim{} engine how to simulate observations.
 \end{itemize}
 
 In addition to the core package, there are several support packages:
 
 \begin{itemize}
-\item \texttt{AnisoCADO}: simulates SCAO PSFs for the ELT
+\item \lstinline{AnisoCADO}: simulates SCAO PSFs for the ELT
 
-\item \texttt{SkyCalc\_ipy}: queries the ESO skycalc service for atmospheric spectral curves
+\item \lstinline{SkyCalc_ipy}: queries the ESO skycalc service for atmospheric spectral curves
 
-\item \texttt{SpeXtra}: provides easy access to many well-known spectral libraries
+\item \lstinline{SpeXtra}: provides easy access to many well-known spectral libraries
 
-\item \texttt{Pyckles}: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
+\item \lstinline{Pyckles}: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
 \end{itemize}
 
-These package are not direct dependencies of ScopeSim, but do help provide additional functionality to the simulation engine.
-Table \ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
+These package are not direct dependencies of \ScopeSim{}, but do help provide additional functionality to the simulation engine.
+Table~\ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
 
-\setlength{\DUtablewidth}{\linewidth}
-\begin{longtable}[c]{|p{0.315\DUtablewidth}|p{0.315\DUtablewidth}|p{0.315\DUtablewidth}|}
-\caption{Links to the open source documentation and code bases}\\
+\begin{table}
+\caption{Links to the open source documentation and code bases}\label{tbl-list-of-packages}
+\begin{tabularx}{\linewidth}{|l|X|X|}
 \hline
 
 Package
@@ -97,8 +96,8 @@ Pyckles
 \url{https://github.com/astronomyk/Pyckles}
  \\
 \hline
-\end{longtable}
-\label{tbl-list-of-packages}
+\end{tabularx}
+\end{table}
 
 \textbf{Community involvement is highly encouraged!}
 The whole ScopeSim ecosystem is open source and the developers welcome any contributions, both code and comments, by members of the astronomical community.
