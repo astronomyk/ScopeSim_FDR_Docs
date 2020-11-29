@@ -1,5 +1,3 @@
-
-
 \section{Introduction}
 \label{introduction}
 
@@ -12,7 +10,7 @@ The description of the on-sky source is kept exclusively within the target templ
 Finally, the engine makes no assumptions about what it is observing until run-time.
 
 But why does the community need yet another instrument simulator?
-Until now, most instrument consortia have developed their own simulators.
+Until now, most instrument consortia have developed, or are continuing to develop their own simulators\cite{hsim, schmalzl2012, simcado2016, simcado2019}.
 The general consensus is that every new instrument is sufficiently different from anything that has been previously developed, that it would make little sense to adapt already existing code.
 This statement is true to some extent.
 Every new instrument must differ in some way from all existing instruments in order for it to be useful to the astronomical community.
@@ -23,4 +21,5 @@ Furthermore, while the amplitude and shape of each effect differs between optica
 \ScopeSim{}'s main goal is to provide a framework for modelling (almost) any astronomical optical system by taking advantage of all these commonalities.
 What \lstinline{Astropy} has done for the general Python landscape in astronomy, \ScopeSim{} aims to do for the instrument simulator landscape.
 
-This paper is not intended to be a comprehensive description of the \ScopeSim{} environment. Rather it aims to introduce the reader to the elements that make up \ScopeSim{} and directs the reader towards the online documentation for each of the packages, should the reader wish to dive deeper into the material.
+This paper is not intended to be a comprehensive description of the \ScopeSim{} environment.
+Rather it aims to introduce the reader to the elements that make up \ScopeSim{} and directs the reader towards the online documentation for each of the packages, should the reader wish to dive deeper into the material (see Table \ref{tbl-list-of-packages}).

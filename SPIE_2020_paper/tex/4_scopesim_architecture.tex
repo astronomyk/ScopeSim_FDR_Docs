@@ -152,7 +152,7 @@ In other words, if a \Source{} object is the input to an \Effect{} object's \lst
 %The \Effect{} object may alter the distribution of flux inside an object, but it must return the same object.
 This is illustrated in Figure~\ref{fig:effect}.
 
-During the simulation workflow, the target object flux makes its way through the four main class objects described in section~\ref{simulation-workflow}.
+During the simulation workflow, the target object flux makes its way through the four main class objects described in Section~\ref{simulation-workflow}.
 While flux resides in each of these objects, the relevant \Effect{}s are sequentially applied to said object.
 For example, the telescope's (chromatic) PSF is applied to each of the \FieldOfView{} objects, as this is a spectrally dependent spatial (3D) effect.
 In contrast, the wind-shake gaussian PSF has no spectral dependency and is therefore only applied to the \ImagePlane{}.
