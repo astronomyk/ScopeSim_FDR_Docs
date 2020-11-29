@@ -1,10 +1,10 @@
 \section{Introduction}
 \label{introduction}
 
-\ScopeSim{} is a modular and flexible suite of Python packages that enable many common astronomical optical (observatory site/telescope/instrument) systems to be simulated.
+\ScopeSim{} is a modular and flexible suite of Python packages that enable many common astronomical optical systems (observatory site/telescope/instrument) to be simulated.
 The suite of packages can be used by a wide audience for a variety of purposes; from the astronomer interested in simulating reduced observational data, to a developer needing raw calibration data for testing the data reduction software.
 
-\ScopeSim{} achieves this level of flexibility by adhering to strict interfaces between the package, e.g: the \ScopeSim{} engine package is completely instrument and object agnostic.
+\ScopeSim{} achieves this level of flexibility by adhering to strict interfaces between the packages, e.g: the \ScopeSim{} engine package is completely instrument and object agnostic.
 All information and data relating to any specific optical configuration is kept exclusively in the instrument packages hosted in the instrument reference database (\IRDB{}).
 The description of the on-sky source is kept exclusively within the target templates package (see \ScopeSimtemplates{}).
 Finally, the engine makes no assumptions about what it is observing until run-time.
@@ -15,11 +15,11 @@ The general consensus is that every new instrument is sufficiently different fro
 This statement is true to some extent.
 Every new instrument must differ in some way from all existing instruments in order for it to be useful to the astronomical community.
 However when looked at from a global perspective, every optical system is comprised primarily of elements common to many other systems.
-Atmospheric emission, mirror reflectivities, filter transmission curves, point spread functions, read-out noise, detector linearity, hot pixels, are just a few of the effects and artifacts that every astronomical optical system contains.
+Atmospheric emission, mirror reflectivities, filter transmission curves, point spread functions, read-out noise, detector linearity, hot pixels, are just a few of the effects and artefacts that every astronomical optical system contains.
 Furthermore, while the amplitude and shape of each effect differs between optical systems, there are still commonalities in the way each effect can be described programmatically.
 
 \ScopeSim{}'s main goal is to provide a framework for modelling (almost) any astronomical optical system by taking advantage of all these commonalities.
-What \lstinline{Astropy} has done for the general Python landscape in astronomy, \ScopeSim{} aims to do for the instrument simulator landscape.
+What \lstinline{Astropy}\cite{astropy1, astropy2} has done for the general Python landscape in astronomy, \ScopeSim{} aims to do for the instrument simulator landscape.
 
 This paper is not intended to be a comprehensive description of the \ScopeSim{} environment.
 Rather it aims to introduce the reader to the elements that make up \ScopeSim{} and directs the reader towards the online documentation for each of the packages, should the reader wish to dive deeper into the material (see Table \ref{tbl-list-of-packages}).
