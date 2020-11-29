@@ -3,13 +3,13 @@
 \section{Building blocks}
 \label{building-blocks}
 
-The ScopeSim ecosystem has been designed to maintain strict boundaries between the simulation code, the optical model data, and the user input.
-As with real systems, the astronomical objects and the light they emit exist regardless of the telescope or astronomer.
-The telescope and instruments also exist independently of the astronomer.
-Only when an astronomer uses a telescope to observe a celestial object are the three connected.
-A similar philosophy has been applied to the development of the ScopeSim ecosystem.
+The ScopeSim framework has been designed to maintain strict boundaries between the simulation code, the optical model data, and the user input.
+%As with real systems, the astronomical objects and the light they emit exist regardless of the telescope or astronomer.
+%The telescope and instruments also exist independently of the astronomer.
+%Only when an astronomer uses a telescope to observe a celestial object are the three connected.
+A similar philosophy has been applied to the development of the ScopeSim framework.
 
-The ScopeSim ecosystem consists of three main packages:
+The ScopeSim framework consists of three main packages:
 \begin{itemize}
 \item \lstinline{ScopeSim}: the core simulation engine,
 
@@ -19,16 +19,18 @@ The ScopeSim ecosystem consists of three main packages:
 \end{itemize}
 
 \begin{figure}
+
 \resizebox{\linewidth}{!}{\includegraphics{Ecosystem.png}}
-\label{fig-ecosystem}
 \caption{An illustration of the scopes of the three main packages in the ScopeSim environment.
 \lstinline{ScopeSim_templates} (left) only provides the functionality to generate descriptions of on-sky objects in the format used by ScopeSim.
 The instrument reference database (right) contains the data and configuration files required to generate a model of an optical system in discrete instrument packages.
 The ScopeSim engine (centre) requires input from both of these packages, along with the observation constraints (e.g.~exposure time, observing mode, etc.) in order to simulate mock observation data.
 The final output of a simulation is one or more FITS files containing the images or spectra of the user's  target including all expected optical aberrations associated with the optical system.}
+\label{fig:framework}
+
 \end{figure}
 
-Figure~\ref{fig-ecosystem} illustrates the relationship between these three packages.
+Figure~\ref{fig:framework} illustrates the relationship between these three packages.
 Although there is a strict delineation between the scopes of each package, the interfaces between the packages allow them to interact almost seamlessly with each other.
 This can be seen in the code examples from Section~\ref{examples}.
 The main code pattern for simulating observations with a specific instrument is the same for all use cases:
@@ -84,7 +86,7 @@ For example in the case of star cluster, all A0V stars can reference a single A0
 Galaxies and similar extended objects can also be adequately represented in this manner.
 A galaxy generally contains populations of stars (new, old, high- or low-metallicity, etc.) and in most cases observations do not resolve individual stars.
 Hence it can be assumed that if each component is represented by a unique flux weight map (i.e.~an image) then each stellar population can be represented by a single spectrum.
-As an example, the \scopesimtemplates{} function \lstinline{galaxy.spiral_two_component} uses the B~filter image of the galaxy NGC\,1232 to represent the young population and the I~filter image for the old population.
+As an example, the \scopesimtemplates{} function \lstinline{galaxy.spiral_two_component} uses the B~filter image of the galaxy NGC\,1232L to represent the young population and the I~filter image for the old population.
 Each image references a spectrum for a young or old population.
 
 The extreme limit for this type of representation would be the case where every single pixel in an image is associated with a unique spectrum.
@@ -105,7 +107,6 @@ In contrast the \lstinline{advanced} subpackage contains functions that can be u
 
 In addition to the general functions, it is possible to add helper functions for objects used by specific instruments.
 The \lstinline{micado} subpackage for example contains functions that produce objects specific to the MICADO instrument at the ELT.
-
 Community participation is most welcome to help expand the number of object template function in the \ScopeSimtemplates{} package.
 
 
@@ -153,3 +154,95 @@ An example of this is available in the online documentation.
 
 For readers interested in creating their own instrument packages for a local telescope or instrument, the authors recommend looking inside the \lstinline{LFOA} (Leopold Figl Observatory for Astrophysics) package on the IRDB Github page.
 This contains everything needed to simulate observations with the Viennese 1.5\,m telescope.
+
+
+
+\section{Support Packages}
+\label{support-packages}
+
+In addition to the core package, there are several support packages:
+
+\begin{itemize}
+\item \lstinline{AnisoCADO}: simulates SCAO PSFs for the ELT
+
+\item \lstinline{SkyCalc_ipy}: queries the ESO skycalc service for atmospheric spectral curves
+
+\item \lstinline{SpeXtra}: provides easy access to many well-known spectral libraries
+
+\item \lstinline{Pyckles}: a light-weight wrapper for the Pickles (1998) and Brown (2010) catalogues.
+\end{itemize}
+
+These package are not direct dependencies of \ScopeSim{}, but do help provide additional functionality to the simulation engine.
+Table~\ref{tbl-list-of-packages} contains a list of the relevant links to both documentation and code-bases for these packages.
+
+\begin{table}
+\caption{Links to the open source documentation and code bases}
+\label{tbl-list-of-packages}
+\begin{tabularx}{\linewidth}{|l|X|X|}
+\hline
+
+Package
+ &
+Documentation
+ &
+Code base
+ \\
+\hline
+
+ScopeSim
+ &
+\url{https://scopesim.readthedocs.io/}
+ &
+\url{https://github.io/astronomyk/scopesim}
+ \\
+\hline
+
+ScopeSim\_templates
+ &
+\url{https://scopesim-templates.readthedocs.io/}
+ &
+\url{https://github.com/astronomyk/ScopeSim_templates}
+ \\
+\hline
+
+IRDB
+ &
+\url{https://irdb.readthedocs.io/en/latest/}
+ &
+\url{https://github.com/astronomyk/IRDB}
+ \\
+\hline
+
+AnisoCADO
+ &
+\url{https://anisocado.readthedocs.io/}
+ &
+\url{https://github.com/astronomyk/AnisoCADO}
+ \\
+\hline
+
+SkyCalc\_ipy
+ &
+\url{https://skycalc-ipy.readthedocs.io/en/latest/}
+ &
+\url{https://github.com/astronomyk/SkyCalc_iPy}
+ \\
+\hline
+
+SpeXtra
+ &
+\url{https://spextra.readthedocs.io/en/latest/}
+ &
+\url{https://github.com/miguelverdugo/speXtra}
+ \\
+\hline
+
+Pyckles
+ &
+\url{https://pyckles.readthedocs.io/en/latest/}
+ &
+\url{https://github.com/astronomyk/Pyckles}
+ \\
+\hline
+\end{tabularx}
+\end{table}
