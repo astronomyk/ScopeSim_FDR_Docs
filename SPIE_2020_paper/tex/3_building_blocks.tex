@@ -47,7 +47,7 @@ The main code pattern for simulating observations with a specific instrument is 
 
 The following subsections briefly describe each of these three packages.
 
-\subsection{\lstinline{ScopeSim}: the observation simulator engine}
+\subsection{ScopeSim: the observation simulator engine}
 \label{scopesim-the-observation-simulator-engine}
 
 The ScopeSim core package, also referred to as the ScopeSim engine, contains the code necessary for running observations simulations.
@@ -66,14 +66,14 @@ At the other end of the scale, ScopeSim is also useful for generating simulated 
 As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only the number and accuracy of the Effects listed in these packages.
 
 
-\subsection{\ScopeSimtemplates{}: Descriptions of on-sky targets}
+\subsection{ScopeSim Templates: Descriptions of on-sky targets}
 \label{scopesim-templates-descriptions-of-on-sky-targets}
 
 The \scopesimtemplates{} package provides a series of functions to help the user create a description of the on-sky targets they wish to observe in the format required by the \ScopeSim{} engine.
 These helper function populate one or more instances of the \ScopeSim{} \Source{} class with the data needed to best describe the target.
 
 
-\subsubsection{Format of a \Source{} object}
+\subsubsection{Format of a Source object}
 \label{format-of-a-source-object}
 
 In order to optimise memory usage the \Source{} objects split the spatial and spectral characteristics of a target.\cite{schmalzl2012}
@@ -96,7 +96,7 @@ Such a use case would be particularly computationally expensive.
 It is therefore highly recommended in such cases to search for possible spectral redundancy before creating a \Source{} object from a spectral cube.
 
 
-\subsubsection{Structure of \ScopeSimtemplates{} package}
+\subsubsection{Structure of ScopeSim templates package}
 \label{structure-of-scopesim-templates-package}
 
 
