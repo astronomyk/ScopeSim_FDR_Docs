@@ -53,7 +53,7 @@ The main \ScopeSim{} engine architecture is based around five major Python class
 
 \item \textbf{\DetectorArray}: mimics the functionality of the instrument detector array in converting the final expectation flux image from the \ImagePlane{} into FITS format pixel maps similar to those delivered by the system's read-out electronics.
 
-\item \textbf{\Effect{}}: the interface base class for introducing spectral and spatial aberrations into the final flux map.
+\item \textbf{\Effect{}}: the interface base class for introducing spectral, spatial, electronic, and statistical aberrations into the final flux map.
 \end{itemize}
 
 Figure~\ref{fig:workflow} illustrates how the first four of these classes interact with each other.
@@ -104,13 +104,15 @@ The \FieldOfView{} objects also contain two sets of spatial coordinates which co
 The \ImagePlane{}~(C, G) inside each optical model acts as a 2D canvas for the integrated flux contained inside the \FieldOfView{} objects.
 When each \FieldOfView{} object deposits its flux map onto the \ImagePlane{}, it simply adds the photon counts to what is already on the canvas at the \FieldOfView{}'s projected focal plane position.
 The resulting \ImagePlane{} image is therefore the final integrated projected expectation flux map as would exist at the detector focal plane of a real image, in units of $\mathrm{ph\,s^{-1}\,pixel^{-1}}$.
-All information on telescope aperture, viewing angle, and spectral bandpass has been integrated into the normalised photon count map -- thus the name ``expectation'' flux map.
+All information on telescope aperture, viewing angle, and spectral bandpass has been integrated into the normalised photon count map.
+% -- thus the name ``expectation'' flux map.
 At this stage of the simulation all sources of background flux (atmospheric, thermal) have also been projected onto the \ImagePlane{}, but no noise characteristics are included.
 
 The \DetectorArray{} class contains a list of \Detector{} objects (D, H).
-\Detector{} objects extract a region of the \ImagePlane{}'s expection flux map corresponding to its own footprint on the detector focal plane and scales this to match the user's desired exposure time (DIT in seconds).
-The resulting image is the flux that a real detector would register in an ideal world.
-At this point all noise characteristics are introduced, e.g.~shot noise, read noise, dark current, etc.
+\Detector{} objects extract a region of the \ImagePlane{}'s expectation flux map corresponding to its own footprint on the detector focal plane and scales this to match the user's desired exposure time (DIT in seconds).
+The resulting image is a Poisson shot noise realisation created from the expectation flux map with added detector noise characteristics, e.g.~read noise, dark current, etc.
+% The resulting image is the flux that a real detector would register in an ideal world.
+% At this point all noise characteristics are introduced, e.g.~shot noise, read noise, dark current, etc.
 The final detector output is returned in the form of a FITS \lstinline{HDUList} object.
 
 

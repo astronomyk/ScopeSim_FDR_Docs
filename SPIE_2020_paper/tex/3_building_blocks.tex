@@ -49,6 +49,7 @@ Instead it uses the fact that the observed image is a linear combination of inde
 This focus on removing as many redundant calculations as possible results in very quick execution times.
 The images from the code examples were generated on a standard laptop in around 10~seconds.
 Such speed makes ScopeSim suitable for use cases with short iteration times, such a quick look feasibility studies, e.g.~``playing'' with a science case, or advanced exposure time calculators.
+Such simulated observations should also help astronomers to improve their understanding of real observations and the intrinsic systematic uncertainties.
 At the other end of the scale, ScopeSim is also useful for generating simulated raw data needed during the development of instrument data reduction pipelines.
 As the ScopeSim engine takes its cues from the instrument packages, the fidelity of simulations is limited only by the number and accuracy of the Effects listed in these packages.
 
@@ -80,7 +81,7 @@ The extreme limit for this type of representation would be the case where every 
 An example might be the turbulent motions of gas in a star forming region, although it is still arguable that even here there will still be spectrally redundant regions.
 In this case the spectral and spatial components can still be split, although the result will be that each spatial field entry will consist of an image with only a single pixel and referencing the associated spectrum from the list of spectra.
 Such a use case would be particularly computationally expensive.
-It is therefore highly recommended in such cases to search for possible spectral redundancy before creating a \Source{} object from a spectral cube.
+It is therefore highly recommended in such cases either to search for possible spectral redundancy before creating a \Source{} object from a spectral cube or to greatly reduce the size of the data cube to the most relevant spectral and spatial regions.
 
 
 \subsubsection{Structure of ScopeSim templates package}
@@ -123,7 +124,7 @@ Each instrument package contains two main types of data:
 \item The empirical data files needed for \scopesim{} to apply the aberrations to the incoming photon flux.
 \end{enumerate}
 
-The configuration files are written in YAML.
+The configuration files are written in the YAML\footnote{YAML is a human-readable data-serialization language. It is based on the JSON language and allows configuration files to be written in an manner that is easy to read by a human.} style.
 They contain lists of \Effect{} object descriptions as well as global properties that are common to all \Effect{} objects in the subsystem.
 The \Effect{} object descriptions must call an existing \Effect{} class from the \ScopeSim{} core package.
 \Effect{} objects are discussed in more detail in Section~\ref{effects-objects}.
@@ -155,7 +156,7 @@ These package are not direct dependencies of \ScopeSim{}, but do help provide ad
 
 \item \lstinline{SkyCalc_ipy}: queries the ESO skycalc service for atmospheric spectral curves
 
-\item \lstinline{SpeXtra}: provides easy access to many well-known spectral libraries
+\item \lstinline{SpeXtra}: provides easy access to, and manipulation of, many well-known spectral libraries
 
 \item \lstinline{Pyckles}: a light-weight wrapper for the Pickles (1998)\cite{pickles1998} and Brown (2014)\cite{brown2014} catalogues.
 \end{itemize}
