@@ -94,8 +94,8 @@ Meta-data
 
 
 
-<SpectralTrace> "" : [0.75, 2.5]um : Ext 2 : Aperture 0 : ImagePlane 0
-**********************************************************************
+<SpectralTraceList> "spectral_trace_3000x50mas" : 1 traces
+**********************************************************
 **Included by default**: ``True``
 
 **File Description**: 
@@ -109,34 +109,41 @@ Meta-data
 Data
 ++++
 
+.. figure:: spectral_trace_3000x50mas.png
+    :name: fig:spectral_trace_3000x50mas
+
+    
+
 Meta-data
 +++++++++
 ::
 
-              filename : TRACE_SCI_3arcsec.fits
-                  name : spectral_trace_3000x50mas
-                   psf : {'wavelength': 'Ks', 'strehl': 0.4}
-              aperture : {'x': 0, 'y': 0, 'width': 3, 'height': 0.05}
-          element_name : MICADO_SPEC
-    center_on_wave_mid : True
-                SIMPLE : True
-                BITPIX : 8
-                 NAXIS : 0
-                EXTEND : True
-                  ECAT : 1
-                 EDATA : 2
-               z_order : [70, 270]
-               include : True
-           pixel_scale : !INST.pixel_scale
-           plate_scale : !INST.plate_scale
-              wave_min : !SIM.spectral.wave_min
-              wave_mid : !SIM.spectral.wave_mid
-              wave_max : !SIM.spectral.wave_max
-             x_colname : x
-             y_colname : y
-             s_colname : s
-          wave_colname : wavelength
-      col_number_start : 0
-                 dwave : 0.002
-         invalid_value : None
+                filename : TRACE_SCI_3arcsec.fits
+                    name : spectral_trace_3000x50mas
+                     psf : {'wavelength': 'Ks', 'strehl': 0.4}
+                aperture : {'x': 0, 'y': 0, 'width': 3, 'height': 0.05}
+            element_name : MICADO_SPEC
+      center_on_wave_mid : True
+                  SIMPLE : True
+                  BITPIX : 8
+                   NAXIS : 0
+                  EXTEND : True
+                    ECAT : 1
+                   EDATA : 2
+                 z_order : [70, 270]
+                 include : True
+             pixel_scale : !INST.pixel_scale
+             plate_scale : !INST.plate_scale
+                wave_min : !SIM.spectral.wave_min
+                wave_mid : !SIM.spectral.wave_mid
+                wave_max : !SIM.spectral.wave_max
+               x_colname : x
+               y_colname : y
+               s_colname : s
+            wave_colname : wavelength
+        col_number_start : 0
+                   dwave : 0.002
+           invalid_value : None
+     report_plot_include : True
+    report_table_include : False
 

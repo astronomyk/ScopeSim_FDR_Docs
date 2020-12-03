@@ -49,6 +49,7 @@ SurfaceList: "maory_surface_list"
 - 2019-01-28 (KL) Fixed YAML format in meta data
 - 2020-06-22 (KL) Updated file to match the MMS configuration from Carmelo
 - 2020-08-17 (KL) Pegged temperature to atmosphere
+- 2020-12-03 (KL)
 
 Data
 ++++
@@ -70,7 +71,7 @@ Data
           M8  0.85   0.0   0.0 !ATMO.temperature   reflection   TER_MAORY_mirror_silver.dat
          DM9  0.75   0.0   0.0 !ATMO.temperature   reflection TER_MAORY_mirror_mgf2agal.dat
         DM10  0.75   0.0   0.0 !ATMO.temperature   reflection TER_MAORY_mirror_mgf2agal.dat
-       Dichr   0.6   0.0   0.0 !ATMO.temperature   reflection    TER_MAORY_lgs_dichroic.dat
+    Dichroic   0.6   0.0   0.0 !ATMO.temperature   reflection    TER_MAORY_lgs_dichroic.dat
          M10   0.6   0.0   0.0 !ATMO.temperature   reflection   TER_MAORY_mirror_silver.dat
          M11   0.8   0.0  45.0 !ATMO.temperature   reflection   TER_MAORY_mirror_silver.dat
          M12   0.8   0.0   0.0 !ATMO.temperature   reflection   TER_MAORY_mirror_silver.dat

@@ -48,7 +48,7 @@ def summary_cmds(opt_mgr, filename=None, rst_title_chars="_^#*+"):
 def make_micado_rst_files():
 
     all_modes = ["SCAO", "MCAO", "IMG_4mas", "IMG_1.5mas",   # "IMG_HCI",
-                 "SPEC_15000x50", "SPEC_3000x50", "SPEC_3000x20"]
+                 "SPEC_3000x50"]
 
     cmd = sim.UserCommands(use_instrument="MICADO", set_modes=all_modes)
     rc.__currsys__ = cmd

@@ -109,14 +109,14 @@ ApertureMask: "spectroscopic_slit_aperture"
 *******************************************
 **Included by default**: ``True``
 
-**File Description**: Slit mask for the short, narrow slit (3 arcsec x 20 mas)
+**File Description**: Slit mask for the short, wide slit  (3 arcsec x 50 mas)
 
 **Class Description**: Only provides the on-sky window coords of the Aperture
 
 **Changes**:
 
 - 2019-07-10 (KL) Created the file
-- 2020-03-24 (KL) Changed geometry to 3000x20mas
+- 2020-03-24 (KL) Changed geometry to 3000x50mas
 
 Data
 ++++
@@ -127,10 +127,10 @@ Data
     ======= =======
        x       y   
     ======= =======
-    -1.5000 -0.0100
-     1.5000 -0.0100
-     1.5000  0.0100
-    -1.5000  0.0100
+    -1.5000 -0.0250
+     1.5000 -0.0250
+     1.5000  0.0250
+    -1.5000  0.0250
     ======= =======
 
 
@@ -166,24 +166,8 @@ Meta-data
 
 
 
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [1.93, 2.46]um : Ext 2 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [1.45, 1.85]um : Ext 3 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [1.16, 1.48]um : Ext 4 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [1.16, 1.39]um : Ext 5 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.97, 1.23]um : Ext 6 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.97, 1.23]um : Ext 7 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.83, 1.05]um : Ext 8 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.83, 1.05]um : Ext 9 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.83, 0.92]um : Ext 10 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.73, 0.92]um : Ext 11 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.73, 0.92]um : Ext 12 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.65, 0.82]um : Ext 13 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.65, 0.82]um : Ext 14 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.6, 0.74]um : Ext 15 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.6, 0.73]um : Ext 16 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.6, 0.67]um : Ext 17 : Aperture 0 : ImagePlane 0
-<SpectralTrace> "list of spectral order trace geometry on the focal plane" : [0.6, 0.67]um : Ext 18 : Aperture 0 : ImagePlane 0
-********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+<SpectralTraceList> "micado_spectral_traces" : 17 traces
+********************************************************
 **Included by default**: ``True``
 
 **File Description**: list of spectral order trace geometry on the focal plane
@@ -197,42 +181,49 @@ Meta-data
 Data
 ++++
 
+.. figure:: micado_spectral_traces.png
+    :name: fig:micado_spectral_traces
+
+    
+
 Meta-data
 +++++++++
 ::
 
-              filename : !OBS.trace_file
-                  name : micado_spectral_traces
-           pixel_scale : 0.004
-           plate_scale : 0.2666666667
-          element_name : MICADO_SPEC
-          wave_colname : lam
-             s_colname : xi
-      col_number_start : 1
-         invalid_value : 0
-                SIMPLE : True
-                BITPIX : 8
-                 NAXIS : 0
-                EXTEND : True
-              FILETYPE : Spectral Layout Definition
-                AUTHOR : Oliver Czoske
-                  DATE : 2018-09-16
-                SOURCE : Frank Grupp
-              ORIGDATE : 2018-06-29
-                STATUS : Design PDR
-                  ECAT : 1
-                 EDATA : 2
-              DESCRIPT : Maps spectral traces from long slit aperture to detector image plane
-              DATE_CRE : 2018-06-29
-              DATE_MOD : 2019-09-16
-               HISTORY : 2019-09-16 : (KL) Added aperture-imagePlane table to EXT 1
-               z_order : [70, 270]
-               include : True
-              wave_min : !SIM.spectral.wave_min
-              wave_mid : !SIM.spectral.wave_mid
-              wave_max : !SIM.spectral.wave_max
-             x_colname : x
-             y_colname : y
-    center_on_wave_mid : False
-                 dwave : 0.002
+                filename : !OBS.trace_file
+                    name : micado_spectral_traces
+             pixel_scale : 0.004
+             plate_scale : 0.2666666667
+            element_name : MICADO_SPEC
+            wave_colname : lam
+               s_colname : xi
+        col_number_start : 1
+           invalid_value : 0
+                  SIMPLE : True
+                  BITPIX : 8
+                   NAXIS : 0
+                  EXTEND : True
+                FILETYPE : Spectral Layout Definition
+                  AUTHOR : Oliver Czoske
+                    DATE : 2018-09-16
+                  SOURCE : Frank Grupp
+                ORIGDATE : 2018-06-29
+                  STATUS : Design PDR
+                    ECAT : 1
+                   EDATA : 2
+                DESCRIPT : Maps spectral traces from long slit aperture to detector image plane
+                DATE_CRE : 2018-06-29
+                DATE_MOD : 2019-09-16
+                 HISTORY : 2019-09-16 : (KL) Added aperture-imagePlane table to EXT 1
+                 z_order : [70, 270]
+                 include : True
+                wave_min : !SIM.spectral.wave_min
+                wave_mid : !SIM.spectral.wave_mid
+                wave_max : !SIM.spectral.wave_max
+               x_colname : x
+               y_colname : y
+      center_on_wave_mid : False
+                   dwave : 0.002
+     report_plot_include : True
+    report_table_include : False
 

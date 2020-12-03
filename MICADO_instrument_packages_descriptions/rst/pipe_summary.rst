@@ -37,10 +37,4 @@ Summary of Effects in Optical Elements:
               MICADO_SPEC                 spec_mode_optics                     SurfaceList     True      [20, 120, 520]
               MICADO_SPEC      spectroscopic_slit_aperture                    ApertureMask     True      [80, 280, 380]
               MICADO_SPEC           micado_spectral_traces               SpectralTraceList     True           [70, 270]
-              MICADO_SPEC                 spec_mode_optics                     SurfaceList     True      [20, 120, 520]
-              MICADO_SPEC      spectroscopic_slit_aperture                    ApertureMask     True      [80, 280, 380]
-              MICADO_SPEC           micado_spectral_traces               SpectralTraceList     True           [70, 270]
-              MICADO_SPEC                 spec_mode_optics                     SurfaceList     True      [20, 120, 520]
-              MICADO_SPEC      spectroscopic_slit_aperture                    ApertureMask     True      [80, 280, 380]
-              MICADO_SPEC           micado_spectral_traces               SpectralTraceList     True           [70, 270]
     ===================== ================================ =============================== ======== ===================
