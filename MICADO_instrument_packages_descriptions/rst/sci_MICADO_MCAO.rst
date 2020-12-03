@@ -15,7 +15,7 @@ Global properties
              psf : {'strehl': 0.4, 'wavelength': 'Ks'}
     element_name : MICADO_MCAO
 
-
+        
 Effects
 #######
 
@@ -28,7 +28,7 @@ Summary of Effects included in this optical element:
       element         name            class       included    z_orders   
     =========== =============== ================= ======== ==============
     MICADO_MCAO   maory_mms_ter          TERCurve     True [10, 110, 510]
-    MICADO_MCAO maory_const_psf AnisocadoConstPSF     True           [42]
+    MICADO_MCAO maory_const_psf AnisocadoConstPSF     True      [42, 652]
     =========== =============== ================= ======== ==============
  
 
@@ -49,29 +49,36 @@ TERCurve: "maory_mms_ter"
 Data
 ++++
 
+.. figure:: maory_mms_ter.png
+    :name: fig:maory_mms_ter
+
+    
+
 Meta-data
 +++++++++
 ::
 
-           filename : TER_MAORY_MMS.dat
-               name : maory_mms_ter
-                psf : {'strehl': 0.4, 'wavelength': 'Ks'}
-       element_name : MICADO_MCAO
-             author : Auto-compiled from source
-             source : LIST_mirrors_maory_mms.tbl
-       date_created : 2020-08-25
-      date_modified : 2020-08-25
-               area : 0.9503317777109126
-          area_unit : m2
-    wavelength_unit : um
-      emission_unit : photlam
-            z_order : [10, 110, 510]
-            include : True
-       ignore_wings : False
-           wave_min : !SIM.spectral.wave_min
-           wave_max : !SIM.spectral.wave_max
-          wave_unit : !SIM.spectral.wave_unit
-           wave_bin : !SIM.spectral.spectral_resolution
+                filename : TER_MAORY_MMS.dat
+                    name : maory_mms_ter
+                     psf : {'strehl': 0.4, 'wavelength': 'Ks'}
+            element_name : MICADO_MCAO
+                  author : Auto-compiled from source
+                  source : LIST_mirrors_maory_mms.tbl
+            date_created : 2020-08-25
+           date_modified : 2020-08-25
+                    area : 0.9503317777109126
+               area_unit : m2
+         wavelength_unit : um
+           emission_unit : photlam
+                 z_order : [10, 110, 510]
+                 include : True
+            ignore_wings : False
+                wave_min : 0.7
+                wave_max : 2.5
+               wave_unit : um
+                wave_bin : 0.001
+     report_plot_include : True
+    report_table_include : False
 
 
 
@@ -91,53 +98,59 @@ AnisocadoConstPSF: "maory_const_psf"
 Data
 ++++
 
+.. figure:: maory_const_psf.png
+    :name: fig:maory_const_psf
+
+    
+
 Meta-data
 +++++++++
 ::
 
-                  filename : MICADO_AnisoCADO_rms_map.fits
-                      name : maory_const_psf
-                       psf : {'strehl': 0.4, 'wavelength': 'Ks'}
-              element_name : MICADO_MCAO
-                    strehl : !INST.psf.strehl
-                wavelength : !INST.psf.wavelength
-           psf_side_length : 256
-                    offset : [0, 0]
-             rounded_edges : True
-             convolve_mode : full
-                    SIMPLE : True
-                    BITPIX : -64
-                     NAXIS : 2
-                    NAXIS1 : 35
-                    NAXIS2 : 9
-                    EXTEND : True
-                    CRVAL1 : 0
-                    CRVAL2 : 0.8
-                    CRPIX1 : 1.0
-                    CRPIX2 : 1.0
-                    CDELT1 : 20
-                    CDELT2 : 0.2
-                    CUNIT1 : nm
-                    CUNIT2 : um
-                    CTYPE1 : LINEAR
-                    CTYPE2 : LINEAR
-                    LABEL1 : nmRMS
-                    LABEL2 : wavelength
-                    AUTHOR : Kieran Leschinski
-                  DATE_CRE : 2019-07-30
-                  DATE_MOD : 2019-07-30
-                    SOURCE : AnisoCADO
-                    STATUS : Strehl as a function of wavelength and wavefront error (nmRMS)
-                     ETYPE : SRMAP
-                      ECAT : -1
-                     EDATA : 0
-                   XOFFSET : 0
-                   YOFFSET : 0
-                   z_order : [42]
-                   include : True
-             flux_accuracy : 0.001
-            sub_pixel_flag : False
-                  wave_key : WAVE0
-          normalise_kernel : True
-    filter_filename_format : !INST.filename_format
+                filename : MICADO_AnisoCADO_rms_map.fits
+                    name : maory_const_psf
+                     psf : {'strehl': 0.4, 'wavelength': 'Ks'}
+            element_name : MICADO_MCAO
+                  strehl : !INST.psf.strehl
+              wavelength : !INST.psf.wavelength
+         psf_side_length : 256
+                  offset : [0, 0]
+           rounded_edges : True
+           convolve_mode : full
+                  SIMPLE : True
+                  BITPIX : -64
+                   NAXIS : 2
+                  NAXIS1 : 35
+                  NAXIS2 : 9
+                  EXTEND : True
+                  CRVAL1 : 0
+                  CRVAL2 : 0.8
+                  CRPIX1 : 1.0
+                  CRPIX2 : 1.0
+                  CDELT1 : 20
+                  CDELT2 : 0.2
+                  CUNIT1 : nm
+                  CUNIT2 : um
+                  CTYPE1 : LINEAR
+                  CTYPE2 : LINEAR
+                  LABEL1 : nmRMS
+                  LABEL2 : wavelength
+                  AUTHOR : Kieran Leschinski
+                DATE_CRE : 2019-07-30
+                DATE_MOD : 2019-07-30
+                  SOURCE : AnisoCADO
+                  STATUS : Strehl as a function of wavelength and wavefront error (nmRMS)
+                   ETYPE : SRMAP
+                    ECAT : -1
+                   EDATA : 0
+                 XOFFSET : 0
+                 YOFFSET : 0
+                 z_order : [42, 652]
+                 include : True
+           flux_accuracy : 0.001
+          sub_pixel_flag : False
+                wave_key : WAVE0
+        normalise_kernel : True
+     report_plot_include : True
+    report_table_include : False
 

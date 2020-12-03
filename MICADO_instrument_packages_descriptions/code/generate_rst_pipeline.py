@@ -1,12 +1,14 @@
 import os.path as pth
 import scopesim as sim
 from scopesim import rc
-from scopesim.utils import table_to_rst, write_report
+from scopesim.utils import write_report
+from scopesim.reports.rst_utils import table_to_rst
+
 
 rc.__config__["!SIM.reports.image_path"] = "../images/"
 rc.__config__["!SIM.reports.rst_path"] = "../rst/"
 rc.__config__["!SIM.reports.latex_path"] = "../tex/"
-rc.__config__["!SIM.file.local_packages_path"] = "D:/Work/irdb/"
+rc.__config__["!SIM.file.local_packages_path"] = "C:/Work/irdb/"
 
 
 def summary_effects(opt_mgr, filename=None, rst_title_chars="_^#*+"):
@@ -26,7 +28,7 @@ def summary_effects(opt_mgr, filename=None, rst_title_chars="_^#*+"):
     return rst_text
 
 
-def summary_cmds(cmds, filename=None, rst_title_chars="_^#*+"):
+def summary_cmds(opt_mgr, filename=None, rst_title_chars="_^#*+"):
     rst_text = """Summary of Effects in Optical Elements:
 {}
 
@@ -50,7 +52,6 @@ def make_micado_rst_files():
 
     cmd = sim.UserCommands(use_instrument="MICADO", set_modes=all_modes)
     rc.__currsys__ = cmd
-
 
     opt_els = []
     for yaml in cmd.yaml_dicts:

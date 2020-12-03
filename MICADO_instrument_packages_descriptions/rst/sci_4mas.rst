@@ -18,18 +18,4 @@ Global properties
     element_name : 4mas
 
 
-Effects
-#######
-
-Summary of Effects included in this optical element:
-
-.. table::
-    :name: tbl:4mas
-   
-    ======= ==== ===== ======== ========
-    element name class included z_orders
-    ======= ==== ===== ======== ========
-    ======= ==== ===== ======== ========
- 
-
 

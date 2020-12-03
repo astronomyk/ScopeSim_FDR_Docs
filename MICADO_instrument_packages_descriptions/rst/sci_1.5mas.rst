@@ -18,18 +18,4 @@ Global properties
     element_name : 1.5mas
 
 
-Effects
-#######
-
-Summary of Effects included in this optical element:
-
-.. table::
-    :name: tbl:1.5mas
-   
-    ======= ==== ===== ======== ========
-    element name class included z_orders
-    ======= ==== ===== ======== ========
-    ======= ==== ===== ======== ========
- 
-
 

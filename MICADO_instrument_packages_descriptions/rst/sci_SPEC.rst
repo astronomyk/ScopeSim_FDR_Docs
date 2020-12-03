@@ -18,18 +18,4 @@ Global properties
     element_name : SPEC
 
 
-Effects
-#######
-
-Summary of Effects included in this optical element:
-
-.. table::
-    :name: tbl:SPEC
-   
-    ======= ==== ===== ======== ========
-    element name class included z_orders
-    ======= ==== ===== ======== ========
-    ======= ==== ===== ======== ========
- 
-
 

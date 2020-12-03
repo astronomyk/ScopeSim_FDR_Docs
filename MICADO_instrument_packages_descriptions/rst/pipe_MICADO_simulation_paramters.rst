@@ -19,18 +19,4 @@ Global properties
     element_name : MICADO_simulation_paramters
 
 
-Effects
-#######
-
-Summary of Effects included in this optical element:
-
-.. table::
-    :name: tbl:MICADO_simulation_paramters
-   
-    ======= ==== ===== ======== ========
-    element name class included z_orders
-    ======= ==== ===== ======== ========
-    ======= ==== ===== ======== ========
- 
-
 

@@ -16,7 +16,7 @@ Global properties
      plate_scale : 0.26666666666
     element_name : MICADO_IMG_LR
 
-
+        
 Effects
 #######
 
@@ -29,7 +29,7 @@ Summary of Effects included in this optical element:
        element                 name                          class              included    z_orders   
     ============= ============================= =============================== ======== ==============
     MICADO_IMG_LR micado_wide_field_mirror_list                     SurfaceList     True [20, 120, 520]
-    MICADO_IMG_LR           micado_adc_3D_shift AtmosphericDispersionCorrection     True     [632, 232]
+    MICADO_IMG_LR           micado_adc_3D_shift AtmosphericDispersionCorrection    False     [632, 232]
     ============= ============================= =============================== ======== ==============
  
 
@@ -45,11 +45,28 @@ SurfaceList: "micado_wide_field_mirror_list"
 
 **Changes**:
 
-- {datetime.date(2019, 1, 28): '(KL) Changed column names and added units to header'}
-- {datetime.date(2019, 7, 10): '(KL) Shortened the list to only the swappable mirrors'}
+- 2019-01-28 (KL) Changed column names and added units to header
+- 2019-07-10 (KL) Shortened the list to only the swappable mirrors
 
 Data
 ++++
+
+.. figure:: micado_wide_field_mirror_list.png
+    :name: fig:micado_wide_field_mirror_list
+
+    
+
+.. table::
+    :name: tbl:micado_wide_field_mirror_list
+
+    ======= ===== ===== ===== =========== ========== ===================
+      name  outer inner angle temperature   action         filename     
+    ======= ===== ===== ===== =========== ========== ===================
+    I08_SM5   0.2   0.0     0        -190 reflection TER_mirror_gold.dat
+    I09_SM6   0.2   0.0     0        -190 reflection TER_mirror_gold.dat
+    ======= ===== ===== ===== =========== ========== ===================
+
+The list of surfaces from the rotating optics wheel that are added to the optical train when observing in the wide field mode
 
 Meta-data
 +++++++++
@@ -64,7 +81,7 @@ Meta-data
                   source : Ric's SPIE 2018 PPT presentation
             date_created : 2018-11-19
            date_modified : 2019-07-10
-                  status : Design - pre PDR list of MICADO mirrors for wide-field mode
+                  status : Design, pre PDR list of MICADO mirrors for wide-field mode
                     type : mirror:list
               outer_unit : m
               inner_unit : m
@@ -77,6 +94,8 @@ Meta-data
                 wave_max : !SIM.spectral.wave_max
                wave_unit : !SIM.spectral.wave_unit
                 wave_bin : !SIM.spectral.spectral_resolution
+     report_plot_include : True
+    report_table_include : True
       minimum_throughput : !SIM.spectral.minimum_throughput
                  etendue : !TEL.etendue
 
@@ -85,7 +104,7 @@ Meta-data
 
 AtmosphericDispersionCorrection: "micado_adc_3D_shift"
 ******************************************************
-**Included by default**: ``True``
+**Included by default**: ``False``
 
 **File Description**: atmospheric disperson corrector
 
@@ -102,22 +121,24 @@ Meta-data
 +++++++++
 ::
 
-        filename : None
-            name : micado_adc_3D_shift
-     pixel_scale : 0.004
-     plate_scale : 0.26666666666
-    element_name : MICADO_IMG_LR
-        altitude : !ATMO.altitude
-       longitude : !ATMO.longitude
-        latitude : !ATMO.latitude
-         airmass : !OBS.airmass
-     temperature : !ATMO.temperature
-        humidity : !ATMO.humidity
-        pressure : !ATMO.pressure
-     pupil_angle : !OBS.pupil_angle
-      efficiency : 1
-        wave_mid : !SIM.spectral.wave_mid
-       quick_adc : True
-         z_order : [632, 232]
-         include : True
+                filename : None
+                    name : micado_adc_3D_shift
+                 include : False
+             pixel_scale : 0.004
+             plate_scale : 0.26666666666
+            element_name : MICADO_IMG_LR
+                altitude : !ATMO.altitude
+               longitude : !ATMO.longitude
+                latitude : !ATMO.latitude
+                 airmass : !OBS.airmass
+             temperature : !ATMO.temperature
+                humidity : !ATMO.humidity
+                pressure : !ATMO.pressure
+             pupil_angle : !OBS.pupil_angle
+              efficiency : 1
+                wave_mid : !SIM.spectral.wave_mid
+               quick_adc : True
+                 z_order : [632, 232]
+     report_plot_include : True
+    report_table_include : False
 
