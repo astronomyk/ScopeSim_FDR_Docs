@@ -166,8 +166,8 @@ Meta-data
 
 
 
-<SpectralTraceList> "micado_spectral_traces" : 17 traces
-********************************************************
+SpectralTraceList: "micado_spectral_traces" : 17 traces
+*******************************************************
 **Included by default**: ``True``
 
 **File Description**: list of spectral order trace geometry on the focal plane

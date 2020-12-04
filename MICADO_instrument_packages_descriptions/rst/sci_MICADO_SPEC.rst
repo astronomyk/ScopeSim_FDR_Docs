@@ -94,8 +94,8 @@ Meta-data
 
 
 
-<SpectralTraceList> "spectral_trace_3000x50mas" : 1 traces
-**********************************************************
+SpectralTraceList: "spectral_trace_3000x50mas" : 1 traces
+*********************************************************
 **Included by default**: ``True``
 
 **File Description**: 

@@ -1,5 +1,19 @@
-Overview of the Instrument Packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Document Scope
+^^^^^^^^^^^^^^
+This document aims to serve as a reference for the contents of the instrument packages relevant to the implementation of the MICADO instrument simulator using the ScopeSim_ package.
+The information provided here is a snapshot of the FDR release (Dec. 2020) of the these packages.
+It is possible that changes will made to files contained in the packages.
+For more up-to-date information, the reader is referred to the `online GitHub repository`__.
+
+__ IRDB_
+
+This document does not provide an overview of how to use the MICADO packages with ScopeSim_.
+For this the reader should consult the online documentation for ScopeSim_.
+
+
+
+Overview of the Instrument Packages relevant to MICADO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The MICADO instrument simulator has moved from using the stand alone SimCADO package to using the generic astronomical instrument simulator ScopeSim.
 As the ScopeSim code is instrument agnostic, all data related to creating instrument models are contained inside instrument packages, which are hosted on the `instrument reference database (IRDB)`__.
@@ -83,3 +97,4 @@ If an Effect required data from an external file (e.g. PSF kernels, linearity cu
 
 
 .. _IRDB: https://github.com/astronomyk/irdb
+.. _ScopeSim: https://scopesim.readthedocs.io/en/latest/
