@@ -139,7 +139,24 @@
   \tabletail{\hline}
 
   \begin{supertabular}{|l|l|l|l|}
-   0.0.1 & 2020-10-15 & All & Layout initialised \\
+   0.0.1 & 2020-10-15 & All & (KL) Layout initialised \\
+   0.0.2 & 2020-12-04 & All & (KL) Added new data, tables, plots to all sections \\
+   \hline
+  \end{supertabular}
+
+\end{center}
+
+\begin{center}
+  \textbf{Relevant Documents}
+
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Ref. No.} &
+    \multicolumn{1}{|c|}{Title} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|l|}
+    &  \\
    \hline
   \end{supertabular}
 
@@ -153,10 +170,14 @@
 
 
 \chapter{Introduction}
+
+\begin{samepage}
 \input{tex/0_introduction}
+\end{samepage}
 
 \chapter{MICADO Pipeline package}
 
+\begin{samepage}
 \input{tex/pipe_summary}
 \input{tex/pipe_MICADO}
 \input{tex/pipe_MICADO_IMG_LR}
@@ -164,9 +185,11 @@
 \input{tex/pipe_MICADO_SPEC}
 \input{tex/pipe_micado_detector_array}
 \input{tex/pipe_MICADO_simulation_paramters}
+\end{samepage}
 
 \chapter{MICADO Science package}
 
+\begin{samepage}
 \input{tex/sci_summary}
 \input{tex/sci_MICADO_Sci}
 \input{tex/sci_SCAO}
@@ -181,13 +204,15 @@
 \input{tex/sci_4mas}
 \input{tex/sci_1}
 \input{tex/sci_micado_sci_detector}
+\end{samepage}
 
 \chapter{Supoort packages}
 
+\begin{samepage}
 \input{tex/pipe_armazones}
 \input{tex/pipe_ELT}
 \input{tex/pipe_MAORY}
 \input{tex/pipe_default_ro}
-
+\end{samepage}
 
 \end{document}
