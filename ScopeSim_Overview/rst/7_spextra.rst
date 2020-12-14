@@ -11,6 +11,8 @@ Continuous integration: https://travis-ci.org/github/miguelverdugo/speXtra
 
 Author: Miguel Verdugo
 
+::
+    pip install spextra
 
 Functionality
 -------------
