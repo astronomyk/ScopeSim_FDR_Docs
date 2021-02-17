@@ -96,20 +96,20 @@
 \renewcommand{\footrulewidth}{0pt}
 \pagestyle{fancy}
 
-%
-% Next 6 lines added by C.Izzo, to have tables and images numbered
-% within the subsection they belong to. It can surely be done in a better
-% way, however this works, provided that all tables definitions contain
-% also the command "\subtable", and all images the command "\subfigure",
-% which I guess it's silly...
-%
-
-\newcounter{subtable}[subsection]
-\newcommand{\subtable}{\refstepcounter{subtable}}
-\renewcommand{\thetable} {\thesubsection.\thesubtable}
-\newcounter{subfigure}[subsection]
-\newcommand{\subfigure}{\refstepcounter{subfigure}}
-\renewcommand{\thefigure} {\thesubsection.\thesubfigure}
+%%%
+%%% Next 6 lines added by C.Izzo, to have tables and images numbered
+%%% within the subsection they belong to. It can surely be done in a better
+%%% way, however this works, provided that all tables definitions contain
+%%% also the command "\subtable", and all images the command "\subfigure",
+%%% which I guess it's silly...
+%%%
+%%
+%%\newcounter{subtable}[subsection]
+%%\newcommand{\subtable}{\refstepcounter{subtable}}
+%%\renewcommand{\thetable} {\thesubsection.\thesubtable}
+%%\newcounter{subfigure}[subsection]
+%%\newcommand{\subfigure}{\refstepcounter{subfigure}}
+%%\renewcommand{\thefigure} {\thesubsection.\thesubfigure}
 
 \newcommand{\MIChead}{%
   \vspace*{-\headheight}
