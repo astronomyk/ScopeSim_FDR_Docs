@@ -17,7 +17,7 @@ Contolling the simulation
     - filter
     - dit / ndit
     - slit size
-    - zenith distance
+    - zenith distancepip
     - psf model
 
 

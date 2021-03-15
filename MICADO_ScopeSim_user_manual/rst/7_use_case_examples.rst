@@ -1,6 +1,14 @@
 Science package use case examples
 ---------------------------------
 
+- 4mas MCAO field constat PSF, windowed detector --.> a resolved spiral galaxy (FITS image) with background elliptical galaxies (analytical profiles)
+- 4mas SCAO field varying PSF, full detector --> a resolved star cluster (e.g. 30 Dor in LMC)
+- 1.5mas SCAO astrometric imaging --> two epoch observations of a resolved star cluster with sub-pixel level shifts in the star positions
+- IJ SPEC 3000x20mas slit, (quick rectified ) science-team mode, --> target TBD, possible binary star system
+- HK SPEC 15000x50mas slit, (slow) pipeline mode --> TBD , possible elliptical galaxy with velocity gradient
+- possibly a HCI example with a large warning sign that HCI is a complex monster and that this example is purely for illustrative purposes.
+
+
 IMG: Extended Sources (4mas, MCAO, Ks filter)
 +++++++++++++++++++++++++++++++++++++++++++++
 - View a galaxy with star formation regions over the middle MICADO detector
