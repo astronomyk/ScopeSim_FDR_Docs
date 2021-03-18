@@ -3,14 +3,15 @@ Science package use case examples
 
 
 
-- IJ SPEC 3000x20mas slit, (quick rectified ) science-team mode, --> target TBD, possible binary star system
-- HK SPEC 15000x50mas slit, (slow) pipeline mode --> TBD , possible elliptical galaxy with velocity gradient
-- possibly a HCI example with a large warning sign that HCI is a complex monster and that this example is purely for illustrative purposes.
+
+Pipeline package use case examples
+----------------------------------
+
 
 
 IMG: Extended Sources (4mas, MCAO, Ks filter)
 +++++++++++++++++++++++++++++++++++++++++++++
-Should show how nto use the science package (MICADO_Sci)
+Should show how to use the science package (MICADO_Sci)
 
 - a resolved spiral galaxy (FITS image) with ~10 background elliptical galaxies (analytical profiles)
     - scopesim_templates.basicgalaxy.two_component_spiral
@@ -23,7 +24,7 @@ Should show how nto use the science package (MICADO_Sci)
 
 IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Should show how nto use the pipeline package (MICADO). Therefore should also show detector characteristics like linearity, and noise, etc
+Should show how to use the pipeline package (MICADO). Therefore should also show detector characteristics like linearity, and noise, etc
 
 - a resolved star cluster (e.g. similar 30 Dor in LMC)
     - scopesim_templates.basic.stars.cluster
@@ -54,19 +55,29 @@ This will need a tiny field of view (like 64x64 pixels)
 - Extract the positions and show change in position
 
 
+SPEC 20x3000, J, slit at 45 deg to zenith
++++++++++++++++++++++++++++++++++++++++++
+Binary stars with MICADO_Sci producing spectra
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- binary star system of two A0V stars with shifted spectral features
+    - scopesim_templates.basic.stars.stars - 2 stars
+    - IJ_SPEC filter
+    - 3000x20mas slit
+    - NDIT = 1
+    - DIT = 3600
+
 
 SPEC 50x15000, HK, slit aligned with parallactic angle, no ADC
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+possible elliptical galaxy with velocity gradient
+- HK SPEC 15000x50mas slit, (slow) pipeline mode --> TBD , possible elliptical galaxy with velocity gradient
 
 
-SPEC 20x3000, J, slit at 45 deg to zenith
-+++++++++++++++++++++++++++++++++++++++++
+
 
 HCI (not yet implemented)
 +++++++++++++++++++++++++
-- possible hack to get this working
+- possibly a HCI example with a large warning sign that HCI is a complex monster and that this example is purely for illustrative purposes.
 
 
 

@@ -19,8 +19,8 @@ The original SimCADO package is described here:
     The doumentation for this will be added to the original SimCADO_ read-the-docs page
 
 
-Downloading ScopeSim and the MICADO package
-+++++++++++++++++++++++++++++++++++++++++++
+Downloading ScopeSim and the MICADO packages
+++++++++++++++++++++++++++++++++++++++++++++
 
 The ScopeSim engine is installed using pip::
 
@@ -36,7 +36,8 @@ Once ScopeSim is available to the local Python (version >= 3.5) installation, th
     download_package(["locations/Armazones",
                       "telescopes/ELT",
                       "instruments/MAORY",
-                      "instruments/MICADO"])
+                      "instruments/MICADO",
+                      "instruments/MICADO_Sci"])
 
 .. note:: There are two (2) MICADO packages available: ``MICADO`` and ``MICADO_Sci``.
 
@@ -45,18 +46,23 @@ For those more concerned with accuracy, the standard ``MICADO`` package contains
 ``MICADO`` was originally developed for the development of the reduction pipeline, and therefore contains many effects that are beyond the scope of normal science case feasability studies.
 
 
-Primary vs Support packages
-+++++++++++++++++++++++++++
+A quick note on Primary vs Support packages
++++++++++++++++++++++++++++++++++++++++++++
+Each package contains descriptions of the optical effects associated with an optical element.
+For example the ELT package contains only the radiometric curves (e.g. transmission, emissivity, reflection) associated with the five ELT mirrors.
 
-``MICADO`` and ``MICADO_Sci`` are primary packages.
-This means they contain detector modules that enable an on-sky target to be observed
+Packages are split into two categories: Primary and Support packages.
 
-``Armazones``, ``ELT``, and ``MAORY`` are support packages.
-They do not contain detector modules.
+**Primary packages** contain detector modules that enable an on-sky target to be observed.
+Without a (single) primary package, ScopeSim will not be able to produce any simulated data.
+Examples of primary packages are: MICADO, METIS, HAWKI, NACO, etc
+
+**Support packages** do not contain detector modules.
+They're main function is to add the additional optical effects associated with the common optical components of an optical system.
+``Armazones``, ``ELT``, and ``MAORY`` are examples of such support packages.
 
 Just like in real life, observing with only MICADO would be a difficult task.
-Therefore we encourage the user to also download the support packages needed by MICADO.
-
+Therefore we highly encourage the user to also download the support packages needed by MICADO.
 
 
 .. _SimCADO: https://simcado.readthedocs.io/en/latest/
