@@ -1,0 +1,105 @@
+
+
+\section{Essentials: Documentation and Downloads%
+  \label{essentials-documentation-and-downloads}%
+}
+
+
+\subsection{Online Documentation%
+  \label{online-documentation}%
+}
+
+Online documentation for the main packages in the ScopeSim environment can be found here:
+
+\begin{itemize}
+\item ScopeSim: \url{https://scopesim.readthedocs.io/en/latest/}
+
+\item ScopeSim\_Templates: \url{https://scopesim-templates.readthedocs.io/en/latest/}
+
+\item IRDB: \url{https://github.com/astronomyk/irdb}
+\end{itemize}
+
+The original SimCADO package is described here:
+
+\begin{itemize}
+\item SimCADO: \url{https://simcado.readthedocs.io/en/latest/}
+\end{itemize}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+In the near future we will release a wrapper for the ScopeSim engine and the MICADO instrument package.
+
+The doumentation for this will be added to the original \href{https://simcado.readthedocs.io/en/latest/}{SimCADO} read-the-docs page
+}
+
+
+\subsection{Downloading ScopeSim and the MICADO packages%
+  \label{downloading-scopesim-and-the-micado-packages}%
+}
+
+The ScopeSim engine is installed using pip:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+$ pip install scopesim
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+The casual user will also probably want to install the templates package, which contains helper functions for generating descriptions of on-sky targets like elliptical galaxies or star clusters:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+$ pip install scopesim_templates
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+Once ScopeSim is available to the local Python (version >= 3.5) installation, the user must download \textbf{ALL} the required instrument packages from the server:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+from scopesim.server import download_package
+download_package(["locations/Armazones",
+                  "telescopes/ELT",
+                  "instruments/MAORY",
+                  "instruments/MICADO",
+                  "instruments/MICADO_Sci"])
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+There are two (2) MICADO packages available: \texttt{MICADO} and \texttt{MICADO\_Sci}.
+}
+
+For those interested in quick results, \texttt{MICADO\_Sci} provides a reduced version of the MICADO package that contains all the major effects expected from the MICADO optical system.
+For those more concerned with accuracy, the standard \texttt{MICADO} package contains all expected optical effects.
+\texttt{MICADO} was originally developed for the development of the reduction pipeline, and therefore contains many effects that are beyond the scope of normal science case feasability studies.
+
+
+\subsection{A quick note on Primary vs Support packages%
+  \label{a-quick-note-on-primary-vs-support-packages}%
+}
+
+Each package contains descriptions of the optical effects associated with an optical element.
+For example the ELT package contains only the radiometric curves (e.g. transmission, emissivity, reflection) associated with the five ELT mirrors.
+
+Packages are split into two categories: Primary and Support packages.
+
+\textbf{Primary packages} contain detector modules that enable an on-sky target to be observed.
+Without a (single) primary package, ScopeSim will not be able to produce any simulated data.
+Examples of primary packages are: MICADO, METIS, HAWKI, NACO, etc
+
+\textbf{Support packages} do not contain detector modules.
+They're main function is to add the additional optical effects associated with the common optical components of an optical system.
+\texttt{Armazones}, \texttt{ELT}, and \texttt{MAORY} are examples of such support packages.
+
+Just like in real life, observing with only MICADO would be a difficult task.
+Therefore we highly encourage the user to also download the support packages needed by MICADO.

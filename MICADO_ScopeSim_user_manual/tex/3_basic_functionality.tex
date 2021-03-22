@@ -1,0 +1,105 @@
+
+
+\section{Basic functionality%
+  \label{basic-functionality}%
+}
+
+A basic simulation of an ELT/MICADO observation using the MICADO\_Sci package would look something like this:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+# Setup everything
+import scopesim_templates
+from scopesim.server.database import download_package
+import scopesim
+
+scopesim.download_package(["locations/Armazones",
+                           "telescopes/ELT",
+                           "instruments/MICADO_Sci"])
+
+# Make the on-sky target
+src = scopesim_templates.basic.stars.cluster()
+
+# Load the model of MICADO and the ELT
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci",
+                            properties=\{"!OBS.dit": 60, "!OBS.ndit": 10,
+                                        "!INST.filter_name": "Ks"\})
+micado = scopesim.OpticalTrain(cmd)
+
+# Run the simulation
+micado.observe(src)
+micado.readout(filename="my_image.fits")
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+
+\subsection{General Workflow%
+  \label{general-workflow}%
+}
+
+The general workflow for simulating observations can be seen in the code in the previous section.
+There are three (four) major components of any simulation workflow:
+
+\begin{enumerate}
+\item the target description,
+
+\item the telescope/instrument model, and
+
+\item the observation.
+\end{enumerate}
+
+The zeroth (or fourth) step is the setup stage which include the import statements and the package downloads.
+
+The first step of any simulation run is defining the on-sky target.
+This is probably the most time intensive step and requires the user to know what they want to observe.
+In the code above we make use of the \href{https://scopesim-templates.readthedocs.io/en/latest/}{ScopeSim\_Templates} package to create a \texttt{Source} object for an open cluster with default values (i.e. 1000 Msun at 50 kpc).:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+src = scopesim_templates.basic.stars.cluster()
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+\texttt{Source} objects are discussed in a later chapter.
+Here it is sufficient to note that \texttt{Source} objects can be created from scratch if the user has both spectral and spatial data available.
+Otherwise the \href{https://scopesim-templates.readthedocs.io/en/latest/}{ScopeSim\_Templates} package contains various helper functions to aid the user in quickly generating \textquotedbl{}standard\textquotedbl{} objects.
+
+The second step required creating an in-memory model of the optical system.
+This model contains a list of effects that are applied to the incoming photon description (similar to a flux cube).:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci",
+                            properties=\{"!OBS.dit": 60, "!OBS.ndit": 10,
+                                        "!INST.filter_name": "Ks"\})
+micado = scopesim.OpticalTrain(cmd)
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+In this code we initialise a series of command dictionaries that control how the optical model will be built.
+Any default values that we wish to override can be set by passing a dictionary to the \texttt{properties} keyword.
+The \textquotedbl{}controlling a simulation\textquotedbl{} section goes into more detail on how to adjust these parameters.
+The command dictionary (\texttt{cmd}) is used to initialise an \texttt{OpticalTrain} object which acts as the in-memory model of MICADO.
+Here we use the \texttt{MICADO\_Sci} optical model rather than the generic \texttt{MICADO} package, as the \texttt{MICADO\_Sci} package has been optimised for speedy simulations.
+
+The third step executes the simulation by passing the \texttt{Source} object through the \texttt{OpticalTrain} model.:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+micado.observe(src)
+micado.readout(filename="my_image.fits")
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+This step involves two commands:
+\texttt{.observe} generates an photon flux image (or images) on the focal plane(s) of the instrument.
+\texttt{.readout} converts the photon flux image into electrons inside the detector, and ultimately into the FITS objects that all astronomers know (and love?).
+The output of this step is a FITS object available either as an \texttt{astropy.fits.HDUList} object inside the python environment, or as a \texttt{.fits} file saved to the hard drive.

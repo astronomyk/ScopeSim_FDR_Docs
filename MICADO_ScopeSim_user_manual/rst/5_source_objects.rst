@@ -116,7 +116,7 @@ Each object remains intact inside the new ``Source`` container.
 
 
 
-..
+.. Contents
     - What is inside a Source object
     - How to make source objects to observe
         - Star cluster

@@ -62,7 +62,7 @@ This model contains a list of effects that are applied to the incoming photon de
 
 In this code we initialise a series of command dictionaries that control how the optical model will be built.
 Any default values that we wish to override can be set by passing a dictionary to the ``properties`` keyword.
-The `controlling-the-simulation`_ section goes into more detail on how to adjust these parameters.
+The "controlling a simulation" section goes into more detail on how to adjust these parameters.
 The command dictionary (``cmd``) is used to initialise an ``OpticalTrain`` object which acts as the in-memory model of MICADO.
 Here we use the ``MICADO_Sci`` optical model rather than the generic ``MICADO`` package, as the ``MICADO_Sci`` package has been optimised for speedy simulations.
 

@@ -12,8 +12,9 @@ The sole purpose of the attached notebooks is to illustrate how to run ScopeSim 
   The pixel scale is set to 4mas (low resolution imaging) and a MCAO field constant PSF is used.
   The galaxy is observed for 1 hour (60x 60s images) in the J filter.
 
-- IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Should show how to use the pipeline package (MICADO). Therefore should also show detector characteristics like linearity, and noise, etc
 
 - a resolved star cluster (e.g. similar 30 Dor in LMC)
