@@ -30,6 +30,7 @@
 \usepackage{float}
 \usepackage{listings}
 \lstloadlanguages{csh, python}
+\usepackage{caption}
 
 %%% MICADO PDR doc packages
 \usepackage{dmd-doc}
@@ -108,9 +109,9 @@
 \dmdTitle{ScopeSim \\ A flexible astronomical instrument data simulation environment}
 \dmdDocId{ELT-TRE-MCD-56306-0060}
 \dmdIssue{1.0}
-\dmdDate{04. December 2020}
-\dmdPreparedBy{K. Leschinski, O. Czoske, M. Verdugo}
-\dmdPreparedOn{2020-12-04}
+\dmdDate{12. April 2021}
+\dmdPreparedBy{K. Leschinski, O. Czoske}
+\dmdPreparedOn{2021-04-12}
 \dmdPreparedSig{\resizebox{2.5cm}{!}{\includegraphics{scribble}}}
 \dmdApprovedBy{}
 \dmdApprovedOn{}
@@ -141,6 +142,8 @@
 %%% Body
 \begin{document}
 
+\bibliographystyle{spiebib}
+
 % listings style
 \lstset{basicstyle=\ttfamily,
   %columns=flexible,
@@ -166,34 +169,19 @@
   \tabletail{\hline}
 
   \begin{supertabular}{|l|l|l|l|}
-   0.0.1 & 2020-10-15 & All & Layout initialised \\
-   0.0.2 & 2020-12-04 & All & Added contents of Leschinski et al. (2020) \\
+   0.1 & 2020-10-15 & All & Layout initialised \\
+   0.2 & 2020-12-04 & All & Added contents of Leschinski et al. (2020) \\
+   1.0 & 2021-04-12 & All & Added final changes to first release version \\
    \hline
   \end{supertabular}
 
 \end{center}
 
-\begin{center}
-  \textbf{Relevant Documents}
-
-  \tablehead{\hline
-    \multicolumn{1}{|c|}{Ref. No.} &
-    \multicolumn{1}{|c|}{Title} \\
-    \hline}
-  \tabletail{\hline}
-
-  \begin{supertabular}{|l|l|l|l|}
-   ELT-TRE-MCD-56306-0058 & SimCADO v2 User Manual \\
-   ELT-TRE-MCD-56306-0059 & ScopeSim instrument packages for MICADO \\
-   \hline
-  \end{supertabular}
-
-\end{center}
 
 \begin{figure}
 
 \resizebox{\linewidth}{!}{\includegraphics{massive_image.png}}
-\caption{A simulated 1-hour 30-arcsecond windowed observation with
+\caption*{A simulated 1-hour 30-arcsecond windowed observation with
   MICADO in K-band of a ficticious region of the sky containing Saturn
   (centre) at opposition, Vesta at conjunction (centre right), the
   nearby galaxies M\,104 (top left) and M\,51 (bottom right), a
@@ -219,12 +207,34 @@
 
 \setcounter{tocdepth}{3}
 \tableofcontents
-\cleardoublepage
+\clearpage
+
+
+\begin{center}
+  \textbf{Relevant Documents}
+
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Ref. No.} &
+    \multicolumn{1}{|c|}{Title} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|l|}
+   ELT-TRE-MCD-56306-0058 & SimCADO v2 User Manual \\
+   ELT-TRE-MCD-56306-0059 & ScopeSim instrument packages for MICADO \\
+   \hline
+  \end{supertabular}
+
+\end{center}
+
 
 \input{spie_tex/A_abstract}
 \input{spie_tex/1_intro}
 \input{spie_tex/2_examples}
 \input{spie_tex/4_scopesim_architecture}
 \input{spie_tex/3_building_blocks}
+
+% References
+\bibliography{report} % bibliography data in report.bib
 
 \end{document}
