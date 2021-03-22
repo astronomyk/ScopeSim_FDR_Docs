@@ -1,0 +1,149 @@
+% listings style
+\lstset{basicstyle=\ttfamily,
+        columns=flexible,
+        frame=single,
+        backgroundcolor=\color{listingbg},
+        captionpos=b,
+        showspaces=false}
+
+\dmdmaketitle
+
+%\emptypage{This page was intentionally left blank}
+
+\begin{center}
+  \textbf{Change record}
+
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Issue/Rev.} &
+    \multicolumn{1}{|c|}{Date} &
+    \multicolumn{1}{|c|}{Section/Parag.\ affected} &
+    \multicolumn{1}{|c|}{Reason/Initiation/Documents/Remarks} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|l|}
+   0.0.1 & 2020-10-15 & All & Layout initialised \\
+   \hline
+  \end{supertabular}
+
+\end{center}
+
+%\emptypage{This page was unintentionally left blank}
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\cleardoublepage
+
+
+
+\section*{Abbreviations}
+\label{sec:abbreviations}
+
+%\tablehead{%
+%  \hline
+%  \multicolumn{1}{|c|}{Abbreviation} &
+%  \multicolumn{1}{|c|}{Meaning} \\
+%  \hline}
+%\tabletail{\hline}
+
+\tablehead{}
+\tabletail{}
+\begin{supertabular}{ll}
+  DFS & Data Flow System \\
+  ELT & Extremely Large Telescope \\
+  ESO & European Southern Observatory \\
+  HCI & High Contrast Imaging \\
+  IMG & Imaging observing modi \\
+  MCAO & Multi-Conjugate Adaptive Optics \\
+  PSF & Point Spread Function \\
+  SCAO & Single Conjugate Adaptive Optics \\
+  SPEC & Spectroscopy observing modi
+  TBC & To Be Confirmed \\
+  TBD & To Be Decided \\
+\end{supertabular}
+
+
+\section{Scope}
+\label{sec:introduction}
+
+This document aims to introduce the reader to the ScopeSim instrument simulator and the MICADO instrument packages that have been developed as part of the MICADO instrument simulator work package.
+ScopeSim is a second generation instrument simulation environment, following on from the original SimCADO package.
+In this context, the title of the document "SimCADO v2 user manual" refers to the fact that the MICADO instrument simulator is now a combination of the ScopeSim software and the associated MICADO packages.
+The ScopeSim environment consists of a series of Python packages, with the ScopeSim instrument simulation engine at its core.
+All packages are available within the standard python ecosystem.
+The ScopeSim ecosystem maintains a very strict split between code and data.
+The simulation engine and all associated software packages are completely instrument agnostic.
+Instrument models can only be initialised by passing an instrument specific data package to the ScopeSim engine.
+
+For MICADO two instrument data package were produced as input for the ScopeSim engine: ``MICADO`` and ``MICADO_Sci``.
+The original use case for the simulator was as a means of producing raw detector frames to aid in the development of the MICADO data reduction pipeline.
+Hence the ``MICADO`` instrument data package contains all the elements needed to simulate realistic raw detector readout images.
+The primary audience for the ``MICADO`` instrument data package is the MICADO dataflow system work package.
+Many of the effect included in the ``MICADO`` package will be removed by the data reduction pipeline.
+Simulating and subsequently removing these effects results in a substantial amount of redundant computational overhead for the second group of use cases for the software: science case feasibility studies.
+In order to enable rapid iteration of simulations for these feasibility studies, a second instrument data package was compiled: ``MICADO_Sci``.
+``MICADO_Sci`` contains only the optical effects that will remain in the images after the data reduction pipeline has successfully processed the images.
+
+This document should be seen as the initial introduction to ScopeSim and the MICADO data packages.
+It contains the following information:
+\begin{itemize}
+\item Introduction to ScopeSim environment
+\item Where to find the online documentation
+\item How to begin simulating MICADO observations with ScopeSim
+\item How to control simulations
+\item Building on-sky target object as input for ScopeSim
+\item Five use case examples for the imaging and spectroscopy modes of MICADO
+\end{itemize}
+
+It should be noted that what is contained in this document is a subset of what is available in the online documentation for ScopeSim.
+Yet more examples and information are available at \url{https://scopesim.readthedocs.io/en/latest/}.
+
+
+\section{Applicable and Reference Documents}
+\label{sec:documents}
+
+\subsection{Applicable Documents}
+
+\begin{center}
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Title} &
+    \multicolumn{1}{|c|}{Issue} &
+    \multicolumn{1}{|c|}{Date} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|c|l|}
+    AD\,1 & ELT-ICD-MCD-56306-0058 & SimCADO User Manual & 1.0 & 2021-04-12 \\
+    AD\,2 & ELT-ICD-MCD-56306-0059 & Instrument data packages for the & & \\
+    & & MICADO simulation environment & 1.0 & 2021-04-12 \\
+    AD\,3 & ELT-ICD-MCD-56306-0060 & ScopeSim - A modular astronomical & & \\
+    & & instrument data simulation environment & 1.0 & 2021-04-12 \\
+    AD\,4 & ELT-TRE-MCD-56300-0014 & MICADO Masks, Stops, and Filters Description & 2.9 & 2020-12-04 \\
+  \end{supertabular}
+\end{center}
+
+\subsection{Reference Documents}
+
+\begin{center}
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Title} &
+    \multicolumn{1}{|c|}{Issue} &
+    \multicolumn{1}{|c|}{Date} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|c|l|}
+    \hline
+    RD\,1 & ESO-257871 & MICADO Statement of Work & 2 & 2020-12-10  \\
+    RD\,2 & ELT-PLA-MCD-56301-0004 & Operational Concept Description &
+    2 & 2019-11-09 \\
+    RD\,3 & ELT-TRE-MCD-56300-0011 & MICADO System Design and Analysis & 1.5 &
+    2021-04-12 \\
+    RD\,4 & ELT-ICD-MCD-56306-0050 & SimCADO: the Data Simulator for MICADO & 1.0 & 2018-09-27 \\
+
+  \end{supertabular}
+\end{center}

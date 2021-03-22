@@ -4,6 +4,17 @@
   \label{use-case-examples-using-the-micado-sci-and-micado-instrument-packages}%
 }
 
+
+\subsection{Notes regarding the worked examples%
+  \label{notes-regarding-the-worked-examples}%
+}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+All examples listed here are available online as part of the \href{https://scopesim.readthedocs.io/en/latest/}{ScopeSim} documentation.
+}
+
 This section presents a series of 5 use case examples for both the science-team oriented \texttt{MICADO\_Sci} package and the pipeline oriented \texttt{MICADO} package.
 All example are available as iPython notebooks as part of the \href{https://scopesim.readthedocs.io/en/latest/}{ScopeSim} online documentation.
 Please note that no scientifically relevant information is extracted from these simulations.
@@ -16,115 +27,47 @@ This example shows how to use the science package to observe a resolved spiral g
 It uses a windowed detector object to avoid simulating the full MICADO detector array.
 The pixel scale is set to 4mas (low resolution imaging) and a MCAO field constant PSF is used.
 The galaxy is observed for 1 hour (60x 60s images) in the J filter.
+
+\item Astrometric observations of an open cluster in zoom SCAO mode:
+
+This example shows how to enable sub-pixel resolution for simulations with the \texttt{MICADO\_Sci} package.
+Two basic examples are shown: the sub-pixel motions of a grid of 4 stars, and the proper motions of stars in an open cluster.
+Both MICADO pixel scales (4mas and 1.5mas) are used for the example, together with the SCAO mode.
+The observations are in the J filter with an exposure time of 1 hour (1x 3600s).
+This example also makes use of the variable size of a theoretical detector sub-frame readout (window).
+
+\item Field variations in the PSF using a star cluster and wide-field SCAO mode (advanced level):
+
+This example shows the effects of of field dependent variations in the shape of the PSF for off-axis stars using the pipeline-oriented \texttt{MICADO} package.
+A standard open cluster is observed in the Ks filter for 10 minutes (1x 600s).
+The use of various detector window sizes as well as the use of the full MICADO detector array are described.
+This example also illustrates how \texttt{Effect} objects can be exchanged for more realistic simulation outputs.
+
+\item Basic spectroscopy observation of a galaxy core with MICADO\_Sci:
+
+This example shows how to generate rectified images of spectra for a desired wavelength range using the \texttt{SPEC} mode of the \texttt{MICADO\_Sci} package.
+The 3 arcsec slit is placed over the centre of the galaxy and observed for 1 hour using the \texttt{Spec\_IJ} filter.
+The final output image shows distance along the slit on the horizontal axis and wavelength on the vertical axis.
+ScopeSim \textbf{does not} provide functionality for extracting spectra from the images.
+Hence it is up to the user to extract the regions corresponding to their desired spectra from this image.
+
+\item Advanced spectroscopy observation of a binary star system with MICADO:
+
+This example shows how to use the pipeline-oriented \texttt{MICADO} package to generate raw detector readouts for the MICADO spectroscopy mode.
+The spectroscopy modes in this package are not aimed towards the casual user, but rather are meant to simulate realistic raw data frames for the data reduction pipeline.
+There may however be science users who wish to have such data for their feasibility studies.
+The example observes a binary star system with the 3000x50 slit and the \texttt{Spec\_HK} filter for 10 minutes.
+Each star ha a K-band brightness of 18 magnitudes.
 \end{itemize}
 
 
-\subsection{IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)%
-  \label{img-point-source-4mas-scao-j-filter-field-varying-psfs}%
+\subsection{A note on High Contrast Imaging simulations%
+  \label{a-note-on-high-contrast-imaging-simulations}%
 }
 
-Should show how to use the pipeline package (MICADO). Therefore should also show detector characteristics like linearity, and noise, etc
-
-\begin{itemize}
-\item 
-\begin{description}
-\item[{a resolved star cluster (e.g. similar 30 Dor in LMC)}] \leavevmode 
-\begin{itemize}
-\item scopesim\_templates.basic.stars.cluster
-
-\item MICADO package
-
-\item full detector layout
-
-\item 4mas SCAO field varying PSF
-
-\item J filter
-
-\item NDIT = 1
-
-\item DIT = 60
-\end{itemize}
-
-\end{description}
-\end{itemize}
-
-
-\subsection{IMG: Astrometric sub-pixel shifts (1.5mas, SCAO, Pa-Beta  filter)%
-  \label{img-astrometric-sub-pixel-shifts-1-5mas-scao-pa-beta-filter}%
-}
-
-Astrometry use case with MICADO\_Sci package.
-Two epoch observations of a resolved star cluster with sub-pixel level shifts in the star positions
-This will need a tiny field of view (like 64x64 pixels)
-
-\begin{itemize}
-\item 
-\begin{description}
-\item[{a resolved star cluster (e.g. similar 30 Dor in LMC)}] \leavevmode 
-\begin{itemize}
-\item scopesim\_templates.basic.stars.stars - random distribution of stars in both spatial and brightness
-
-\item MICADO\_Sci package
-
-\item tiny window layout (64x64 pixel)
-
-\item 1.5mas SCAO CONSTANT PSF
-
-\item PaBeta filter
-
-\item NDIT = 1
-
-\item DIT = 60
-\end{itemize}
-
-\end{description}
-
-\item Generate a group of stars with different velocities
-
-\item Observe the group at two epochs
-
-\item Extract the positions and show change in position
-\end{itemize}
-
-
-\subsection{SPEC 20x3000, J, slit at 45 deg to zenith%
-  \label{spec-20x3000-j-slit-at-45-deg-to-zenith}%
-}
-
-Binary stars with MICADO\_Sci producing spectra
-
-\begin{itemize}
-\item 
-\begin{description}
-\item[{binary star system of two A0V stars with shifted spectral features}] \leavevmode 
-\begin{itemize}
-\item scopesim\_templates.basic.stars.stars - 2 stars
-
-\item IJ\_SPEC filter
-
-\item 3000x20mas slit
-
-\item NDIT = 1
-
-\item DIT = 3600
-\end{itemize}
-
-\end{description}
-\end{itemize}
-
-
-\subsection{SPEC 50x15000, HK, slit aligned with parallactic angle, no ADC%
-  \label{spec-50x15000-hk-slit-aligned-with-parallactic-angle-no-adc}%
-}
-
-possible elliptical galaxy with velocity gradient
-- HK SPEC 15000x50mas slit, (slow) pipeline mode -{}-> TBD , possible elliptical galaxy with velocity gradient
-
-
-\subsection{HCI (not yet implemented)%
-  \label{hci-not-yet-implemented}%
-}
-
-\begin{itemize}
-\item possibly a HCI example with a large warning sign that HCI is a complex monster and that this example is purely for illustrative purposes.
-\end{itemize}
+High contrast imaging has been described as an Artform.
+It is almost impossible to define a \textquotedbl{}standard\textquotedbl{} HCI PSF.
+ScopeSim and the MICADO packages work with data models that can be standardised, or at the very least be described by a low-dimensional parameter space.
+As the high contrast imaging PSFs do not fit this definition, we concluded that a HCI mode was outside the scope of the \texttt{MICADO} and \texttt{MICADO\_Sci} packages.
+Separate HCI simulation packages are being developed by the HCI work package.
+Readers interested in simulating HCI use cases should contact the relevant work package leaders.

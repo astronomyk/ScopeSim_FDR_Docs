@@ -119,41 +119,7 @@
 %%% Body
 \begin{document}
 
-% listings style
-\lstset{basicstyle=\ttfamily,
-        columns=flexible,
-        frame=single,
-        backgroundcolor=\color{listingbg},
-        captionpos=b,
-        showspaces=false}
-
-\dmdmaketitle
-
-%\emptypage{This page was intentionally left blank}
-
-\begin{center}
-  \textbf{Change record}
-
-  \tablehead{\hline
-    \multicolumn{1}{|c|}{Issue/Rev.} &
-    \multicolumn{1}{|c|}{Date} &
-    \multicolumn{1}{|c|}{Section/Parag.\ affected} &
-    \multicolumn{1}{|c|}{Reason/Initiation/Documents/Remarks} \\
-    \hline}
-  \tabletail{\hline}
-
-  \begin{supertabular}{|l|l|l|l|}
-   0.0.1 & 2020-10-15 & All & Layout initialised \\
-   \hline
-  \end{supertabular}
-
-\end{center}
-
-%\emptypage{This page was unintentionally left blank}
-
-\setcounter{tocdepth}{3}
-\tableofcontents
-\cleardoublepage
+\include{preamble}
 
 \include{tex/1_introduction}
 \include{tex/2_documentation}
@@ -163,15 +129,30 @@
 \include{tex/6_use_case_examples}
 
 \includepdfset{pages=-, pagecommand=\thispagestyle{fancy}}
-\phantomsection\label{A}
+
+\stepcounter{subsection}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}A: Galaxy observation with MCAO, IMG\_4mas, and MICADO\_Sci}
 \includepdf[pages=-, scale=0.80]{tex/A_galaxy_with_micado_sci_mcao_4mas.pdf}
-\phantomsection\label{B}
+
+\stepcounter{subsection}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}B: Astrometric observations of star cluster with SCAO, IMG\_1.5mas, and MICADO\_Sci}
 \includepdf[pages=-, scale=0.80]{tex/B_astrometry_with_micado_sci_scao_1_5mas.pdf}
-\phantomsection\label{C}
+
+\stepcounter{subsection}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}C: PSF field variations with SCAO, variable pixel scales, and MICADO}
 \includepdf[pages=-, scale=0.80]{tex/C_psf_field_variations_with_micado_pipe_scao.pdf}
-\phantomsection\label{D}
+
+\stepcounter{subsection}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}D: Basic spectroscopy of galaxy core with variable slit size and MICADO\_Sci}
 \includepdf[pages=-, scale=0.80]{tex/D_basioc_spectroscopy_with_micado_sci_spec.pdf}
-\phantomsection\label{E}
+
+\stepcounter{subsection}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}E: Spectroscopy of binary stars with Spec\_HK, 3000x50 slit, and MICADO}
 \includepdf[pages=-, scale=0.80]{tex/E_full_spectroscopy_pattern_with_micado_spec_3000x50.pdf}
+
+\vspace*{\fill}
+\centering
+The previous page was unintentionally left blank.
+\vspace*{\fill}
 
 \end{document}
