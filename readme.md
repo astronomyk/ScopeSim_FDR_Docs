@@ -9,7 +9,6 @@ https://www.overleaf.com/8196534261ndmvhvrfzmyn
 Therefore ALWAYS sync a session (pull, push) with Github at the START AND END
 of a writing session. 
 
-
 ## Sphinx and Latex
 
 The docs can be written in RST format, and include graphics generated directly 
@@ -20,6 +19,15 @@ Some setting can be altered with the ``latex_elements`` object:
 
 - https://www.sphinx-doc.org/en/master/latex.html
 - https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html
+
+
+## Overview
+
+| Document Title                                                            | Document Number        | Version | responsible author | JIRA username of responsible author |
+|---|---|---|---|---|
+| SimCADO User Manual                                                       | ELT-MAN-MCD-56306-0058 | 1.0     | Leschinski/Verdugo | NN |
+| Instrument data packages for the MICADO simulation environment            | ELT-TRE-MCD-56306-0059 | 1.0     | Leschinski/Verdugo | NN |
+| ScopeSim - A modular astronomical instrument data simulation environment  | ELT-TRE-MCD-56306-0060 | 1.0     | Leschinski/Verdugo | NN |
 
 
 ## Three ScopeSim documents

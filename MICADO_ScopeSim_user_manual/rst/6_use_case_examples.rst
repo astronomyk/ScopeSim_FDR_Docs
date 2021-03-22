@@ -1,28 +1,18 @@
-Science package use case examples
----------------------------------
+Use case examples using the MICADO_Sci and MICADO instrument packages
+---------------------------------------------------------------------
+This section presents a series of 5 use case examples for both the science-team oriented ``MICADO_Sci`` package and the pipeline oriented ``MICADO`` package.
+All example are available as iPython notebooks as part of the ScopeSim_ online documentation.
+Please note that no scientifically relevant information is extracted from these simulations.
+The sole purpose of the attached notebooks is to illustrate how to run ScopeSim with the two MICADO packages.
 
+- Observing a galaxy with MICADO_Sci in wide-field MCAO mode:
 
+  This example shows how to use the science package to observe a resolved spiral galaxy using the ``scopesim_templates.basicgalaxy.two_component_spiral`` function.
+  It uses a windowed detector object to avoid simulating the full MICADO detector array.
+  The pixel scale is set to 4mas (low resolution imaging) and a MCAO field constant PSF is used.
+  The galaxy is observed for 1 hour (60x 60s images) in the J filter.
 
-
-Pipeline package use case examples
-----------------------------------
-
-
-
-IMG: Extended Sources (4mas, MCAO, Ks filter)
-+++++++++++++++++++++++++++++++++++++++++++++
-Should show how to use the science package (MICADO_Sci)
-
-- a resolved spiral galaxy (FITS image) with ~10 background elliptical galaxies (analytical profiles)
-    - scopesim_templates.basicgalaxy.two_component_spiral
-    - MICADO_Sci package
-    - windowed detector
-    - 4mas MCAO field constant PSF
-    - Ks filter
-    - NDIT = 60
-    - DIT = 60
-
-IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)
+- IMG: Point source (4mas, SCAO, J filter, Field-varying PSFs)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Should show how to use the pipeline package (MICADO). Therefore should also show detector characteristics like linearity, and noise, etc
 
@@ -34,6 +24,7 @@ Should show how to use the pipeline package (MICADO). Therefore should also show
     - J filter
     - NDIT = 1
     - DIT = 60
+
 
 IMG: Astrometric sub-pixel shifts (1.5mas, SCAO, Pa-Beta  filter)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
