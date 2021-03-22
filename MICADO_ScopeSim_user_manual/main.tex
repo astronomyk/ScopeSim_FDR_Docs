@@ -24,6 +24,7 @@
 \usepackage{float}
 \usepackage{listings}
 \lstloadlanguages{csh, python}
+\usepackage{pdfpages}
 
 %%% MICADO PDR doc packages
 \usepackage{dmd-doc}
@@ -161,5 +162,7 @@
 \include{tex/6_observing_workflow}
 \include{tex/7_use_case_examples}
 
+\includepdfset{pages=-, pagecommand=\thispagestyle{fancy}}
+\includepdf[pages=-, scale=0.80]{tex/A_galaxy_with_micado_sci_mcao_4mas.pdf}
 
 \end{document}
