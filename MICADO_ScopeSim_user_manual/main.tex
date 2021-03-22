@@ -24,6 +24,7 @@
 \usepackage{float}
 \usepackage{listings}
 \lstloadlanguages{csh, python}
+\usepackage{pdfpages}
 
 %%% MICADO PDR doc packages
 \usepackage{dmd-doc}
@@ -156,10 +157,16 @@
 
 \include{tex/1_introduction}
 \include{tex/2_documentation}
-\include{tex/4_basic_functionality}
+\include{tex/3_basic_functionality}
+\include{tex/4_controlling_simulations}
 \include{tex/5_source_objects}
-\include{tex/6_observing_workflow}
-\include{tex/7_use_case_examples}
+\include{tex/6_use_case_examples}
 
+\includepdfset{pages=-, pagecommand=\thispagestyle{fancy}}
+\includepdf[pages=-, scale=0.80]{tex/A_galaxy_with_micado_sci_mcao_4mas.pdf}
+\includepdf[pages=-, scale=0.80]{tex/B_astrometry_with_micado_sci_scao_1_5mas.pdf}
+\includepdf[pages=-, scale=0.80]{tex/C_psf_field_variations_with_micado_pipe_scao.pdf}
+\includepdf[pages=-, scale=0.80]{tex/D_basioc_spectroscopy_with_micado_sci_spec.pdf}
+\includepdf[pages=-, scale=0.80]{tex/E_full_spectroscopy_pattern_with_micado_spec_3000x50.pdf}
 
 \end{document}
