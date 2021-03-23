@@ -57,7 +57,7 @@
   MCAO & Multi-Conjugate Adaptive Optics \\
   PSF & Point Spread Function \\
   SCAO & Single Conjugate Adaptive Optics \\
-  SPEC & Spectroscopy observing modi
+  SPEC & Spectroscopy observing modi \\
   TBC & To Be Confirmed \\
   TBD & To Be Decided \\
 \end{supertabular}
@@ -75,14 +75,14 @@ The ScopeSim ecosystem maintains a very strict split between code and data.
 The simulation engine and all associated software packages are completely instrument agnostic.
 Instrument models can only be initialised by passing an instrument specific data package to the ScopeSim engine.
 
-For MICADO two instrument data package were produced as input for the ScopeSim engine: ``MICADO`` and ``MICADO_Sci``.
+For MICADO two instrument data package were produced as input for the ScopeSim engine: ``MICADO'' and ``MICADO\_Sci''.
 The original use case for the simulator was as a means of producing raw detector frames to aid in the development of the MICADO data reduction pipeline.
 Hence the ``MICADO`` instrument data package contains all the elements needed to simulate realistic raw detector readout images.
 The primary audience for the ``MICADO`` instrument data package is the MICADO dataflow system work package.
 Many of the effect included in the ``MICADO`` package will be removed by the data reduction pipeline.
 Simulating and subsequently removing these effects results in a substantial amount of redundant computational overhead for the second group of use cases for the software: science case feasibility studies.
-In order to enable rapid iteration of simulations for these feasibility studies, a second instrument data package was compiled: ``MICADO_Sci``.
-``MICADO_Sci`` contains only the optical effects that will remain in the images after the data reduction pipeline has successfully processed the images.
+In order to enable rapid iteration of simulations for these feasibility studies, a second instrument data package was compiled: ``MICADO\_Sci``.
+``MICADO\_Sci`` contains only the optical effects that will remain in the images after the data reduction pipeline has successfully processed the images.
 
 This document should be seen as the initial introduction to ScopeSim and the MICADO data packages.
 It contains the following information:

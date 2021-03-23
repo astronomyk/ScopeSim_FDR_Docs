@@ -47,7 +47,7 @@ SPEC_3000x50  'MICADO' package only. Produces full raw detector traces for the s
 SPEC_15000x50 'MICADO' package only. Produces full raw detector traces for the long-wide slit (15000x50mas)
 ============= ===
 
-.. note::  that while the imaging mode names are consistent between the MICADO_Sci and MICADO packages, the spectroscopy mode names differ.
+.. note::  while the imaging mode names are consistent between the MICADO_Sci and MICADO packages, the spectroscopy mode names differ.
 
 
 Setting top level observation parameters

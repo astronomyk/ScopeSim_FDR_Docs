@@ -1,0 +1,401 @@
+
+
+\section{Summary of Effects in Optical Elements:%
+  \label{summary-of-effects-in-optical-elements}%
+}
+
+\setlength{\DUtablewidth}{\linewidth}
+\begin{longtable*}[c]{|p{0.181\DUtablewidth}|p{0.270\DUtablewidth}|p{0.262\DUtablewidth}|p{0.077\DUtablewidth}|p{0.165\DUtablewidth}|}
+\hline
+\textbf{%
+element
+} & \textbf{%
+name
+} & \textbf{%
+class
+} & \textbf{%
+included
+} & \textbf{%
+z\_orders
+} \\
+\hline
+\endfirsthead
+\hline
+\textbf{%
+element
+} & \textbf{%
+name
+} & \textbf{%
+class
+} & \textbf{%
+included
+} & \textbf{%
+z\_orders
+} \\
+\hline
+\endhead
+\multicolumn{5}{c}{\hfill ... continued on next page} \\
+\endfoot
+\endlastfoot
+
+armazones
+ & 
+armazones\_atmo\_default\_ter\_curve
+ & 
+AtmosphericTERCurve
+ & 
+True
+ & 
+{[}111, 511{]}
+ \\
+\hline
+
+armazones
+ & 
+armazones\_atmo\_dispersion
+ & 
+AtmosphericDispersion
+ & 
+False
+ & 
+{[}231{]}
+ \\
+\hline
+
+armazones
+ & 
+armazones\_atmo\_skycalc\_ter\_curve
+ & 
+SkycalcTERCurve
+ & 
+False
+ & 
+{[}112, 512{]}
+ \\
+\hline
+
+ELT
+ & 
+scope\_surface\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+ELT
+ & 
+scope\_vibration
+ & 
+Vibration
+ & 
+True
+ & 
+{[}244, 744{]}
+ \\
+\hline
+
+ELT
+ & 
+eso\_combined\_reflection
+ & 
+TERCurve
+ & 
+False
+ & 
+{[}10, 110, 510{]}
+ \\
+\hline
+
+MICADO
+ & 
+micado\_static\_surfaces
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MICADO
+ & 
+micado\_ncpas\_psf
+ & 
+NonCommonPathAberration
+ & 
+True
+ & 
+{[}241, 641{]}
+ \\
+\hline
+
+MICADO
+ & 
+filter\_wheel\_1
+ & 
+FilterWheel
+ & 
+True
+ & 
+{[}124, 224, 524{]}
+ \\
+\hline
+
+MICADO
+ & 
+filter\_wheel\_2
+ & 
+FilterWheel
+ & 
+True
+ & 
+{[}124, 224, 524{]}
+ \\
+\hline
+
+MICADO
+ & 
+pupil\_wheel
+ & 
+FilterWheel
+ & 
+True
+ & 
+{[}124, 224, 524{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+full\_detector\_array
+ & 
+DetectorList
+ & 
+False
+ & 
+{[}90, 290, 390, 490{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+detector\_window
+ & 
+DetectorList
+ & 
+True
+ & 
+{[}90, 290, 390, 490{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+qe\_curve
+ & 
+QuantumEfficiencyCurve
+ & 
+True
+ & 
+{[}113, 513{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+exposure\_action
+ & 
+SummedExposure
+ & 
+True
+ & 
+{[}860{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+dark\_current
+ & 
+DarkCurrent
+ & 
+True
+ & 
+{[}830{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+detector\_linearity
+ & 
+LinearityCurve
+ & 
+True
+ & 
+{[}840{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+shot\_noise
+ & 
+ShotNoise
+ & 
+True
+ & 
+{[}820{]}
+ \\
+\hline
+
+micado\_detector\_array
+ & 
+readout\_noise
+ & 
+PoorMansHxRGReadoutNoise
+ & 
+True
+ & 
+{[}811{]}
+ \\
+\hline
+
+default\_ro
+ & 
+relay\_psf
+ & 
+FieldConstantPSF
+ & 
+True
+ & 
+{[}262, 662{]}
+ \\
+\hline
+
+default\_ro
+ & 
+relay\_surface\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MAORY
+ & 
+maory\_surface\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MAORY
+ & 
+maory\_generic\_psf
+ & 
+FieldConstantPSF
+ & 
+True
+ & 
+{[}262, 662{]}
+ \\
+\hline
+
+MICADO\_IMG\_LR
+ & 
+micado\_wide\_field\_mirror\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MICADO\_IMG\_LR
+ & 
+micado\_adc\_3D\_shift
+ & 
+AtmosphericDispersionCorrection
+ & 
+False
+ & 
+{[}632, 232{]}
+ \\
+\hline
+
+MICADO\_IMG\_HR
+ & 
+zoom\_mirror\_list
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MICADO\_IMG\_HR
+ & 
+micado\_adc\_3D\_shift
+ & 
+AtmosphericDispersionCorrection
+ & 
+False
+ & 
+{[}632, 232{]}
+ \\
+\hline
+
+MICADO\_SPEC
+ & 
+spec\_mode\_optics
+ & 
+SurfaceList
+ & 
+True
+ & 
+{[}20, 120, 520{]}
+ \\
+\hline
+
+MICADO\_SPEC
+ & 
+spectroscopic\_slit\_aperture
+ & 
+ApertureMask
+ & 
+True
+ & 
+{[}80, 280, 380{]}
+ \\
+\hline
+
+MICADO\_SPEC
+ & 
+micado\_spectral\_traces
+ & 
+SpectralTraceList
+ & 
+True
+ & 
+{[}70, 270{]}
+ \\
+\hline
+\end{longtable*}
+\label{tbl-effects-summary}

@@ -1,0 +1,419 @@
+
+
+\section{Controlling a simulation%
+  \label{controlling-a-simulation}%
+}
+
+
+\subsection{A note on the two MICADO packages%
+  \label{a-note-on-the-two-micado-packages}%
+}
+
+It should be noted that there are two MICADO packages available:
+
+\begin{enumerate}
+\item MICADO\_Sci: optimised for quick run times to enable rapid iterations of science feasibility use cases
+
+\item MICADO: the generalised package containing all the known optical effects needed by the pipeline development team.
+\end{enumerate}
+
+In general science team members are recommended to use the MICADO\_Sci package as the generalised MICADO is slower and exposes many more configuration parameters to the user.
+
+Both packages \textbf{still} require all upstream support packages, namely: Armazones, ELT, and MAORY.
+
+
+\subsection{Available MICADO observing modes%
+  \label{available-micado-observing-modes}%
+}
+
+As mentioned in the previous sections there are two MICADO models available: MICADO\_Sci and MICADO.
+The desired model is selected with the \texttt{use\_instrument=} parameter:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci", ...)
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+The choice of observing modes can be set when the \texttt{UserCommand} object is initialised by passing a list of mode names to the \texttt{set\_mode=} parameter.
+Note that multiple keywords can be passed as different modes for different optical sections can be combined.
+For example, using the MAORY relay optics with the MICADO wide-field imaging mode requires the following input:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(..., set_modes=["MCAO", "IMG_4mas"])
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+In contrast, to use the MICADO internal SCAO mode with the zoom imaging mode, the following input is required:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(..., set_modes=["SCAO", "IMG_1.5mas"])
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+The following table lists all available mode keywords for MICADO.
+
+\setlength{\DUtablewidth}{\linewidth}
+\begin{longtable*}[c]{|p{0.15\DUtablewidth}|p{0.817\DUtablewidth}|}
+\hline
+\textbf{%
+Keyword
+} & \textbf{%
+Description
+} \\
+\hline
+\endfirsthead
+\hline
+\textbf{%
+Keyword
+} & \textbf{%
+Description
+} \\
+\hline
+\endhead
+\multicolumn{2}{c}{\hfill ... continued on next page} \\
+\endfoot
+\endlastfoot
+
+MCAO
+ & 
+MAORY relay optics model is included
+ \\
+\hline
+
+SCAO
+ & 
+MICADO SCAO relay optics module is included
+ \\
+\hline
+
+IMG\_4mas
+ & 
+Wide-field imaging optics included. Images have 4mas pixel scale.
+ \\
+\hline
+
+IMG\_1.5mas
+ & 
+Zoom imaging optics included. Images have 1.5mas pixel scale.
+ \\
+\hline
+
+SPEC
+ & 
+'MICADO\_Sci' package only. Produces rectified spectroscopic images.
+ \\
+\hline
+
+SPEC\_3000x20
+ & 
+'MICADO' package only. Produces full raw detector traces for the short-narrow slit (3000x20mas)
+ \\
+\hline
+
+SPEC\_3000x50
+ & 
+'MICADO' package only. Produces full raw detector traces for the short-wide slit (3000x50mas)
+ \\
+\hline
+
+SPEC\_15000x50
+ & 
+'MICADO' package only. Produces full raw detector traces for the long-wide slit (15000x50mas)
+ \\
+\hline
+\end{longtable*}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+While the imaging mode names are consistent between the MICADO\_Sci and MICADO packages, the spectroscopy mode names differ.
+}
+
+
+\subsection{Setting top level observation parameters%
+  \label{setting-top-level-observation-parameters}%
+}
+
+The \texttt{UserCommands} object is built on several hierarchical (YAML-style) nested dictionaries which contain all the information needed to build the optical model of MICADO.
+Checking and changing parameters in these dictionaries is done using the so-called \textquotedbl{}bang-string\textquotedbl{} notation.
+Bang-strings shorten the syntax for accessing nested dictionaries.
+E.g. \texttt{cmd{[}\textquotedbl{}!OBS.ndit\textquotedbl{}{]}} is the equivalent of \texttt{cmd{[}\textquotedbl{}OBS\textquotedbl{}{]}{[}\textquotedbl{}ndit\textquotedbl{}{]}}
+
+Alternatively, a dictionary of bang-string keyword-value pairs can be passed to the \texttt{UserCommands} object when initialising via the \texttt{properties} keyword:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+scopesim.UserCommands(properties={"!OBS.dit": 60, "!OBS.ndit": 10})
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+The following table describes the top level parameter categories.
+
+\setlength{\DUtablewidth}{\linewidth}
+\begin{longtable*}[c]{|p{0.060\DUtablewidth}|p{0.880\DUtablewidth}|}
+\hline
+\textbf{%
+Alias
+} & \textbf{%
+Description
+} \\
+\hline
+\endfirsthead
+\hline
+\textbf{%
+Alias
+} & \textbf{%
+Description
+} \\
+\hline
+\endhead
+\multicolumn{2}{c}{\hfill ... continued on next page} \\
+\endfoot
+\endlastfoot
+
+OBS
+ & 
+Instrument specific parameters. E.g. exposure time and number (DIT, NDIT), filter name, etc
+ \\
+\hline
+
+ATMO
+ & 
+Atmospheric specific parameters. E.g. air temperature, background brightness, location, etc
+ \\
+\hline
+
+TEL
+ & 
+Telescope specific parameters. E.g. Dome temperature, etc
+ \\
+\hline
+
+RO
+ & 
+Relay optics specific parameters. E.g. RO module temperature, etc
+ \\
+\hline
+
+INST
+ & 
+Instrument specific parameters. E.g. plate scale, strehl ratio (MICADO\_Sci only), etc
+ \\
+\hline
+
+DET
+ & 
+Detector specific parameters. E.g. windowing dimensions and position (MICADO\_Sci only), etc
+ \\
+\hline
+
+SIM
+ & 
+Instrument specific parameters. E.g. spectral range, computing parameters, file locations, etc
+ \\
+\hline
+\end{longtable*}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+Important parameters like which filter to use and how long to observe for are generally kept in the \texttt{\textquotedbl{}!OBS\textquotedbl{}} dictionary
+}
+
+The whole parameter dictionary can be shown by simply printing the \texttt{UserCommand} object:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+print(cmd)
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+Specific categories can be shown by using the category alias in the bang string format:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+print(cmd["!OBS"])
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+A specific parameter (or sub-group thereof) can be shown by following the hierarchy in bang-string format:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+print(cmd["!INST.psf.strehl"])
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+Parameter values can also be set in this manner.
+For example, to set which filter to use with MICADO, we call the \texttt{\textquotedbl{}OBS.filter\_name} keyword:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd["!OBS.filter_name"] = "Ks"
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+The full list of filters available in MICADO is kept in the \texttt{OpticalTrain} object. This will be discussed below.
+}
+
+The following list contains some commonly used parameters for the \texttt{MICADO\_Sci} package:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+MICADO_Sci
+==========
+
+OBS.filter_name: "J"                    # MICADO filter name
+OBS.dit: 60                             # [s] Length of exposure
+OBS.ndit: 1                             # Number of exposures to stack
+OBS.airmass: 1.2
+
+ATMO.background.filter_name: "Ks"
+ATMO.background.value: 13.6             # Amplitude of background flux
+ATMO.background.unit: "mag"             # Unit of background flux
+
+INST.psf.strehl: 0.8                    # Desired Strehl ratio (as far as 
+                                        #   physically possible)
+INST.psf.wavelength: "Ks"               # Either wavelength [um] or common 
+                                        #   broadband filter name
+INST.aperture.x: 0                      # [arcsec] (MICADO_Sci only) Slit
+                                        #   position relative to FOV centre
+INST.aperture.y: 0
+INST.aperture.width: 3                  # [arcsec] (MICADO_Sci only) 
+                                        #    The slit dimensions
+INST.aperture.height: 0.05
+
+DET.width: 1024                         # [pixel] Detector dimensions
+DET.height: 1024
+DET.x: 0                                # [pixel] Position of window centre 
+                                        #   relative to detector plane centre
+DET.y: 0
+
+SIM.spectral.wave_min: 0.7              # [um] Spectral borders of simulation
+SIM.spectral.wave_mid: 1.6              # [um] Central wavelength for SPEC mode
+SIM.spectral.wave_max: 2.5
+SIM.sub_pixel.flag: False               # Turn on for astrometry observation
+SIM.random.seed: 9001                   # Random seed for numpy
+SIM.file.use_cached_downloads: True     # Turn off when checking for updates
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+The spectroscopy mode of the \texttt{MICADO\_Sci} package contains a configurable slit and detector window.
+This allows the user to choose only the spectral range that is relevant to their science case.
+Restricting the spectral range like this speeds up the computation time by order and allows for fast iterations of science use cases.
+The pipeline-oriented \texttt{MICADO} package contains fixed slit dimensions and spectral trace layouts.
+Simulations run using this setup are slow and memory intensive.
+
+
+\subsection{The MICADO filter settings%
+  \label{the-micado-filter-settings}%
+}
+
+To set the filter name, we use the \texttt{!OBS.filter\_name} bang-string.
+
+To find out which filters are included in the MICADO\_Sci and MICADO packages, we must create an OpticalTrain model for MICADO:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci")
+micado = scopesim.OpticalTrain(cmd)
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+In the \texttt{MICADO\_Sci} package all filters are contained in a single \texttt{filter\_wheel} object:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+micado["filter_wheel"].data["name"]
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+For the pipeline-oriented \texttt{MICADO} package, the filters are distributed among the three filter wheels:
+\texttt{filter\_wheel\_1}, \texttt{filter\_wheel\_2}, and \texttt{pupil\_wheel}.
+Hence there is no central list of all filters for the \texttt{MICADO} package.
+
+
+\subsection{The MICADO\_Sci PSF model%
+  \label{the-micado-sci-psf-model}%
+}
+
+The \texttt{MICADO\_Sci} package uses the AnisoCADO python package to generate ELT-like PSFs on the fly.
+The Strehl ratio can therefore be set (within reason) to whatever the user desires.
+The global bang-string keywords for this are \texttt{!OBS.psf.strehl} and \texttt{!OBS.psf.wavelength}:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd["!OBS.psf.strehl"] = 0.35
+cmd["!OBS.psf.wavelength"] = 2.15
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+These settings will create an on-axis PSF with a 35\% Strehl ratio at 2.15um.
+At shorter wavelengths the Strehl ratio will scale as expected.
+If a Strehl ratio is physically impossible (e.g. 80\% at 0.9um), the largest PSF will be generated with the best physically possible Strehl ratio.
+
+It is possible to also create PSF models for off-axis positions in SCAO mode.
+The offset can only be specified after the \texttt{OpticalTrain} model has been created by accessing the PSF object inside the model.
+The relevant MICADO \texttt{OpticalTrain} objects are \texttt{scao\_const\_psf} for SCAO observations and \texttt{maory\_const\_psf} for MCAO observations:
+
+\begin{quote}
+\begin{alltt}
+\begin{lstlisting}[frame=single]
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci", 
+                            set_modes=["SCAO", "IMG_4mas"])
+cmd["!OBS.psf.strehl"] = 0.35
+cmd["!OBS.psf.wavelength"] = 2.15
+
+micado = scopesim.OpticalTrain(cmd)
+micado["scao_const_psf"].meta["offset"] = [10, 0]
+\end{lstlisting}
+\end{alltt}
+\end{quote}
+
+This will create an on-axis PSF with a 35\% Strehl ratio at 2.15um, and then shift the 10 arcseconds off axis.
+The form and Strehl ratio of the PSF will be adjusted to match what is expected for the off-axis position.
+
+\DUadmonition[note]{
+\DUtitle[note]{Note}
+
+While the \texttt{MICADO\_Sci} PSF model is configurable, the \texttt{MICADO} PSF model is not.
+
+The \texttt{MICADO}-package uses pre-computed PSF files. These are available on the ScopeSim server: \url{https://www.univie.ac.at/simcado/InstPkgSvr/psfs/}
+}
+
+% - Other major configuration parameters
+% - filter
+% - dit / ndit
+% - slit size
+% - zenith distance
+% - psf model
