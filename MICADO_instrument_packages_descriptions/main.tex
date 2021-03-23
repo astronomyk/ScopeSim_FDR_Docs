@@ -24,6 +24,7 @@
 \usepackage{float}
 \usepackage{listings}
 \lstloadlanguages{csh, python}
+\usepackage{pdfpages}
 
 %%% MICADO PDR doc packages
 \usepackage{dmd-doc}
@@ -97,9 +98,9 @@
 \dmdTitle{ScopeSim instrument packages for MICADO}
 \dmdDocId{ELT-TRE-MCD-56306-0059}
 \dmdIssue{1.0}
-\dmdDate{04. December 2020}
+\dmdDate{12. April 2021}
 \dmdPreparedBy{K. Leschinski, O. Czoske, M. Verdugo}
-\dmdPreparedOn{2020-12-04}
+\dmdPreparedOn{2021-12-04}
 \dmdPreparedSig{\resizebox{2.5cm}{!}{\includegraphics{scribble}}}
 \dmdApprovedBy{}
 \dmdApprovedOn{}
@@ -139,25 +140,9 @@
   \tabletail{\hline}
 
   \begin{supertabular}{|l|l|l|l|}
-   0.0.1 & 2020-10-15 & All & (KL) Layout initialised \\
-   0.0.2 & 2020-12-04 & All & (KL) Added new data, tables, plots to all sections \\
-   \hline
-  \end{supertabular}
-
-\end{center}
-
-\begin{center}
-  \textbf{Relevant Documents}
-
-  \tablehead{\hline
-    \multicolumn{1}{|c|}{Ref. No.} &
-    \multicolumn{1}{|c|}{Title} \\
-    \hline}
-  \tabletail{\hline}
-
-  \begin{supertabular}{|l|l|l|l|}
-   ELT-TRE-MCD-56306-0058 & SimCADO v2 User Manual \\
-   ELT-TRE-MCD-56306-0060 & ScopeSim: A flexible astronomical instrument data simulation environment \\
+   0.1 & 2020-10-15 & All & (KL) Layout initialised \\
+   0.2 & 2020-12-04 & All & (KL) Added new data, tables, plots to all sections \\
+   1.0 & 2021-04-12 & All & (KL) Minor corrections \\
    \hline
   \end{supertabular}
 
@@ -171,6 +156,28 @@
 
 
 \chapter{Introduction}
+
+\section{Applicable Documents}
+
+\begin{center}
+  \tablehead{\hline
+    \multicolumn{1}{|c|}{Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Nr} &
+    \multicolumn{1}{|c|}{Doc.\ Title} &
+    \multicolumn{1}{|c|}{Issue} &
+    \multicolumn{1}{|c|}{Date} \\
+    \hline}
+  \tabletail{\hline}
+
+  \begin{supertabular}{|l|l|l|c|l|}
+    AD\,1 & ELT-MAN-MCD-56306-0058 & SimCADO User Manual & 1.0 & 2021-04-12 \\
+    AD\,2 & ELT-TRE-MCD-56306-0060 & ScopeSim - A modular astronomical & & \\
+    & & instrument data simulation environment & 1.0 & 2021-04-12 \\
+    AD\,3 & ELT-TRE-MCD-56300-0014 & MICADO Masks, Stops, and Filters Description & 2.9 & 2020-12-04 \\
+  \end{supertabular}
+\end{center}
+
+
 
 \input{tex/0_introduction}
 

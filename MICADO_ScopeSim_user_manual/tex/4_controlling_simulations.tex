@@ -62,7 +62,7 @@ cmd = scopesim.UserCommands(..., set_modes=["SCAO", "IMG_1.5mas"])
 The following table lists all available mode keywords for MICADO.
 
 \setlength{\DUtablewidth}{\linewidth}
-\begin{longtable*}[c]{|p{0.123\DUtablewidth}|p{0.817\DUtablewidth}|}
+\begin{longtable*}[c]{|p{0.15\DUtablewidth}|p{0.817\DUtablewidth}|}
 \hline
 \textbf{%
 Keyword
@@ -135,7 +135,7 @@ SPEC\_15000x50
 \DUadmonition[note]{
 \DUtitle[note]{Note}
 
-while the imaging mode names are consistent between the MICADO\_Sci and MICADO packages, the spectroscopy mode names differ.
+While the imaging mode names are consistent between the MICADO\_Sci and MICADO packages, the spectroscopy mode names differ.
 }
 
 
@@ -153,7 +153,7 @@ Alternatively, a dictionary of bang-string keyword-value pairs can be passed to 
 \begin{quote}
 \begin{alltt}
 \begin{lstlisting}[frame=single]
-scopesim.UserCommands(..., ..., properties=\{"!OBS.dit": 60, "!OBS.ndit": 10\})
+scopesim.UserCommands(properties={"!OBS.dit": 60, "!OBS.ndit": 10})
 \end{lstlisting}
 \end{alltt}
 \end{quote}
@@ -295,23 +295,28 @@ ATMO.background.filter_name: "Ks"
 ATMO.background.value: 13.6             # Amplitude of background flux
 ATMO.background.unit: "mag"             # Unit of background flux
 
-INST.psf.strehl: 0.8                    # Desired Strehl ratio (as far as physically possible)
-INST.psf.wavelength: "Ks"               # Either wavelength [um] or common broadband filter name
-INST.aperture.x: 0                      # [arcsec] (MICADO_Sci only) The slit position relative to FOV centre
+INST.psf.strehl: 0.8                    # Desired Strehl ratio (as far as
+                                        #   physically possible)
+INST.psf.wavelength: "Ks"               # Either wavelength [um] or common
+                                        #   broadband filter name
+INST.aperture.x: 0                      # [arcsec] (MICADO_Sci only) Slit
+                                        #   position relative to FOV centre
 INST.aperture.y: 0
-INST.aperture.width: 3                  # [arcsec] (MICADO_Sci only) The slit dimensions
+INST.aperture.width: 3                  # [arcsec] (MICADO_Sci only)
+                                        #    The slit dimensions
 INST.aperture.height: 0.05
 
 DET.width: 1024                         # [pixel] Detector dimensions
 DET.height: 1024
-DET.x: 0                                # [pixel] Position of window centre relative to detector plane centre
+DET.x: 0                                # [pixel] Position of window centre
+                                        #   relative to detector plane centre
 DET.y: 0
 
 SIM.spectral.wave_min: 0.7              # [um] Spectral borders of simulation
 SIM.spectral.wave_mid: 1.6              # [um] Central wavelength for SPEC mode
 SIM.spectral.wave_max: 2.5
 SIM.sub_pixel.flag: False               # Turn on for astrometry observation
-SIM.random.seed: 9001                   # Random seed for numpy to aid reproducibility
+SIM.random.seed: 9001                   # Random seed for numpy
 SIM.file.use_cached_downloads: True     # Turn off when checking for updates
 \end{lstlisting}
 \end{alltt}
@@ -384,7 +389,8 @@ The relevant MICADO \texttt{OpticalTrain} objects are \texttt{scao\_const\_psf} 
 \begin{quote}
 \begin{alltt}
 \begin{lstlisting}[frame=single]
-cmd = scopesim.UserCommands(use_instrument="MICADO_Sci", set_modes=["SCAO", "IMG_4mas"])
+cmd = scopesim.UserCommands(use_instrument="MICADO_Sci",
+                            set_modes=["SCAO", "IMG_4mas"])
 cmd["!OBS.psf.strehl"] = 0.35
 cmd["!OBS.psf.wavelength"] = 2.15
 

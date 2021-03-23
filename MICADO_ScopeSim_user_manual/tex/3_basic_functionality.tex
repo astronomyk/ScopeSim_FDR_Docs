@@ -75,8 +75,8 @@ This model contains a list of effects that are applied to the incoming photon de
 \begin{alltt}
 \begin{lstlisting}[frame=single]
 cmd = scopesim.UserCommands(use_instrument="MICADO_Sci",
-                            properties=\{"!OBS.dit": 60, "!OBS.ndit": 10,
-                                        "!INST.filter_name": "Ks"\})
+                            properties={"!OBS.dit": 60, "!OBS.ndit": 10,
+                                        "!INST.filter_name": "Ks"})
 micado = scopesim.OpticalTrain(cmd)
 \end{lstlisting}
 \end{alltt}
